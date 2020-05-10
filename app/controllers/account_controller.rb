@@ -1,7 +1,6 @@
 class AccountController < ApplicationController
   include ActionController::MimeResponds
 
-
   def register()
     username = params[:username]
     password = params[:passwd]

@@ -1,0 +1,1 @@
+http://localhost:3000/api/user/register?linfo={"name":"syndria","email":"syndria@hola.com","pass":"rubysucks"}

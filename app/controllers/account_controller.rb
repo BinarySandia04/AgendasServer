@@ -33,7 +33,7 @@ class AccountController < ApplicationController
       if User.where(username: name).exists?
         renderJson("ERROR_USERNAME_ALREADY_EXISTS")
       elsif User.where(email: email).exists?
-        renderJson("ERROR_EMAIL_ALREADY_EXISTS")
+        renderJson("ERROR_EMAIL_TAKEN")
       else
         if createUser(email, name, password)
           renderJson("OK")

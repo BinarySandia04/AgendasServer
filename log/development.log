@@ -9452,3 +9452,13 @@ Processing by AccountController#login as */*
 Completed 200 OK in 180ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 975)
 
 
+Started POST "/api/user/login" for 127.0.0.1 at 2020-06-23 19:41:22 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountController#login as */*
+  Parameters: {"usermail"=>"aranseraroig@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aranseraroig@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_controller.rb:58:in `doLogin'
+Completed 200 OK in 206ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 11119)
+
+

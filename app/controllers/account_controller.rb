@@ -1,50 +1,87 @@
 class AccountController < ApplicationController
   include ActionController::MimeResponds
 
-  def logintest
-    loginInfo = getLoginInfo
+  ##########################################################
+  # Funciones de rutas
+  def register
+    name = params[:username]
+    email = params[:email]
+    password = params[:password]
 
-    name = loginInfo["name"]
-    email = loginInfo["email"]
-    pass = loginInfo["pass"]
-
-    renderJson(login(name, email, pass))
+    renderJson(doRegister(name, email, password))
   end
 
-  def register
-    loginInfo = getLoginInfo
+  def login
+    usermail = params[:usermail]
+    password = params[:password]
 
-    name = loginInfo["name"]
-    email = loginInfo["email"]
-    password = loginInfo["pass"]
+    renderJson(doLogin(usermail, password))
+  end
 
+  ##################################################################
+
+  protected
+
+  def doRegister(name, email, password)
     if name.nil? or password.nil? or email.nil?
-      renderJson('ERROR_NO_PARAMS')
+      return "ERROR_NO_PARAMS"
     else
 
       if password.length > 16
-        renderJson("ERROR_PASSWORD_LONG")
-        return
+        return "ERROR_PASSWORD_LONG"
       elsif password.length < 6
-        renderJson("ERROR_PASSWORD_SHORT")
-        return
+        return "ERROR_PASSWORD_SHORT"
       end
 
       if User.where(username: name).exists?
-        renderJson("ERROR_USERNAME_ALREADY_EXISTS")
+        return "ERROR_USERNAME_ALREADY_EXISTS"
       elsif User.where(email: email).exists?
-        renderJson("ERROR_EMAIL_TAKEN")
+        return "ERROR_EMAIL_TAKEN"
       else
         if createUser(email, name, password)
-          renderJson("OK")
+          return "OK"
         else
-          renderJson("ERROR")
+          return "ERROR"
         end
       end
     end
   end
 
-  protected
+  # Funcion que prueba si esta logeado y tal
+  def doLogin(usermail, password)
+    if(usermail.nil?)
+      return "ERROR_NO_PARAMS"
+    end
+
+    if(usermail.include? "@")
+      # Es un correo electronico
+      myUser = User.where(email: usermail).first
+      if(not myUser.nil?)
+        # Try to autentificate with username
+        if(myUser.authenticate(password))
+          return "OK"
+        else
+          return "ERROR_WRONG_PASSWORD"
+        end
+      else
+        return "ERROR_EMAIL_DOESNT_EXISTS"
+      end
+    else
+      # Es un nombre de usuario
+      myUser = User.where(username: usermail).first
+      if(not myUser.nil?)
+        # Try to autentificate with username
+        if(myUser.authenticate(password))
+          return "OK"
+        else
+          return "ERROR_WRONG_PASSWORD"
+        end
+      else
+        return "ERROR_USERNAME_DOESNT_EXISTS"
+      end
+    end
+  end
+
   def createUser (email, username, password)
     @user = User.new
 

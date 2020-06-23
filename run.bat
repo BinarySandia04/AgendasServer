@@ -1,0 +1,1 @@
+C:\Ruby25-x64\bin\ruby.exe D:/TDR/GendaServer/bin/rails server -b 0.0.0.0 -p 3000 -e development

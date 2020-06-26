@@ -1,6 +1,6 @@
 # Agenda Server
 
-## The server part of Agenda
+## The server side of Agenda
 
 * Ruby version: 2.5.5 i think
 

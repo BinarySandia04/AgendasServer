@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @test = "yeaaaa"
+    # Bruh
   end
 end

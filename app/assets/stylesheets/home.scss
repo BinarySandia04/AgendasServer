@@ -1,3 +1,181 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$color_black: #303030;
+$color_black_2: #404040;
+$color_white: #fff;
+$color_white2: #dcdcdc;
+
+$border_radius: 5px;
+$phone_width: 800px;
+$hovertime: 0.3s;
+
+$firstmargin: 5%;
+$secondmargin: 8%;
+
+$bodymargin: 2%;
+$bodypaddingtop: 75px;
+
+.navmargin {
+  margin-left: $firstmargin;
+  margin-right: $firstmargin;
+
+  @media screen and (max-width: $phone_width){
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+.nicemargin {
+  margin-left: $secondmargin;
+  margin-right: $secondmargin;
+}
+
+.navbar {
+  ul {
+    position: fixed;
+
+    top: 10px;
+
+    width: 100% - $firstmargin * 2 - $bodymargin * 2;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: $color_black;
+    border-radius: $border_radius;
+  }
+
+  .nav-centered-right {
+    float: right;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  li {
+    float: left;
+
+    a {
+      display: block;
+      padding: 8px;
+      color: $color_white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+
+      transition: $hovertime * 2;
+
+      &:hover {
+        background-color: $color_black_2;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $color_black_2;
+      }
+
+      &:active {
+        background-color: $color_white2;
+        color: $color_black;
+        transition: 0s;
+      }
+    }
+
+    span {
+      display: block;
+      padding: 8px;
+      color: $color_white2;
+      text-align: center;
+      padding: 14px 20px;
+    }
+  }
+
+  @media screen and (max-width: $phone_width){
+     ul {
+       width: 100% - $bodymargin * 2;
+     }
+
+    li:not(:first-child) {
+
+      height: 0px;
+      visibility: hidden;
+      transition: none;
+      float: none;
+      opacity: 0;
+
+      a {
+        text-align: left;
+      }
+    }
+
+    a.icon {
+      float: right;
+      display: block;
+      color: $color_white;
+      padding: 14px 20px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $color_black_2;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $color_black_2;
+      }
+
+      &:active {
+        background-color: $color_white2;
+        color: $color_black;
+        transition: 0s;
+      }
+
+      transition: $hovertime;
+    }
+
+    &.responsive {
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      li {
+        float: none;
+        a {
+          text-align: left;
+        }
+
+        &:not(:first-child){
+          visibility: visible;
+          opacity: 1;
+          height: 47px;
+          transition: all $hovertime / 2 ease-out;
+        }
+      }
+    }
+  }
+}
+
+.page {
+  width: calc(100%);
+  margin-left: $bodymargin * -1;
+  margin-top: $bodymargin * -1;
+
+  padding-left: $bodymargin;
+  padding-right: $bodymargin;
+
+  padding-top: $bodypaddingtop;
+}
+
+body {
+  margin: $bodymargin;
+  font-family: $fonts;
+}

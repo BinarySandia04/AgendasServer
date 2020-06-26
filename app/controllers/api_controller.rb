@@ -82,19 +82,4 @@ class ApiController < ApplicationController
       end
     end
   end
-
-  def createUser (email, username, password)
-    @user = User.new
-
-    @user.email = email
-    @user.password = password
-    @user.username = username
-
-    if @user.save
-      puts "User digested password: " + @user.password_digest
-      return true
-    else
-      return false
-    end
-  end
 end

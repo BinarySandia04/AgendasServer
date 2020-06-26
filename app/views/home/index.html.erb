@@ -5,49 +5,177 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <%= stylesheet_link_tag "bootstrap" %>
+  <script src="https://kit.fontawesome.com/7ef18f319f.js" crossorigin="anonymous"></script>
 
-  <title>Hello, world!</title>
+  <%= javascript_pack_tag 'application' %>
+
+  <%= stylesheet_link_tag "home" %>
+
+<title>Hello, world!</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class = "navmargin navbar" id = "topnavbar">
+    <ul>
+      <li ><a href="#home">Agenda</a></li>
+      <li ><a href="#news">News</a></li>
+      <li ><a href="#contact">Contact</a></li>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      <!-- Botones de login -->
+      <% if current_user %>
+        <li class="nav-centered-right">
+          <%= link_to "Log out", "/logout" %>
+        </li>
+        <li class="nav-centered-right">
+          <span>Logged in as <%= current_user.username%></span>
+        </li>
+      <% else %>
+        <li class="nav-centered-right">
+          <%= link_to "Sign up", "/register" %>
+        </li>
+        <li class="nav-centered-right">
+          <%= link_to "Sign in", "/login" %>
+        </li>
+      <% end %>
+
+
+      <a href="javascript:void(0);" class="icon" onclick="responsiveMenuNavBar();">
+          <i class="fa fa-bars">
+          </i>
+        </a>
     </ul>
   </div>
-</nav>
-
-<div class="jumbotron" style="padding-top: 128px;">
-  <div class="container">
-    <h1 class="display-3">Agenda!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+  <div class = "page">
+    <h1>
+      Agenda
+    </h1>
+    <p>
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+      Wow this is a cool paragraph xDDDD
+    </p>
   </div>
-</div>
-
 </body>
 </html>
 

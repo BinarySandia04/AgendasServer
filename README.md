@@ -1,26 +1,19 @@
-# README
+# Agenda Server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The server part of Agenda
 
-Things you may want to cover:
+* Ruby version: 2.5.5 i think
 
-* Ruby version
+* System dependencies: A lot
 
-* System dependencies
+* Configuration: very well made
 
-* Configuration
+* Database creation: idk when
 
-* Database creation
+* Database initialization: wat
 
-* Database initialization
+* How to run the test suite: running it??
 
-* How to run the test suite
+* Services (job queues, cache servers, search engines, etc.): mmmh I don't know what this is but ok
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Test y tal
+* Deployment instructions: Deploy it

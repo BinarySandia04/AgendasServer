@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@import 'reset';
+
 $fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $color_black: #303030;
@@ -165,9 +167,16 @@ $bodypaddingtop: 75px;
 }
 
 .page {
+  h1 {
+    font-size: 72px;
+    font-weight: bold;
+
+    padding: 30px 10px;
+  }
+
   width: calc(100%);
   margin-left: $bodymargin * -1;
-  margin-top: $bodymargin * -1;
+  margin-top: $bodymargin * -2;
 
   padding-left: $bodymargin;
   padding-right: $bodymargin;

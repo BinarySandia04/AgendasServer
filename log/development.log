@@ -37985,3 +37985,217 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3637)
 
 
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:08:10 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Compiling...
+Started GET "/login" for 127.0.0.1 at 2020-06-27 14:08:12 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#login_view as HTML
+  Rendering sessions/login_view.html.erb
+  Rendered sessions/login_view.html.erb (Duration: 1.1ms | Allocations: 584)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1644)
+
+
+[Webpacker] Compilation failed:
+Hash: aa394ead6dc75b75c196
+Version: webpack 4.43.0
+Time: 967ms
+Built at: 06/27/2020 2:08:12 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-78ccff31f9edea480bd8.js    314 KiB  application  [emitted] [immutable]  application
+js/application-78ccff31f9edea480bd8.js.map    366 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-78ccff31f9edea480bd8.js js/application-78ccff31f9edea480bd8.js.map
+[./app/javascript/global/index.js] 298 bytes {application} [built]
+[./app/javascript/packs/application.js] 60 bytes {application} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} [built]
+    + 1 hidden module
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'jsdom' in '/home/arans/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 6:15-31
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'location' in '/home/arans/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 14:26-45
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'navigator' in '/home/arans/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 18:27-47
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'xmlhttprequest' in '/home/arans/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 9:30-55
+ @ ./app/javascript/packs/application.js
+
+
+warning package.json: No license field
+
+  Rendered home/index.html.erb (Duration: 2826.7ms | Allocations: 46837)
+Completed 200 OK in 2835ms (Views: 2829.1ms | ActiveRecord: 0.0ms | Allocations: 50066)
+
+
+Started GET "/register" for 127.0.0.1 at 2020-06-27 14:08:14 -0700
+Processing by SessionsController#register_view as HTML
+  Rendering sessions/register_view.html.erb
+  Rendered sessions/register_view.html.erb (Duration: 1.0ms | Allocations: 739)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1350)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:10:01 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 69.9ms | Allocations: 28376)
+Completed 200 OK in 87ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 31614)
+
+
+Started GET "/assets/home-db54bce67ff9bd2d8b0bb1232294155a15ec2c915d45d989e45482a18a4d7249.css" for 127.0.0.1 at 2020-06-27 14:10:01 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:10:39 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 13.6ms | Allocations: 5511)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 6013)
+
+
+Started GET "/assets/home-abfd1078698f5dd1b6992e80c8cc30a2a8893a9c5c86ad0bfc36bc84ef39881e.css" for 127.0.0.1 at 2020-06-27 14:10:39 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:10:46 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 11.0ms | Allocations: 5970)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6472)
+
+
+Started GET "/assets/home-2f80f23ec7dab5d2be45ec2777542757635e52bd2edc566525f30753d1af9454.css" for 127.0.0.1 at 2020-06-27 14:10:46 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:10:55 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 6.9ms | Allocations: 5293)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 5795)
+
+
+Started GET "/assets/home-e61d703b1e27e0a2b63db682af3155328d924d0a8e837a1ab56a582cc1c5cea5.css" for 127.0.0.1 at 2020-06-27 14:10:55 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:11:13 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.2ms | Allocations: 5519)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6018)
+
+
+Started GET "/assets/home-822738807138f94517560e476b8f5edb3771b07d4a20e7a6188e6453cdc632c3.css" for 127.0.0.1 at 2020-06-27 14:11:13 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:11:23 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 7.8ms | Allocations: 5062)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5561)
+
+
+Started GET "/assets/home-8c7780035dc6833a891731087128383726d9ec7a840f5c8a5155b9a88eea4ef9.css" for 127.0.0.1 at 2020-06-27 14:11:23 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:11:27 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.0ms | Allocations: 6769)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 7263)
+
+
+Started GET "/assets/home-92a2f0a452d7533588e9656591b53abcd4b65414ea4fb1082caf59ecc239372f.css" for 127.0.0.1 at 2020-06-27 14:11:27 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:01 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.9ms | Allocations: 7237)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 7737)
+
+
+Started GET "/assets/home-dc0cc4c31e0b162e15b127425e98e8a54ce5ca7677c0594a4f510072e36f27da.css" for 127.0.0.1 at 2020-06-27 14:12:01 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:17 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.6ms | Allocations: 5485)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5985)
+
+
+Started GET "/assets/home-2f164c974bb132189a27a1732ff2cb2fbe3563478e7c1c83b7f734c9db4c9a37.css" for 127.0.0.1 at 2020-06-27 14:12:17 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:29 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.0ms | Allocations: 5539)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 6041)
+
+
+Started GET "/assets/home-5b50136b6558799e95dedf7779eae9c9a3b4f975877e021488345dd632616bb1.css" for 127.0.0.1 at 2020-06-27 14:12:29 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:35 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 2.6ms | Allocations: 2651)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3151)
+
+
+Started GET "/assets/home-2f164c974bb132189a27a1732ff2cb2fbe3563478e7c1c83b7f734c9db4c9a37.css" for 127.0.0.1 at 2020-06-27 14:12:35 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:43 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 12.0ms | Allocations: 5936)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 6436)
+
+
+Started GET "/assets/home-040b7109c4ebd530aee06804951df9080d4f2c887703308db829e9a828cb88e0.css" for 127.0.0.1 at 2020-06-27 14:12:43 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:52 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 9.6ms | Allocations: 5509)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 6008)
+
+
+Started GET "/assets/home-a23497f86b7b00458b5dab1724b6db056fc7f84071f1bee9cc826384c4fd7ee6.css" for 127.0.0.1 at 2020-06-27 14:12:52 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:12:57 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 8.6ms | Allocations: 6800)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 7292)
+
+
+Started GET "/assets/home-7b271c99ee43202713bcd1d4f1d4f00cfc75d50beee32096462a07083627dabc.css" for 127.0.0.1 at 2020-06-27 14:12:57 -0700
+Started GET "/" for 127.0.0.1 at 2020-06-27 14:13:20 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb (Duration: 2.4ms | Allocations: 2608)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3108)
+
+
+Started GET "/assets/home-7b271c99ee43202713bcd1d4f1d4f00cfc75d50beee32096462a07083627dabc.css" for 127.0.0.1 at 2020-06-27 14:13:20 -0700
+Started GET "/login" for 127.0.0.1 at 2020-06-27 14:13:21 -0700
+Processing by SessionsController#login_view as HTML
+  Rendering sessions/login_view.html.erb
+  Rendered sessions/login_view.html.erb (Duration: 0.9ms | Allocations: 575)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1624)
+
+
+Started GET "/register" for 127.0.0.1 at 2020-06-27 14:13:22 -0700
+Processing by SessionsController#register_view as HTML
+  Rendering sessions/register_view.html.erb
+  Rendered sessions/register_view.html.erb (Duration: 0.8ms | Allocations: 738)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1349)
+
+

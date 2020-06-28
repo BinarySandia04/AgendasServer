@@ -38199,3 +38199,92 @@ Processing by SessionsController#register_view as HTML
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1349)
 
 
+Started GET "/" for 127.0.0.1 at 2020-06-28 13:09:44 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 2e7825915f114828776b
+Version: webpack 4.43.0
+Time: 2787ms
+Built at: 06/28/2020 1:09:49 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-78ccff31f9edea480bd8.js    314 KiB  application  [emitted] [immutable]  application
+js/application-78ccff31f9edea480bd8.js.map    366 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-78ccff31f9edea480bd8.js js/application-78ccff31f9edea480bd8.js.map
+[./app/javascript/global/index.js] 298 bytes {application} [built]
+[./app/javascript/packs/application.js] 60 bytes {application} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} [built]
+    + 1 hidden module
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'jsdom' in '/home/aroig/git/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 6:15-31
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'location' in '/home/aroig/git/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 14:26-45
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'navigator' in '/home/aroig/git/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 18:27-47
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/jQuery/lib/node-jquery.js
+Module not found: Error: Can't resolve 'xmlhttprequest' in '/home/aroig/git/GendaServer/node_modules/jQuery/lib'
+ @ ./node_modules/jQuery/lib/node-jquery.js 9:30-55
+ @ ./app/javascript/packs/application.js
+
+
+warning package.json: No license field
+
+  Rendered home/index.html.erb (Duration: 5205.4ms | Allocations: 30928)
+Completed 200 OK in 5215ms (Views: 5209.4ms | ActiveRecord: 0.0ms | Allocations: 33988)
+
+
+Started GET "/assets/home-7b271c99ee43202713bcd1d4f1d4f00cfc75d50beee32096462a07083627dabc.css" for 127.0.0.1 at 2020-06-28 13:09:50 +0200
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-06-28 13:09:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2020-06-28 13:09:53 +0200
+Processing by SessionsController#login_view as HTML
+  Rendering sessions/login_view.html.erb
+  Rendered sessions/login_view.html.erb (Duration: 1.6ms | Allocations: 589)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1561)
+
+

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     myUser = nil
 
     if usermail == "" or password == ""
-      renderResponse("You can't leave empty fields", "login_view")
+      renderResponse("ERROR_NO_PARAMS", "You can't leave empty fields", "login_view")
       return
     end
     if usermail.include? "@"
@@ -20,14 +20,18 @@ class SessionsController < ApplicationController
     end
 
     if myUser.nil?
-      renderResponse("This user doesn't exist", "login_view")
+      renderResponse("ERROR_USERMAIL_DOESNT_EXISTS", "This user doesn't exist", "login_view")
       return
     else
       if myUser.authenticate(password)
-        session[:user_id] = myUser.id
-        redirect_to root_url
+        if request.format.json?
+          renderJson("OK")
+        else
+          session[:user_id] = myUser.id
+          redirect_to root_url
+        end
       else
-        renderResponse("Wrong password", "login_view")
+        renderResponse("ERROR_WRONG_PASSWORD", "Wrong password", "login_view")
       end
     end
   end
@@ -39,48 +43,57 @@ class SessionsController < ApplicationController
     confirmation = params[:confirmation]
 
     if username == "" or password == "" or email == ""
-      renderResponse("You can't leave empty fields", "register_view")
+      renderResponse("ERROR_NO_PARAMS", "You can't leave empty fields", "register_view")
       return
     end
 
     if password != confirmation
-      renderResponse("Password mismatch", "register_view")
+      renderResponse("ERROR_CONFIRMATION","Password mismatch", "register_view")
       return
     end
 
     if password == username
-      renderResponse("Your password can't be your username", "register_view")
+      renderResponse("ERROR_PASS_EQUALS_USER","Your password can't be your username", "register_view")
       return
     end
 
     if password.length > 16
-      renderResponse("Password is too long. Make your password between 6 and 16 characters", "register_view")
+      renderResponse("ERROR_PASSWORD_LONG", "Password is too long. Make your password between 6 and 16 characters", "register_view")
       return
     elsif password.length < 6
-      renderResponse("Password is too short. Make your password between 6 and 16 characters", "register_view")
+      renderResponse("ERROR_PASSWORD_SHORT", "Password is too short. Make your password between 6 and 16 characters", "register_view")
       return
     end
 
     if User.where(username: username).exists?
-      renderResponse("This username is already taken", "register_view")
+      renderResponse("ERROR_USERNAME_ALREADY_EXISTS", "This username is already taken", "register_view")
       return
     elsif User.where(email: email).exists?
-      renderResponse("This email already belongs to an account", "register_view")
+      renderResponse("ERROR_EMAIL_TAKEN", "This email already belongs to an account", "register_view")
       return
     else
       if createUser(email, username, password)
-        session[:user_id] = User.where(username: username).first.id
-        redirect_to root_url
+        if request.format.json?
+          renderJson("OK")
+        else
+          session[:user_id] = User.where(username: username).first.id
+          redirect_to root_url
+        end
       else
-        renderResponse("Error", "register_view")
+        renderResponse("ERROR", "Error", "register_view")
         return
       end
     end
   end
 
   protected
-  def renderResponse(response, view)
-    flash.now[:alert] = response
-    render view
+  def renderResponse(res, response, view)
+    puts params[:uapit]
+    if request.format.json?
+      renderJson(res)
+    else
+      flash.now[:alert] = response
+      render view
+    end
   end
 end

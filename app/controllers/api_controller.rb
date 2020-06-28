@@ -1,6 +1,5 @@
 class ApiController < ApplicationController
   include ActionController::MimeResponds
-  protect_from_forgery with: :null_session
 
   ##########################################################
   # Funciones de rutas

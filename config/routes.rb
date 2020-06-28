@@ -9,7 +9,5 @@
   get 'logout', to: 'sessions#logout'
   root to: 'home#index'
   # Api routes
-  post 'api/user/register', to: 'api#register'
-  post 'api/user/login', to: 'api#login'
 
   end

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   require 'json'
+  protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
 
   helper_method :current_user
   def current_user

@@ -11,6 +11,9 @@ $color_black_2: #404040;
 $color_white: #fff;
 $color_white2: #dcdcdc;
 
+$color_accent: #469de2;
+$color_accent_selected: #6fb2e7;
+
 $border_radius: 5px;
 $phone_width: 800px;
 $hovertime: 0.3s;
@@ -18,17 +21,25 @@ $hovertime: 0.3s;
 $firstmargin: 5%;
 $secondmargin: 8%;
 
-$bodymargin: 2%;
 $bodypaddingtop: 75px;
+
+$color_red_primary: #f18888;
+$color_red_secondary: #950000;
+
+.alert {
+  margin: 5px 0;
+  padding: 10px;
+  &.red {
+    background-color: $color_red_primary;
+    color: $color_red_secondary;
+    border-radius: 4px;
+    border-color: $color_red_secondary;
+  }
+}
 
 .navmargin {
   margin-left: $firstmargin;
   margin-right: $firstmargin;
-
-  @media screen and (max-width: $phone_width){
-    margin-left: 0%;
-    margin-right: 0%;
-  }
 }
 
 .nicemargin {
@@ -42,10 +53,10 @@ $bodypaddingtop: 75px;
 
     top: 10px;
 
-    width: 100% - $firstmargin * 2 - $bodymargin * 2;
+    width: 100% - $firstmargin * 2;
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: $color_black;
     border-radius: $border_radius;
@@ -70,9 +81,10 @@ $bodypaddingtop: 75px;
       padding: 14px 20px;
       text-decoration: none;
 
-      transition: $hovertime * 2;
 
       &:hover {
+
+        transition: $hovertime * 2;
         background-color: $color_black_2;
       }
 
@@ -99,7 +111,7 @@ $bodypaddingtop: 75px;
 
   @media screen and (max-width: $phone_width){
      ul {
-       width: 100% - $bodymargin * 2;
+       width: 100% - $firstmargin * 2;
      }
 
     li:not(:first-child) {
@@ -174,17 +186,118 @@ $bodypaddingtop: 75px;
     padding: 30px 10px;
   }
 
-  width: calc(100%);
-  margin-left: $bodymargin * -1;
-  margin-top: $bodymargin * -2;
+  width: 100%;
 
-  padding-left: $bodymargin;
-  padding-right: $bodymargin;
+  margin-top: -20px;
 
   padding-top: $bodypaddingtop;
 }
 
+.centered-login-container {
+
+  max-height: 80%;
+  max-width: 80%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  .form-container {
+    h1 {
+      text-align: center;
+      color: $color_white;
+      font-weight: bold;
+
+      padding-bottom: 30px;
+
+      font-size: 48px;
+    }
+
+    .form-parameters {
+      background-color: $color_white;
+      border-radius: 10px;
+
+      padding: 20px 20px;
+
+      text-align: center;
+
+      max-height: 300px;
+      width: 300px;
+
+      overflow: auto;
+
+      .field {
+        padding: 10px;
+        text-align: left;
+
+        br {
+          display: block;
+          margin: 5px 0;
+        }
+
+        .textbox {
+          width: 100%;
+          padding: 5px 0;
+          border: none;
+          border-bottom: 2px solid $color_black_2;
+          border-width: 2px;
+          transition: 0.5s;
+
+          margin-bottom: 15px;
+
+          &:focus {
+            border-bottom: 2px solid $color_accent;
+          }
+        }
+      }
+
+      .action {
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $color_accent;
+          transition: 0.5s;
+
+          &:hover {
+            color: $color_accent_selected;
+          }
+        }
+
+        .submit-button {
+          background-color: $color_accent;
+          color: $color_white;
+          text-decoration: none;
+          border: none;
+          padding: 12px 64px;
+          border-radius: 4px;
+          width: 100%;
+          transition: .5s;
+
+          &:hover {
+            background-color: $color_accent_selected;
+          }
+        }
+      }
+    }
+  }
+}
+
 body {
-  margin: $bodymargin;
   font-family: $fonts;
+
+  &.centered-login {
+    background-color: $color_black_2;
+  }
 }

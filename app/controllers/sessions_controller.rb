@@ -4,6 +4,25 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
+  def register_view
+    unless session[:user_id].nil?
+      if params[:api] == "YES"
+        renderJson("ALREADY_LOGGED_IN")
+      else
+        redirect_to root_url
+      end
+    end
+  end
+
+  def login_view
+    unless session[:user_id].nil?
+      if params[:api] == "YES"
+        renderJson("ALREADY_LOGGED_IN")
+      else
+        redirect_to root_url
+      end
+    end
+  end
   def create
     usermail = params[:usermail]
     password = params[:password]
@@ -24,7 +43,7 @@ class SessionsController < ApplicationController
       return
     else
       if myUser.authenticate(password)
-        if request.format.json?
+        if params[:api] == "YES"
           renderJson("OK")
         else
           session[:user_id] = myUser.id
@@ -73,7 +92,7 @@ class SessionsController < ApplicationController
       return
     else
       if createUser(email, username, password)
-        if request.format.json?
+        if params[:api] == "YES"
           renderJson("OK")
         else
           session[:user_id] = User.where(username: username).first.id
@@ -88,8 +107,7 @@ class SessionsController < ApplicationController
 
   protected
   def renderResponse(res, response, view)
-    puts params[:uapit]
-    if request.format.json?
+    if params[:api] == "YES"
       renderJson(res)
     else
       flash.now[:alert] = response

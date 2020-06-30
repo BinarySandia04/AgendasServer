@@ -1,14 +1,62 @@
-<p id=”alert”><%= alert %></p>
-<h1>Login</h1>
-<%= form_tag login_path do |form| %>
-  <div class=”field”>
-    <%= label_tag :usermail %>
-    <%= text_field_tag :usermail %>
-  </div>  <div class=”field”>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://kit.fontawesome.com/7ef18f319f.js" crossorigin="anonymous"></script>
+
+  <%= javascript_pack_tag 'application' %>
+  <%= stylesheet_link_tag "home" %>
+
+  <title>Hello, world!</title>
+</head>
+
+<body class = "centered-login">
+<!-- <h1>Agenda</h1> -->
+<div class = "navmargin navbar" id = "topnavbar">
+  <ul>
+    <li ><a href="#home">Agenda</a></li>
+    <li ><a href="#news">News</a></li>
+    <li ><a href="#contact">Contact</a></li>
+
+
+    <a href="javascript:void(0);" class="icon" onclick="responsiveMenuNavBar();">
+      <i class="fa fa-bars">
+      </i>
+    </a>
+  </ul>
 </div>
-  <div class=”actions”>
-  <%= submit_tag(value = "Login") %>
+
+<div class = "centered-login-container">
+  <%= form_tag login_path, class: "form-container" do |form| %>
+    <h1>Login</h1>
+    <div class="form-parameters">
+      <%if alert %>
+        <div class="alert red">
+          <%= alert %>
+        </div>
+      <%end %>
+      <div class="field">
+        <%= label_tag 'usermail', 'Nombre de usuario o correo electronico:', class: "textlabel" %>
+        <br>
+        <%= text_field_tag :usermail, '', class: "textbox" %>
+      </div>
+      <div class="field">
+        <%= label_tag 'password', 'Contraseña:', class: "textlabel" %>
+        <br>
+        <%= password_field_tag :password, '', class: "textbox"%>
+      </div>
+      <div class="action">
+        <%= submit_tag 'Login', class: "submit-button"%>
+        <p>
+          Don't have an account?
+          <%= link_to 'Register', register_path %>
+        </p>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
+</body>
+</html>

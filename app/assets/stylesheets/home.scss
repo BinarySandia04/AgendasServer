@@ -3,212 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @import 'reset';
+@import 'variables';
 
-$fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-$color_black: #303030;
-$color_black_2: #404040;
-$color_white: #fff;
-$color_white2: #dcdcdc;
-
-$color_accent: #469de2;
-$color_accent_selected: #6fb2e7;
-
-$border_radius: 5px;
-$phone_width: 800px;
-$hovertime: 0.3s;
-
-$firstmargin: 5%;
-$secondmargin: 8%;
-
-$bodypaddingtop: 75px;
-
-$color_red_primary: #f18888;
-$color_red_secondary: #950000;
-
-.alert {
-  margin: 5px 0;
-  padding: 10px;
-  &.red {
-    background-color: $color_red_primary;
-    color: $color_red_secondary;
-    border-radius: 4px;
-    border-color: $color_red_secondary;
-  }
-}
-
-.navmargin {
-  margin-left: $firstmargin;
-  margin-right: $firstmargin;
-}
-
-.nicemargin {
-  margin-left: $secondmargin;
-  margin-right: $secondmargin;
-}
-
-.navbar {
-  ul {
-    position: fixed;
-
-    top: 10px;
-
-    width: 100% - $firstmargin * 2;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: $color_black;
-    border-radius: $border_radius;
-  }
-
-  .nav-centered-right {
-    float: right;
-  }
-
-  .icon {
-    display: none;
-  }
-
-  li {
-    float: left;
-
-    a {
-      display: block;
-      padding: 8px;
-      color: $color_white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-
-
-      &:hover {
-
-        transition: $hovertime * 2;
-        background-color: $color_black_2;
-      }
-
-      &:focus {
-        outline: none;
-        background-color: $color_black_2;
-      }
-
-      &:active {
-        background-color: $color_white2;
-        color: $color_black;
-        transition: 0s;
-      }
-    }
-
-    span {
-      display: block;
-      padding: 8px;
-      color: $color_white2;
-      text-align: center;
-      padding: 14px 20px;
-    }
-  }
-
-  @media screen and (max-width: $phone_width){
-     ul {
-       width: 100% - $firstmargin * 2;
-     }
-
-    li:not(:first-child) {
-
-      height: 0px;
-      visibility: hidden;
-      transition: none;
-      float: none;
-      opacity: 0;
-
-      a {
-        text-align: left;
-      }
-    }
-
-    a.icon {
-      float: right;
-      display: block;
-      color: $color_white;
-      padding: 14px 20px;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $color_black_2;
-      }
-
-      &:focus {
-        outline: none;
-        background-color: $color_black_2;
-      }
-
-      &:active {
-        background-color: $color_white2;
-        color: $color_black;
-        transition: 0s;
-      }
-
-      transition: $hovertime;
-    }
-
-    &.responsive {
-      position: relative;
-
-      .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      li {
-        float: none;
-        a {
-          text-align: left;
-        }
-
-        &:not(:first-child){
-          visibility: visible;
-          opacity: 1;
-          height: 47px;
-          transition: all $hovertime / 2 ease-out;
-        }
-      }
-    }
-  }
-}
-
-.page {
-  h1 {
-    font-size: 72px;
-    font-weight: bold;
-
-    padding: 30px 10px;
-  }
-
-  width: 100%;
-
-  margin-top: -20px;
-
-  padding-top: $bodypaddingtop;
-}
-
-.centered-login-container {
-
-  max-height: 80%;
-  max-width: 80%;
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: auto;
+@mixin form-style($width, $height){
   .form-container {
     h1 {
       text-align: center;
@@ -228,8 +25,8 @@ $color_red_secondary: #950000;
 
       text-align: center;
 
-      max-height: 300px;
-      width: 300px;
+      max-height: $height;
+      width: $width;
 
       overflow: auto;
 
@@ -269,6 +66,7 @@ $color_red_secondary: #950000;
           text-decoration: none;
           color: $color_accent;
           transition: 0.5s;
+          font-weight: bold;
 
           &:hover {
             color: $color_accent_selected;
@@ -279,6 +77,7 @@ $color_red_secondary: #950000;
           background-color: $color_accent;
           color: $color_white;
           text-decoration: none;
+          font-weight: bold;
           border: none;
           padding: 12px 64px;
           border-radius: 4px;
@@ -294,10 +93,134 @@ $color_red_secondary: #950000;
   }
 }
 
+
+.alert {
+  margin: 5px 0;
+  padding: 10px;
+  &.red {
+    background-color: $color_red_primary;
+    color: $color_red_secondary;
+    border-radius: 4px;
+    border-color: $color_red_secondary;
+  }
+}
+
+.navmargin {
+  margin-left: $firstmargin;
+  margin-right: $firstmargin;
+}
+.nicemargin {
+  margin-left: $secondmargin;
+  margin-right: $secondmargin;
+}
+
+.page {
+
+  margin-top: -20px;
+  padding: $bodypaddingtop $bodypadding;
+
+  h1 {
+    font-size: 72px;
+    font-weight: bold;
+
+    padding: 50px 0px;
+  }
+
+  h2 {
+    font-size: 38px;
+    font-weight: bold;
+    padding: 0 10px 30px 0;
+  }
+
+  p {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  @include form-style(auto, auto);
+}
+
+.centered-login-container {
+
+  max-height: 80%;
+  max-width: 80%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+
+  @include form-style(300px, 300px);
+}
+
 body {
   font-family: $fonts;
 
   &.centered-login {
     background-color: $color_black_2;
   }
+}
+
+img {
+  border-radius: 0%;
+
+  &.profile-image-large {
+    width: 300px;
+  }
+
+  &.profile-image-big {
+    width: 100px;
+  }
+
+  &.profile-image-medium {
+    width: 50px;
+  }
+
+  &.profile-image-small {
+    width: 25px;
+  }
+}
+
+.horizontal-layout {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@mixin button($gradient){
+  background-image: $gradient;
+  background-size: 400%;
+  border-radius: 5px;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 20px;
+  cursor: pointer;
+  transition: 0.1s;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.15);
+  font-weight: bold;
+
+  width: 200px;
+
+  &:hover {
+    background-position: 100%;
+  }
+}
+
+.green-button {
+  @include button($green_gradient);
+}
+
+.blue-button {
+  @include button($blue_gradient);
 }

@@ -5,29 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="https://kit.fontawesome.com/7ef18f319f.js" crossorigin="anonymous"></script>
-
-  <%= javascript_pack_tag 'application' %>
-  <%= stylesheet_link_tag "home" %>
+  <%= render template: 'templates/imports' %>
 
   <title>Hello, world!</title>
 </head>
 
 <body class = "centered-login">
 <!-- <h1>Agenda</h1> -->
-<div class = "navmargin navbar" id = "topnavbar">
-  <ul>
-    <li ><a href="#home">Agenda</a></li>
-    <li ><a href="#news">News</a></li>
-    <li ><a href="#contact">Contact</a></li>
-
-
-    <a href="javascript:void(0);" class="icon" onclick="responsiveMenuNavBar();">
-      <i class="fa fa-bars">
-      </i>
-    </a>
-  </ul>
-</div>
+<%= render template: 'templates/navbar' %>
 
 <div class = "centered-login-container">
   <%= form_tag login_path, class: "form-container" do |form| %>

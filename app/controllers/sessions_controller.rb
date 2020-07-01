@@ -5,8 +5,9 @@ class SessionsController < ApplicationController
   end
 
   def register_view
+    @hide_user = true
     unless session[:user_id].nil?
-      if params[:api] == "YES"
+      if isApi
         renderJson("ALREADY_LOGGED_IN")
       else
         redirect_to root_url
@@ -15,8 +16,9 @@ class SessionsController < ApplicationController
   end
 
   def login_view
+    @hide_user = true
     unless session[:user_id].nil?
-      if params[:api] == "YES"
+      if isApi
         renderJson("ALREADY_LOGGED_IN")
       else
         redirect_to root_url
@@ -24,6 +26,8 @@ class SessionsController < ApplicationController
     end
   end
   def create
+    @hide_user = true
+
     usermail = params[:usermail]
     password = params[:password]
     myUser = nil
@@ -43,7 +47,7 @@ class SessionsController < ApplicationController
       return
     else
       if myUser.authenticate(password)
-        if params[:api] == "YES"
+        if isApi
           renderJson("OK")
         else
           session[:user_id] = myUser.id
@@ -56,6 +60,8 @@ class SessionsController < ApplicationController
   end
 
   def register
+    @hide_user = true
+
     username = params[:username]
     email = params[:email]
     password = params[:password]
@@ -92,7 +98,7 @@ class SessionsController < ApplicationController
       return
     else
       if createUser(email, username, password)
-        if params[:api] == "YES"
+        if isApi
           renderJson("OK")
         else
           session[:user_id] = User.where(username: username).first.id
@@ -102,16 +108,6 @@ class SessionsController < ApplicationController
         renderResponse("ERROR", "Error", "register_view")
         return
       end
-    end
-  end
-
-  protected
-  def renderResponse(res, response, view)
-    if params[:api] == "YES"
-      renderJson(res)
-    else
-      flash.now[:alert] = response
-      render view
     end
   end
 end

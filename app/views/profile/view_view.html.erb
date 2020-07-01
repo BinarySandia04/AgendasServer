@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+
+  <title>Hello, world!</title>
+</head>
+<body>
+
+<!-- navbar -->
+<%= render template: 'templates/navbar' %>
+
+<div class="page">
+  <% if @user %>
+
+    <h1><%= @user.displayname %></h1>
+    <% if @user.avatar.attached? %>
+      <%= image_tag(url_for(@user.avatar), class: "profile-image-large")%>
+    <% else %>
+      <%= image_tag("profile.png", class: "profile-image-big")%>
+    <% end %>
+
+    <% if @is_my_profile %>
+      <br>
+      <%= link_to "Edit profile", "/editprofile", class: "button-class" %>
+    <% end %>
+
+  <% else %>
+    <h1>User not found</h1>
+  <% end %>
+</div>
+</body>
+</html>

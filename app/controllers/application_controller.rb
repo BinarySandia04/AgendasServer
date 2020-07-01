@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def isApi
+    params[:api] == "YES"
+  end
+
   def renderJson(theJson)
     respond_to do |format|
       format.html { render json: theJson}
@@ -19,11 +23,12 @@ class ApplicationController < ActionController::Base
   end
 
   def createUser (email, username, password)
-    @user = User.new
+    @user = User.new(user_params)
 
     @user.email = email
     @user.password = password
     @user.username = username
+    @user.displayname = username
 
     if @user.save
       puts "User digested password: " + @user.password_digest
@@ -33,4 +38,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def renderResponse(res, response, view)
+    if isApi
+      renderJson(res)
+    else
+      flash.now[:alert] = response
+      render view
+    end
+  end
+
+  private
+  def user_params
+    params.permit(:avatar)
+  end
 end

@@ -5,178 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="https://kit.fontawesome.com/7ef18f319f.js" crossorigin="anonymous"></script>
+  <%= render template: 'templates/imports' %>
 
-  <%= javascript_pack_tag 'application' %>
-
-  <%= stylesheet_link_tag "home" %>
-
-<title>Hello, world!</title>
+  <title>Hello, world!</title>
 </head>
 <body>
   <!-- navbar -->
-  <div class = "navmargin navbar" id = "topnavbar">
-    <ul>
-      <li ><a href="#home">Agenda</a></li>
-      <li ><a href="#news">News</a></li>
-      <li ><a href="#contact">Contact</a></li>
-
-      <!-- Botones de login -->
-      <% if current_user %>
-        <li class="nav-centered-right">
-          <%= link_to "Log out", "/logout" %>
-        </li>
-        <li class="nav-centered-right">
-          <span>Logged in as <%= current_user.username%></span>
-        </li>
-      <% else %>
-        <li class="nav-centered-right">
-          <%= link_to "Sign up", "/register" %>
-        </li>
-        <li class="nav-centered-right">
-          <%= link_to "Sign in", "/login" %>
-        </li>
-      <% end %>
-
-
-      <a href="javascript:void(0);" class="icon" onclick="responsiveMenuNavBar();">
-          <i class="fa fa-bars">
-          </i>
-        </a>
-    </ul>
-  </div>
+  <%= render template: 'templates/navbar' %>
 
   <!-- front intro page -->
-  <% unless current_user %>
+  <% unless @user %>
   <div class = "page">
     <h1>
       Agenda
     </h1>
     <p>
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
-      Wow this is a cool paragraph xDDDD
       Wow this is a cool paragraph xDDDD
     </p>
   </div>
@@ -185,6 +28,13 @@
     <h1>
       La teva agenda <!-- Capitalist momento -->
     </h1>
+    <%if @user.groups.count == 0 %>
+      <h2>No formes part de ningun grup!</h2>
+      <p>Per començar, crea un grup o uneixte a un grup existent:</p>
+      <%= render template: 'templates/quick-start-buttons'%>
+    <% else %>
+      Els teus grups:
+    <% end %>
   </div>
   <% end %>
 </body>

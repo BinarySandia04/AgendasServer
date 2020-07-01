@@ -8,3 +8,15 @@ window.responsiveMenuNavBar = function(){
         console.log("Ahora ya no");
     }
 };
+
+window.dropdownNavBarActive = function(){
+    var x = document.getElementById("dropdown-content");
+    x.className = "dropdown-content showed";
+};
+
+window.dropdownNavBarInactive = function(){
+    setTimeout(function(){
+        var x = document.getElementById("dropdown-content");
+        x.className = "dropdown-content hidden";
+    }, 200);
+};

@@ -1,5 +1,12 @@
 class HomeController < ApplicationController
   def index
-    # Bruh
+    @user = current_user
+
+  end
+
+  def news
+  end
+
+  def contact
   end
 end

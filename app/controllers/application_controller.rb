@@ -22,13 +22,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def createUser (email, username, password)
+  def createUser (email, username, password, name, surname, birthdate)
     @user = User.new(user_params)
 
     @user.email = email
     @user.password = password
     @user.username = username
     @user.displayname = username
+    @user.name = name
+    @user.surname = surname
+    @user.birthdate = birthdate
+    @user.role = "user"
 
     if @user.save
       puts "User digested password: " + @user.password_digest
@@ -49,6 +53,6 @@ class ApplicationController < ActionController::Base
 
   private
   def user_params
-    params.permit(:avatar)
+    params.permit(:avatar, :email, :username, :displayname, :name, :surname, :birthdate, :role)
   end
 end

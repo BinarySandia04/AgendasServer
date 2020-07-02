@@ -21,6 +21,10 @@ $color_blue_secondary: #07ffff;
 $color_blue_accent: #3659d9;
 $blue_gradient: linear-gradient(to bottom right, $color_blue_primary, $color_blue_secondary);
 
+$color_red_primary: #ff4444;
+$color_red_secondary: #ff2407;
+$color_red_accent: #d93636;
+$red_gradient: linear-gradient(to bottom right, $color_red_primary, $color_red_secondary);
 
 $border_radius: 5px;
 $phone_width: 800px;
@@ -32,5 +36,5 @@ $secondmargin: 8%;
 $bodypaddingtop: 75px;
 $bodypadding: 100px;
 
-$color_red_primary: #f18888;
-$color_red_secondary: #950000;
+$color_red_alert_primary: #f18888;
+$color_red_alert_secondary: #950000;

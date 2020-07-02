@@ -8,5 +8,6 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @user = current_user
   end
 end

@@ -98,10 +98,10 @@
   margin: 5px 0;
   padding: 10px;
   &.red {
-    background-color: $color_red_primary;
-    color: $color_red_secondary;
+    background-color: $color_red_alert_primary;
+    color: $color_red_alert_secondary;
     border-radius: 4px;
-    border-color: $color_red_secondary;
+    border-color: $color_red_alert_secondary;
   }
 }
 
@@ -223,4 +223,8 @@ img {
 
 .blue-button {
   @include button($blue_gradient);
+}
+
+.red-button {
+  @include button($red_gradient);
 }

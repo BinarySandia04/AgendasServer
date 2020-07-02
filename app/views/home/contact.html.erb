@@ -16,5 +16,8 @@
     <h1>
       Contacte
     </h1>
+    <% if @user.role == "admin" %>
+      <%= link_to "Admin dashboard!", '/admin', class: "red-button" %>
+    <% end %>
   </div>
 </body>

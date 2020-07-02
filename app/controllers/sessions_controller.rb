@@ -67,7 +67,11 @@ class SessionsController < ApplicationController
     password = params[:password]
     confirmation = params[:confirmation]
 
-    if username == "" or password == "" or email == ""
+    name = params[:name]
+    surname = params[:surname]
+    birthdate = params[:birthdate][0]
+
+    if username == "" or password == "" or email == "" or name == "" or surname == "" or birthdate == ""
       renderResponse("ERROR_NO_PARAMS", "You can't leave empty fields", "register_view")
       return
     end
@@ -97,7 +101,7 @@ class SessionsController < ApplicationController
       renderResponse("ERROR_EMAIL_TAKEN", "This email already belongs to an account", "register_view")
       return
     else
-      if createUser(email, username, password)
+      if createUser(email, username, password, name, surname, birthdate)
         if isApi
           renderJson("OK")
         else

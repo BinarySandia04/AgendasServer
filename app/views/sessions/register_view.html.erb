@@ -28,6 +28,21 @@
         <%= text_field_tag :username, '', class: "textbox" %>
       </div>
       <div class="field">
+        <%= label_tag 'name', 'Nombre', class: "textlabel" %>
+        <br>
+        <%= text_field_tag :name, '', class: 'textbox' %>
+      </div>
+      <div class="field">
+        <%= label_tag 'surname', 'Apellidos', class: "textlabel" %>
+        <br>
+        <%= text_field_tag :surname, '', class: 'textbox' %>
+      </div>
+      <div class="field">
+        <%= label_tag 'birthdate', 'Fecha de nacimiento', class: "textlabel" %>
+        <br>
+        <%= date_field :birthdate, '', value: '2000-01-01', class: 'textbox' %>
+      </div>
+      <div class="field">
         <%= label_tag 'email', 'Correo electronico', class: "textlabel" %>
         <br>
         <%= text_field_tag :email, '', class: "textbox" %>

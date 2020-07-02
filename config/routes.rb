@@ -1,7 +1,9 @@
   Rails.application.routes.draw do
 
-    get 'news', to: 'home#news'
-    get 'contact', to: 'home#contact'
+  get 'admin', to: 'dashboard#admin_dashboard'
+
+  get 'news', to: 'home#news'
+  get 'contact', to: 'home#contact'
 
   get 'login', to: 'sessions#login_view'
   post 'login', to: 'sessions#create'

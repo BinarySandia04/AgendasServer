@@ -15,14 +15,15 @@
 <%= render template: 'templates/navbar' %>
 
 <div class="page">
-  <% if @user %>
+  <% if @viewuser %>
 
-    <h1><%= @user.displayname %></h1>
-    <% if @user.avatar.attached? %>
-      <%= image_tag(url_for(@user.avatar), class: "profile-image-large")%>
+    <h1><%= @viewuser.displayname %></h1>
+    <% if @viewuser.avatar.attached? %>
+      <%= image_tag(url_for(@viewuser.avatar), class: "profile-image-large")%>
     <% else %>
-      <%= image_tag("profile.png", class: "profile-image-big")%>
+      <%= image_tag("profile.png", class: "profile-image-large")%>
     <% end %>
+    <p><%= @viewuser.description %></p>
 
     <% if @is_my_profile %>
       <br>

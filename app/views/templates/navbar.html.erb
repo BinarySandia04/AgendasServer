@@ -1,7 +1,7 @@
 <!-- navbar -->
 <div class = "navmargin navbar" id = "topnavbar">
   <ul>
-    <% if current_user %>
+    <% if @current_user %>
     <li>
       <a href="javascript:void(0)" class="dropdown element plus" onclick="dropdownNavBarActive();" onblur="dropdownNavBarInactive()">+</a>
       <div class="dropdown-content hidden" id="dropdown-content">
@@ -21,13 +21,13 @@
     </li>
 
     <!-- Botones de login -->
-    <% if current_user %>
+    <% if @current_user %>
       <li class="nav-centered-right">
         <%= link_to "Tencar sessió", "/logout", class: "element" %>
       </li>
       <li class="nav-centered-right">
         <% unless @hide_profile_link %>
-          <span>Logged in as <%= link_to current_user.username, "/profile/" + current_user.username %> </span>
+          <span>Logged in as <%= link_to @current_user.username, "/profile/" + @current_user.username %> </span>
         <% end %>
       </li>
     <% else %>

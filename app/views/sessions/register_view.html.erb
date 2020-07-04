@@ -16,7 +16,7 @@
 <div class = "centered-login-container">
   <%= form_tag register_path, class: "form-container" do |form| %>
     <h1>Register</h1>
-    <div class="form-parameters">
+    <div class="form-parameters" style="width: 550px">
       <%if alert %>
         <div class="alert red">
           <%= alert %>
@@ -47,6 +47,7 @@
         <br>
         <%= text_field_tag :email, '', class: "textbox" %>
       </div>
+      <div class="horizontal-layout">
       <div class="field">
         <%= label_tag 'password', 'Contraseña:', class: "textlabel" %>
         <br>
@@ -56,6 +57,7 @@
         <%= label_tag 'confirmation', 'Confirma la contraseña:', class: "textlabel" %>
         <br>
         <%= password_field_tag :confirmation, '', class: "textbox"%>
+      </div>
       </div>
       <div class="action">
         <%= submit_tag 'Register', class: "submit-button"%>

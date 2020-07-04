@@ -6,5 +6,21 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :email, uniqueness: true
 
-  has_and_belongs_to_many :groups
+  has_many :memberships
+  has_many :groups, through: :memberships
+
+  has_many :invitations, :class_name => "Invitation", :foreign_key => "recipent_id"
+  has_many :sent_invitations, :class_name => "Invitation", :foreign_key => 'sender_id'
+
+  after_commit :flush_cache
+
+  def flush_cache
+    Rails.cache.delete('users')
+  end
+
+  class << self
+    def get_from_cache(user_id)
+      Rails.cache.fetch('users') {User.find(user_id)}
+    end
+  end
 end

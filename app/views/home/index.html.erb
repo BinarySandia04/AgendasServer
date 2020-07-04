@@ -35,6 +35,10 @@
       <%= render template: 'templates/quick-start-buttons'%>
     <% else %>
       Els teus grups:
+      <% @user.groups.each do |group| %>
+        <li><%= group.name %> Id: <%= group.code %> <%= link_to "View", '/group/view/' + group.code %></li>
+      <% end %>
+      <%= render template: 'templates/quick-start-buttons'%>
     <% end %>
   </div>
   <% end %>

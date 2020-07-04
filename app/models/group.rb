@@ -1,13 +1,20 @@
 class Group < ApplicationRecord
   has_many :tasks
-  has_and_belongs_to_many :users
 
-  before_create :generate_code
+  has_many :memberships
+  has_many :users, through: :memberships
 
-  private
-  def generate_code
-    update_column :code, SecureRandom.hex(4)
-  rescue ActiveRecord::RecordNotUnique
-    retry
+  has_many :invitations
+
+  after_commit :flush_cache
+
+  def flush_cache
+    Rails.cache.delete('groups')
+  end
+
+  class << self
+    def get_from_cache(code)
+      Rails.cache.fetch('groups') {Group.find_by_code(code)}
+    end
   end
 end

@@ -1,5 +1,13 @@
   Rails.application.routes.draw do
 
+  get 'group/create'
+  post 'group/create', to: 'group#create_post'
+
+  get 'group/view/:groupcode', to: 'group#view'
+
+  get 'group/join', to: 'group#join'
+  post 'group/join', to: 'group#join_post'
+
   get 'admin', to: 'dashboard#admin_dashboard'
 
   get 'news', to: 'home#news'

@@ -1,5 +1,6 @@
 class ProfileController < ApplicationController
   def edit_view
+    @user = current_user
     if session[:user_id].nil?
       if isApi
         renderJson("UNAUTHORIZED")
@@ -10,6 +11,7 @@ class ProfileController < ApplicationController
   end
 
   def edit
+    @user = current_user
     if session[:user_id].nil?
       if isApi
         renderJson("UNAUTHORIZED")
@@ -17,16 +19,21 @@ class ProfileController < ApplicationController
         redirect_to root_url
       end
     else
-      user = current_user
-      if user.authenticate(params[:password])
-        user.update(displayname: params[:displayname]) unless params[:displayname] == ""
-        user.avatar.attach(params[:avatar]) if params[:avatar]
+      if @user.authenticate(params[:password])
 
-        # user.update_attribute(:avatar, params[:avatar])
+        # Update fields
+        @user.avatar.attach(params[:avatar]) if params[:avatar]
+        @user.displayname = params[:displayname] unless params[:displayname] == ""
+        @user.name = params[:name] unless params[:name] == ""
+        @user.surname = params[:surname] unless params[:surname] == ""
+        @user.birthdate = params[:birthdate][0]
+        @user.update_attribute(:description, params[:description])
+
+
         if isApi
           renderJson("OK")
         else
-          redirect_to '/profile/' + user.username
+          redirect_to '/profile/' + @user.username
         end
       else
         renderResponse("ERROR_AUTHENTICATION", "Password confirmation failed", "edit_view")
@@ -35,12 +42,15 @@ class ProfileController < ApplicationController
   end
 
   def view
+    @user = current_user
   end
 
   def view_view
-    @user = User.where(username: params[:profile]).first
-    if @user
-      @is_my_profile = @user.id == session[:user_id]
+    @user = current_user
+
+    @viewuser = User.where(username: params[:profile]).first
+    if @viewuser
+      @is_my_profile = @viewuser.id == @user.id
       @hide_profile_link = @is_my_profile
     end
   end

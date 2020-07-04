@@ -5,6 +5,10 @@
 @import 'reset';
 @import 'variables';
 
+.centered {
+  text-align: center;
+}
+
 @mixin form-style($width, $height){
   .form-container {
     h1 {
@@ -33,6 +37,15 @@
       .field {
         padding: 10px;
         text-align: left;
+        float: left;
+        display: inline-block;
+        white-space: nowrap;
+
+        &.centered {
+          text-align: center;
+          float: none;
+        }
+
 
         br {
           display: block;
@@ -51,6 +64,49 @@
 
           &:focus {
             border-bottom: 2px solid $color_accent;
+          }
+        }
+
+        .textboxlarge {
+          width: 100%;
+          padding: 10px;
+          transition: 0.5s;
+
+          font-size: 24px;
+          text-align: center;
+
+          box-sizing: border-box;
+          margin-bottom: 15px;
+
+          border: 2px solid $color_black_2;
+          border-radius: 4px;
+
+          &:focus {
+            border: 2px solid $color_accent;
+          }
+        }
+
+        .bigtextbox {
+          width: inherit;
+          height: 200px;
+          padding: 10px;
+
+          outline: none;
+
+          transition: 0.5s;
+
+          margin-bottom: 15px;
+
+          resize: none;
+
+          font-size: 18px;
+          font-family: $fonts;
+
+          border: 2px solid $color_black_2;
+          border-radius: 4px;
+
+          &:focus {
+            border: 2px solid $color_accent;
           }
         }
       }
@@ -84,6 +140,11 @@
           width: 100%;
           transition: .5s;
 
+          &.big {
+            height: 70px;
+            font-size: 24px;
+          }
+
           &:hover {
             background-color: $color_accent_selected;
           }
@@ -116,14 +177,13 @@
 
 .page {
 
-  margin-top: -20px;
-  padding: $bodypaddingtop $bodypadding;
+  padding: $bodypaddingtop $bodypadding 10px $bodypadding;
 
   h1 {
     font-size: 72px;
     font-weight: bold;
 
-    padding: 50px 0px;
+    padding: 20px 0px;
   }
 
   h2 {
@@ -192,6 +252,9 @@ img {
   width: 100%;
   text-align: center;
   padding: 20px 0;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @mixin button($gradient){

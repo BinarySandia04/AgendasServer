@@ -15,6 +15,17 @@ class SessionsController < ApplicationController
     end
   end
 
+  def confirm
+    user = User.where(confirm_token: params[:confirm_token]).first
+    if user
+      user.activate_email
+      flash[:alert] = "Success confirming email!"
+      redirect_to login_url
+    else
+      redirect_to root_url
+    end
+  end
+
   def login_view
     @hide_user = true
     unless session[:user_id].nil?
@@ -47,11 +58,15 @@ class SessionsController < ApplicationController
       return
     else
       if myUser.authenticate(password)
-        if isApi
-          renderJson("OK")
+        if myUser.email_confirmed
+          if isApi
+            renderJson("OK")
+          else
+            session[:user_id] = myUser.id
+            redirect_to root_url
+          end
         else
-          session[:user_id] = myUser.id
-          redirect_to root_url
+          renderResponse("ERROR_EMAIL_CONFIRMATION", "Please activate your account following the instructions of the confirmation mail", "login_view")
         end
       else
         renderResponse("ERROR_WRONG_PASSWORD", "Wrong password", "login_view")
@@ -103,10 +118,11 @@ class SessionsController < ApplicationController
     else
       if createUser(email, username, password, name, surname, birthdate)
         if isApi
-          renderJson("OK")
+          renderJson("EMAIL_SEND")
         else
-          session[:user_id] = User.where(username: username).first.id
-          redirect_to root_url
+          @user = User.where(username: username).first.id
+          flash[:alert] = "Hem enviat un email de confirmació, mira el teu correu"
+          redirect_to '/register'
         end
       else
         renderResponse("ERROR", "Error", "register_view")

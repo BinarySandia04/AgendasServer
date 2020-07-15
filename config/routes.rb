@@ -3,6 +3,9 @@
   get 'group/create'
   post 'group/create', to: 'group#create_post'
 
+  # Email confirmation
+  get 'confirmation/:confirm_token', to: 'sessions#confirm'
+
   get 'group/view/:groupcode', to: 'group#view'
 
   get 'group/join', to: 'group#join'

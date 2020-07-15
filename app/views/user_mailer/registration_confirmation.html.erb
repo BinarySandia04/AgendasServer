@@ -1,0 +1,9 @@
+Hola <%=@user.name %>,
+
+Gràcies per crear un compte a Agenda (c) 2020! (Marca registrada xd)
+
+Per confirmar la teva compta fes click al link d'aqui sota:
+<%# Cambiar per adreça del server lmao %>
+http://localhost:3000/confirmation/<%=@user.confirm_token %>
+
+si no has entrat a Agenda (c), ignora aquest mail, encara que hauries d'entrar-hi ;)

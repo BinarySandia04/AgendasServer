@@ -39,6 +39,8 @@ class ApplicationController < ActionController::Base
     @user.role = "user"
 
     if @user.save
+      UserMailer.registration_confirmation(@user).deliver
+
       return true
     else
       return false

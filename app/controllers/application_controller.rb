@@ -67,11 +67,17 @@ class ApplicationController < ActionController::Base
     return @group
   end
 
-  def renderResponse(res, response, view)
+  def renderResponse(res, response, view, flashresponse)
     if isApi
       renderJson(res)
     else
-      flash.now[:alert] = response
+      if flashresponse == "red"
+        flash.now[:red] = response
+      elsif flashresponse == "green"
+        flash.now[:green] = response
+      else
+        flash.now[:alert] = response
+      end
       render view
     end
   end

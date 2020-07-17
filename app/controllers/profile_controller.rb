@@ -36,7 +36,7 @@ class ProfileController < ApplicationController
           redirect_to '/profile/' + @user.username
         end
       else
-        renderResponse("ERROR_AUTHENTICATION", "Password confirmation failed", "edit_view")
+        renderResponse("ERROR_AUTHENTICATION", "Password confirmation failed", "edit_view", "red")
       end
     end
   end

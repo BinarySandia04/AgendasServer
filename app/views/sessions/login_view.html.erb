@@ -18,11 +18,9 @@
   <%= form_tag login_path, class: "form-container" do |form| %>
     <h1>Login</h1>
     <div class="form-parameters">
-      <%if alert %>
-        <div class="alert red">
-          <%= alert %>
-        </div>
-      <%end %>
+
+      <%= render template: 'templates/alerts' %>
+
       <div class="field">
         <%= label_tag 'usermail', 'Nombre de usuario o correo electronico:', class: "textlabel" %>
         <br>

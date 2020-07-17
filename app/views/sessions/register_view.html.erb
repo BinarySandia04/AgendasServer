@@ -17,11 +17,7 @@
   <%= form_tag register_path, class: "form-container" do |form| %>
     <h1>Register</h1>
     <div class="form-parameters" style="width: 550px">
-      <%if alert %>
-        <div class="alert red">
-          <%= alert %>
-        </div>
-      <%end %>
+      <%= render template: 'templates/alerts' %>
       <div class="field">
         <%= label_tag 'username', 'Nombre de usuario', class: "textlabel" %>
         <br>

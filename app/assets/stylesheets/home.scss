@@ -158,11 +158,17 @@
 .alert {
   margin: 5px 0;
   padding: 10px;
+  border-radius: 4px;
   &.red {
     background-color: $color_red_alert_primary;
     color: $color_red_alert_secondary;
-    border-radius: 4px;
     border-color: $color_red_alert_secondary;
+  }
+
+  &.green {
+    background-color: $color_green_alert_primary;
+    color: $color_green_alert_secondary;
+    border-color: $color_green_alert_secondary;
   }
 }
 

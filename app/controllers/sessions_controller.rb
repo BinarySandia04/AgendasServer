@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     user = User.where(confirm_token: params[:confirm_token]).first
     if user
       user.activate_email
-      flash[:alert] = "Success confirming email!"
+      flash[:green] = "Success confirming email!"
       redirect_to login_url
     else
       redirect_to root_url
@@ -121,7 +121,7 @@ class SessionsController < ApplicationController
           renderJson("EMAIL_SEND")
         else
           @user = User.where(username: username).first.id
-          flash[:alert] = "Hem enviat un email de confirmació, mira el teu correu"
+          flash[:green] = "Hem enviat un email de confirmació, mira el teu correu"
           redirect_to '/register'
         end
       else

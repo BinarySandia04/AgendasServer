@@ -26,15 +26,23 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.action_mailer.delivery_method = :smtp
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.perform_caching = true
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.sendmail_settings = {
-      :location => '/usr/sbin/sendmail',
-      :arguments => '-i -t'
+  # DESCOMENTAR CUANDO SE TENGA DOMINIO
+
+  # host = 'example.com' #replace with your own url
+  # config.action_mailer.default_url_options = { host: host }
+
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "unmailnormalxd",
+      :password             => "ytuquesabes2",
+      :authentication       => "plain",
+      :enable_starttls_auto => true
   }
+
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
@@ -47,6 +55,7 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  config.active_storage.service = :local
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true

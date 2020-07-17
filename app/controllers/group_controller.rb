@@ -7,7 +7,8 @@ class GroupController < ApplicationController
     @user = current_user
     if @user
       @group = createGroup(params[:name], params[:desc])
-      @group.users << @user
+
+      @membership = create_membership(@user.id, @group.id, 1)
 
       if isApi
         renderJson("OK")
@@ -48,6 +49,24 @@ class GroupController < ApplicationController
     else
       flash.now[:alert] = "No s'ha trobat ningun grup. Asegurat de que el codi que has introduït és correcte"
       render "/group/join"
+    end
+  end
+
+  private
+  def create_invitation
+    @invitation = Invitation.new()
+  end
+
+  def create_membership(user_id, group_id, role)
+    membership = Membership.new(user_id: user_id, group_id: group_id, role: role)
+    if membership.save
+      return membership
+    else
+      if isApi
+        renderJson("ERROR")
+      else
+        redirect_to root_url
+      end
     end
   end
 end

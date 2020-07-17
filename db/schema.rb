@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_160549) do
   create_table "memberships", force: :cascade do |t|
     t.integer "user_id"
     t.integer "group_id"
+    t.integer "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,9 +1,22 @@
-Hola <%=@user.name %>,
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    /* Email styles need to be inline */
+  </style>
+</head>
+<body>
+<p>Hola <%=@user.name %>,</p>
+<p>Gràcies per crear un compte a Agenda (c) 2020! (Marca registrada xd)</p>
 
-Gràcies per crear un compte a Agenda (c) 2020! (Marca registrada xd)
-
-Per confirmar la teva compta fes click al link d'aqui sota:
+<p>Per confirmar la teva compta fes click aqui sota:</p>
 <%# Cambiar per adreça del server lmao %>
-http://localhost:3000/confirmation/<%=@user.confirm_token %>
+<p>
+  <a href="http://localhost:3000/confirmation/<%=@user.confirm_token %>">Click aqui!</a>
+</p>
 
-si no has entrat a Agenda (c), ignora aquest mail, encara que hauries d'entrar-hi ;)
+<p>si no has entrat a Agenda (c), ignora aquest mail, encara que hauries d'entrar-hi ;)</p>
+
+</body>
+</html>

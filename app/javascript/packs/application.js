@@ -1,4 +1,4 @@
-require('jQuery');
+require('jquery');
 
 require('global');
 console.log("Yeah");

@@ -53,7 +53,15 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "genda_api_production"
 
-  config.action_mailer.perform_caching = false
+  config.active_storage.service = :local
+
+  # Don't care if the mailer can't send.
+  config.action_mailer.perform_caching = true
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.sendmail_settings = {
+      :location => '/usr/sbin/sendmail',
+      :arguments => '-i -t'
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

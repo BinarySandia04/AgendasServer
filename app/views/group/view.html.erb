@@ -15,6 +15,7 @@
   <h2>Grup</h2>
   <h1><%=@group.name%></h1>
   <p>Code: <%= @group.code %></p>
+  <%= render template: 'templates/alerts' %>
   <% if @user %>
     <h2>Members:</h2>
     <table class="table">

@@ -5,3 +5,4 @@ Gemfile
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/tmp

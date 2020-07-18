@@ -22,7 +22,13 @@ class ProfileController < ApplicationController
       if @user.authenticate(params[:password])
 
         # Update fields
-        @user.avatar.attach(params[:avatar]) if params[:avatar]
+        if params[:avatar]
+          @user.avatar.attach(params[:avatar])
+
+          # Muy feo quiero crear un callback en user.rb
+          @user.avatar_formatting
+        end
+
         @user.displayname = params[:displayname] unless params[:displayname] == ""
         @user.name = params[:name] unless params[:name] == ""
         @user.surname = params[:surname] unless params[:surname] == ""

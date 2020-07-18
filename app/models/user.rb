@@ -27,9 +27,35 @@ class User < ApplicationRecord
     save!(validate: false) # Guarda sin validar (ya lo hemos hecho)
   end
 
+
+  def resize_image
+    resized_image = MiniMagick::Image.open(avatar)
+    resized_image = resized_image.resize("300x300")
+    resized_image = resized_image.format('jpg')
+    v_filename = avatar.filename
+    v_content_type = avatar.content_type
+    avatar.purge
+    avatar.attach(io: File.open(resized_image.path), filename: v_filename, content_type: v_content_type)
+  end
+
   class << self
     def get_from_cache(user_id)
       Rails.cache.fetch('users') {User.find(user_id)}
+    end
+  end
+
+  def avatar_formatting
+    return unless avatar.attached?
+    if avatar.blob.content_type.start_with? 'image/'
+      if avatar.blob.byte_size > 3.megabytes
+        errors.add(:avatar, 'size needs to be less than 10MB')
+        avatar.purge
+      else
+        resize_image
+      end
+    else
+      avatar.purge
+      errors.add(:avatar, 'needs to be an image')
     end
   end
 

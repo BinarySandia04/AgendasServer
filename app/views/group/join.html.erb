@@ -13,11 +13,7 @@
 <!-- navbar -->
 <%= render template: 'templates/navbar' %>
 <div class = "page centered">
-  <%if alert %>
-    <div class="alert red">
-      <%= alert %>
-    </div>
-  <% end %>
+  <%= render template: 'templates/alerts' %>
   <h1>
     Unieix-te a un grup
   </h1>

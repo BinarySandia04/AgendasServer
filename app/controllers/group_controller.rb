@@ -39,15 +39,28 @@ class GroupController < ApplicationController
     redirect_to root_url unless @user
   end
 
+  def invite
+    @group = get_group(params[:groupcode])
+  end
+
+  def invite_post
+    @group = get_group(params[:groupcode])
+    @email = params[:invitation_email]
+    puts @email
+
+    flash.now[:green] = @email
+    render "/group/view/" + @group.code + "/overview"
+  end
+
   def join_post
     @user = current_user
     @group = get_group(params[:groupcode])
     redirect_to root_url unless @user
 
     if @group
-      redirect_to "/group/view/" + @group.code
+      redirect_to "/group/view/" + @group.code + "/overview"
     else
-      flash.now[:alert] = "No s'ha trobat ningun grup. Asegurat de que el codi que has introduït és correcte"
+      flash.now[:red] = "No s'ha trobat ningun grup. Asegurat de que el codi que has introduït és correcte"
       render "/group/join"
     end
   end

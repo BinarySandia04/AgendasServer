@@ -25,7 +25,7 @@ gem "actionpack", ">= 6.0.3.2"
 gem "activestorage", ">= 6.0.3.1"
 gem "activesupport", ">= 6.0.3.1"
 
-gem "mini_magick"
+gem 'image_processing'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2',  require: false unless (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)

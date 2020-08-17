@@ -2,10 +2,8 @@ class Membership < ApplicationRecord
   belongs_to :user
   belongs_to :group
 
-
-
   class << self
-    def get_role(role_id)
+    def get_role_string(role_id)
       roles = {
           "0" => "Membre",
           "1" => "Administrador"

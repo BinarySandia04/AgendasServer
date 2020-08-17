@@ -20,6 +20,11 @@ class GroupController < ApplicationController
     end
   end
 
+  def administrate
+    @user = current_user
+    @group = Group.find_by_code(params[:groupcode])
+  end
+
   def view
     @user = current_user
     @group = Group.find_by_code(params[:groupcode])
@@ -28,6 +33,10 @@ class GroupController < ApplicationController
       unless @group
         # TODO: Hacer redirect al buscador y no a root_url
         redirect_to root_url
+      else
+        unless @user.memberships.find_by(group: @group).present?
+          redirect_to root_url
+        end
       end
     else
       redirect_to root_url

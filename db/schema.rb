@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_160549) do
+ActiveRecord::Schema.define(version: 2020_08_17_155725) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2020_07_15_160549) do
     t.integer "group_id"
     t.integer "sender_id"
     t.integer "recipent_id"
-    t.string "token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -62,6 +61,16 @@ ActiveRecord::Schema.define(version: 2020_07_15_160549) do
     t.integer "user_id"
     t.integer "group_id"
     t.integer "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "user_id"
+    t.text "title"
+    t.text "content"
+    t.text "action"
+    t.boolean "unread"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

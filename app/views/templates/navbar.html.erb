@@ -1,15 +1,6 @@
 <!-- navbar -->
 <div class = "navmargin navbar" id = "topnavbar">
   <ul>
-    <% if @current_user %>
-    <li>
-      <a href="javascript:void(0)" class="dropdown element plus" onclick="dropdownNavBarActive();" onblur="dropdownNavBarInactive()">+</a>
-      <div class="dropdown-content hidden" id="dropdown-content">
-        <a href="#">Esdeveniment</a>
-        <a href="#">Categoria</a>
-      </div>
-    </li>
-    <% end %>
     <li>
       <%= link_to "Agenda", root_url, class: "element" %>
     </li>
@@ -30,6 +21,24 @@
           <span>Logged in as <%= link_to @current_user.username, "/profile/" + @current_user.username %> </span>
         <% end %>
       </li>
+
+      <!-- TODO: Implementar AJAX -->
+      <% if @notifications == 0 %>
+        <li class="nav-centered-right">
+          <%= link_to("/notifications", class: "dropdown element bell fas fa-bell-slash") do %>
+          <% end %>
+        </li>
+      <% else %>
+        <li class="nav-centered-right">
+          <span class="number"> <%= @notifications %></span>
+        </li>
+
+        <li class="nav-centered-right">
+          <%= link_to("/notifications", class: "dropdown element bell fas fa-bell") do %>
+          <% end %>
+        </li>
+      <% end %>
+
     <% else %>
       <% unless @hide_user %>
         <li class="nav-centered-right">
@@ -40,11 +49,5 @@
         </li>
       <% end %>
     <% end %>
-
-
-    <a href="javascript:void(0);" class="icon" onclick="responsiveMenuNavBar();">
-      <i class="fa fa-bars">
-      </i>
-    </a>
   </ul>
 </div>

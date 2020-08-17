@@ -5,7 +5,6 @@ class CreateInvitations < ActiveRecord::Migration[6.0]
       t.integer :group_id
       t.integer :sender_id
       t.integer :recipent_id
-      t.string :token
 
       t.timestamps
     end

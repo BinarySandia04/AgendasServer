@@ -9,6 +9,13 @@ class ApplicationController < ActionController::Base
     else
       @current_user = nil
     end
+
+    if @current_user
+      @notifications = @current_user.notifications.count
+    end
+
+
+    return @current_user
   end
 
   def get_group(groupcode)

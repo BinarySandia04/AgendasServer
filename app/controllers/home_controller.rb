@@ -10,4 +10,11 @@ class HomeController < ApplicationController
   def contact
     @user = current_user
   end
+
+  def notifications
+    @user = current_user
+    if @user.nil?
+      redirect_to root_url
+    end
+  end
 end

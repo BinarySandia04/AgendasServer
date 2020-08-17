@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<%= render template: 'templates/navbar' %>
+<div class = "page">
+  <h2>Grup</h2>
+  <h1><%=@group.name%></h1>
+  <p>Code: <%= @group.code %></p>
+  <%= render template: 'templates/alerts' %>
+  <% if @user %> <!-- por si acaso -->
+    Adimin panel ;)
+    <%= render template: 'templates/group-members' %>
+  <% end %>
+</div>
+</body>
+</html>

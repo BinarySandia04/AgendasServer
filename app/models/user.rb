@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :memberships
   has_many :groups, through: :memberships
 
+  has_many :notifications
+
   has_many :invitations, :class_name => "Invitation", :foreign_key => "recipent_id"
   has_many :sent_invitations, :class_name => "Invitation", :foreign_key => 'sender_id'
 
@@ -27,6 +29,11 @@ class User < ApplicationRecord
     save!(validate: false) # Guarda sin validar (ya lo hemos hecho)
   end
 
+  def getRankFromGroup(group)
+    return memberships.find_by(group: group).role
+  rescue ActiveRecord::RecordNotFound
+    return nil
+  end
 
   def resize_image
     resized_image = MiniMagick::Image.read(avatar)
@@ -40,7 +47,9 @@ class User < ApplicationRecord
 
   class << self
     def get_from_cache(user_id)
-      Rails.cache.fetch('users') {User.find(user_id)}
+      return Rails.cache.fetch('users') {User.find(user_id)}
+      rescue ActiveRecord::RecordNotFound
+        return nil
     end
   end
 

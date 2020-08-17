@@ -88,6 +88,18 @@
           vertical-align: center;
         }
 
+        &.number {
+          background-color: $color_accent;
+
+          font-size: 28px;
+          padding: 7px 0 0 0;
+          height: 37px;
+          width: 44px;
+          vertical-align: center;
+        }
+
+
+
         display: block;
         color: $color_white;
         text-align: center;

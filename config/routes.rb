@@ -6,7 +6,10 @@
   # Email confirmation
   get 'confirmation/:confirm_token', to: 'sessions#confirm'
 
+  get 'group/view/:groupcode', to: 'group#view'
   get 'group/view/:groupcode/overview', to: 'group#view'
+
+  get 'group/view/:groupcode/administrate', to: 'group#administrate'
 
   get 'group/view/:groupcode/invitations', to: 'group#invite'
   post 'group/view/:groupcode/invitations', to: 'group#invite_post', as: 'group_invite'
@@ -21,6 +24,8 @@
 
   get 'login', to: 'sessions#login_view'
   post 'login', to: 'sessions#create'
+
+  get 'notifications', to: 'home#notifications'
 
   get 'register', to: 'sessions#register_view'
   post 'register', to: 'sessions#register'

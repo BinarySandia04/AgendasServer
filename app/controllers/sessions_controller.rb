@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def register_view
     @hide_user = true
-    unless session[:user_id].nil?
+    unless @current_user.nil?
       if isApi
         renderJson("ALREADY_LOGGED_IN")
       else
@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 
   def login_view
     @hide_user = true
-    unless session[:user_id].nil?
+    unless @current_user.nil?
       if isApi
         renderJson("ALREADY_LOGGED_IN")
       else

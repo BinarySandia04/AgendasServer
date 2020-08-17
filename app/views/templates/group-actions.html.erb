@@ -1,0 +1,10 @@
+<% if @group %>
+  <div class="horizontal-layout">
+    <%= link_to "Crea una tasca", '/group/create', class: "green-button" %>
+    <%= link_to "Crea una categoria", '/group/search', class: "blue-button" %>
+  </div>
+  <div class="horizontal-layout">
+    <%= link_to "Administra...", '/group/view/' + @group.code.to_s + "/administrate", class: "yellow-button" %>
+    <%= link_to "Borra el grup!", '/group/search', class: "red-button" %>
+  </div>
+<% end %>

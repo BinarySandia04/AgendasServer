@@ -1,0 +1,19 @@
+<h2>Members:</h2>
+<table class="table">
+  <% Membership.where(group_id: @group.id).each do |member| %>
+    <tr>
+      <% @listuser = User.find_by_id(member.user_id) %>
+      <td style="width: 25px">
+        <% if @listuser.avatar.attached? %>
+          <%= image_tag(url_for(@listuser.avatar), class: "profile-image-small")%>
+        <% else %>
+          <%= image_tag("profile.png", class: "profile-image-small")%>
+        <% end %>
+      </td>
+      <td>
+        <%= @listuser.username %>
+      </td>
+      <td><%= Membership.get_role_string(member.role) %></td>
+    </tr>
+  <% end %>
+</table>

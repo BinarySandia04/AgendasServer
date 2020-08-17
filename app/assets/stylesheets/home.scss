@@ -257,7 +257,7 @@ img {
 .horizontal-layout {
   width: 100%;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -296,6 +296,10 @@ img {
 
 .red-button {
   @include button($red_gradient);
+}
+
+.yellow-button {
+  @include button($yellow_gradient);
 }
 
 .table {

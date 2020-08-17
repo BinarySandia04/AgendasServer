@@ -11,8 +11,8 @@
 
   get 'group/view/:groupcode/administrate', to: 'group#administrate'
 
-  get 'group/view/:groupcode/invitations', to: 'group#invite'
-  post 'group/view/:groupcode/invitations', to: 'group#invite_post', as: 'group_invite'
+  post 'groupinvite/', to: 'group#invite_post', as: 'group_invite'
+  get 'acceptinvite/:id', to: 'group#accept_invite'
 
   get 'group/search', to: 'group#join', as: 'group_join'
   post 'group/search', to: 'group#join_post'
@@ -30,7 +30,7 @@
   get 'register', to: 'sessions#register_view'
   post 'register', to: 'sessions#register'
 
-  get 'profile/:profile', to: 'profile#view_view'
+  get 'profile/:user', to: 'profile#view_view'
 
   get 'editprofile', to: 'profile#edit_view'
   post 'editprofile', to: 'profile#edit'

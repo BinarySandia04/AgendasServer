@@ -17,7 +17,7 @@
   <p>Code: <%= @group.code %></p>
   <%= render template: 'templates/alerts' %>
   <% if @user %> <!-- por si acaso -->
-    <% if @user.getRankFromGroup(@group) == 1 %>
+    <% if @user.get_role(@group) == 1 %>
       <%= render template: 'templates/group-actions' %>
     <% end %>
   <% end %>

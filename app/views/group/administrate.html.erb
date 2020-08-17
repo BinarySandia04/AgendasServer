@@ -14,10 +14,11 @@
   <h1><%=@group.name%></h1>
   <p>Code: <%= @group.code %></p>
   <%= render template: 'templates/alerts' %>
-  <% if @user %> <!-- por si acaso -->
-    Adimin panel ;)
-    <%= render template: 'templates/group-members' %>
-  <% end %>
+    <% if @user.get_role(@group) == 1 %>
+      <%= render template: 'templates/group-members-editable' %>
+    <% else %>
+      <%= render template: 'templates/group-members' %>
+    <% end %>
 </div>
 </body>
 </html>

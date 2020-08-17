@@ -54,7 +54,7 @@ class ProfileController < ApplicationController
   def view_view
     @user = current_user
 
-    @viewuser = User.where(username: params[:profile]).first
+    @viewuser = User.find_by_id(params[:user])
     if @viewuser
       @is_my_profile = @viewuser.id == @user.id
       @hide_profile_link = @is_my_profile

@@ -29,8 +29,8 @@ class User < ApplicationRecord
     save!(validate: false) # Guarda sin validar (ya lo hemos hecho)
   end
 
-  def getRankFromGroup(group)
-    return memberships.find_by(group: group).role
+  def get_role(group)
+    return self.memberships.find_by(group: group).role
   rescue ActiveRecord::RecordNotFound
     return nil
   end
@@ -43,6 +43,14 @@ class User < ApplicationRecord
     v_content_type = avatar.content_type
     avatar.purge
     avatar.attach(io: File.open(resized_image.path), filename: v_filename, content_type: v_content_type)
+  end
+
+  def self.get_user_by_usermail(usermail)
+    if usermail.include? "@"
+      User.where(email: usermail).first
+    else
+      User.where(username: usermail).first
+    end
   end
 
   class << self

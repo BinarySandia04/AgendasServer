@@ -1,0 +1,38 @@
+<h2>Members:</h2>
+<table class="table">
+  <% Membership.where(group_id: @group.id).each do |member| %>
+    <tr>
+      <% @listuser = User.find_by_id(member.user_id) %>
+      <td style="width: 25px">
+        <% if @listuser.avatar.attached? %>
+          <%= image_tag(url_for(@listuser.avatar), class: "profile-image-small")%>
+        <% else %>
+          <%= image_tag("profile.png", class: "profile-image-small")%>
+        <% end %>
+      </td>
+      <td>
+        <%= @listuser.username %>
+      </td>
+      <td>
+        <%= Membership.get_role_string(member.role) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>
+<h2>Convida a gent al grup!</h2>
+
+<%= form_tag group_invite_path, class: "form-container", multipart: true do |form| %>
+  <div class="form-parameters">
+    <div class="field" style="width: 75%">
+      <%= label_tag 'groupcode', "Introdueix el correu electrònic o el nom d'usuari de la persona que vols convidar al teu grup:", class: "textlabel" %>
+      <br>
+      <%= text_field_tag :usermail, '', class: "textboxlarge", placeholder: 'qwertiop@pagina.com | Quiertiop123' %>
+      <%= hidden_field_tag :group_code, @group.code %>
+    </div>
+    <div class="action">
+      <%= submit_tag 'Convidar', class: "submit-button big"%>
+    </div>
+  </div>
+<% end %>

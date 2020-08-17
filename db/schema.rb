@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2020_08_17_155725) do
   end
 
   create_table "invitations", force: :cascade do |t|
-    t.string "email"
     t.integer "group_id"
     t.integer "sender_id"
     t.integer "recipent_id"

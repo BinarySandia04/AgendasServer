@@ -18,7 +18,7 @@
       </li>
       <li class="nav-centered-right">
         <% unless @hide_profile_link %>
-          <span>Logged in as <%= link_to @current_user.username, "/profile/" + @current_user.username %> </span>
+          <span>Has entrat com a <%= link_to @current_user.username, "/profile/" + @current_user.id.to_s %> </span>
         <% end %>
       </li>
 

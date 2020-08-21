@@ -5,6 +5,7 @@ class CreateNotifications < ActiveRecord::Migration[6.0]
 
       t.text :title
       t.text :content
+
       t.text :action
 
       t.boolean :unread

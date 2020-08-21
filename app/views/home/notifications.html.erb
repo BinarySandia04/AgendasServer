@@ -21,7 +21,14 @@
     No tens ninguna notificació nova.
   <% else %>
     <% @current_user.notifications.each do |notification| %>
-      <%= notification.title %>
+      <div class="notification">
+        <h2><%= notification.title %></h2>
+        <p><%= notification.content %></p>
+
+        <div class="buttons">
+          <%= link_to "Accept", notification.action%>
+        </div>
+      </div>
     <% end %>
   <% end %>
 

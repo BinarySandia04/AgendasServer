@@ -24,7 +24,8 @@ class Group < ApplicationRecord
     if invite.save
       # Ok ara enviar notificacio
       notification = Notification.create(to, "T'han convidat a un grup!", from.username + " t'ha convidat al grup " + group.name + " i vol que hi formis part")
-      notification.action = '/acceptinvite/' + notification.id.to_s
+      notification.action = '/acceptinvite/' + invite.group_id.to_s
+      notification.save
     else
       # TODO: Testing, Pot explotar si enviem 2 a la mateixa persona?
     end

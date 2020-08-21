@@ -18,7 +18,7 @@
   </h1>
 
   <% if @notifications == 0 %>
-    No tens ninguna notificació nova.
+    No tens cap notificació.
   <% else %>
     <% @current_user.notifications.each do |notification| %>
       <div class="notification">
@@ -26,7 +26,7 @@
         <p><%= notification.content %></p>
 
         <div class="buttons">
-          <%= link_to "Accept", notification.action%>
+          <%= link_to "Accept", notification.action, class: "blue-button"%>
         </div>
       </div>
     <% end %>

@@ -25,18 +25,36 @@
   </div>
   <% else %>
   <div class = "page">
+    <%= render template: 'templates/alerts' %>
+
     <h1>
       La teva agenda <!-- Capitalist momento -->
     </h1>
 
     <%if @user.groups.count == 0 %>
-      <h2>No formes part de ningun grup!</h2>
-      <p>Per començar, crea un grup o uneixte a un grup existent:</p>
+      <h2>Benvingut a Agenda!</h2>
+      <p>Per començar a sincronitzar tasques, has d'entrar en un grup. Per entrar en un grup tens dugues opcions:</p>
+
+        <li>Esperar a que algu et convidi al seu grup</li>
+        <li>Crear el teu propi grup</li>
+
+      <p>Quan algú et convidi al seu grup t'arribarà una notificació. Per veure les notificacions has de clicar el número de les notificacions al costat de la campaneta</p>
+      <p>Si pitjes en el teu nom d'usuari, pots modificar el teu avatar i també els paràmetres del teu compte</p>
+      <p>Si vols crear un grup pots fer-ho pitjant aquest botó:</p>
       <%= render template: 'templates/quick-start-buttons'%>
     <% else %>
-      Els teus grups:
+      <h2>Els teus grups:</h2>
+
       <% @user.groups.each do |group| %>
-        <li><%= group.name %> Id: <%= group.code %> <%= link_to "View", '/group/view/' + group.code + "/overview" %></li>
+
+        <div class="notification">
+          <h2><%= group.name %></h2>
+          <br>
+          <div class="buttons">
+            <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
+          </div>
+        </div>
+
       <% end %>
       <%= render template: 'templates/quick-start-buttons'%>
     <% end %>

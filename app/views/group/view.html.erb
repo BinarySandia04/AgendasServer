@@ -14,14 +14,28 @@
 <div class = "page">
   <h2>Grup</h2>
   <h1><%=@group.name%></h1>
-  <p>Code: <%= @group.code %></p>
+  <p><%= @group.desc %></p>
+
+  <p>Codi del grup: <%= @group.code %></p>
   <%= render template: 'templates/alerts' %>
-  <% if @user %> <!-- por si acaso -->
-    <% if @user.get_role(@group) == 1 %>
-      <%= render template: 'templates/group-actions' %>
+
+  <% if @user.get_role(@group) == 1 %>
+    <%= render template: 'templates/group-actions' %>
+  <% end %>
+
+  <h2>Tasques:</h2>
+  <% if @group.tasks.count == 0 %>
+    <p>No hi ha ninguna tasca!</p>
+  <% else %>
+    <% @group.tasks.each do |task| %>
+      <p><%= task.title %></p>
     <% end %>
   <% end %>
-  <h2>Tasks:</h2>
+
+  <% if @user.get_role(@group) != 2 %>
+    <%= render template: 'templates/group-members' %>
+  <% end %>
+
 </div>
 </body>
 </html>

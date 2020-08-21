@@ -56,10 +56,6 @@ class GroupController < ApplicationController
     @user = current_user
     @group = get_group(params[:group_code])
 
-    puts "dddddddddddddddd"
-    puts params[:group_code]
-    puts "dddddddddddddddd"
-
     usermail = params[:usermail]
 
     if @user.get_role(@group) != 1
@@ -71,14 +67,17 @@ class GroupController < ApplicationController
     @invited_user = User.get_user_by_usermail(usermail)
     if @invited_user
       # All valido
-      Group.invite(@group, @user, @invited_user)
-      flash[:green] = "S'ha convidat a " + usermail
-      redirect_to '/group/view/' + @group.code + "/administrate" # TODO: Testear
-      return
+      unless Invitation.find_by(group_id: @group.id, sender_id: @user.id, recipent_id: @invited_user.id).present?
+        Group.invite(@group, @user, @invited_user)
+        flash[:green] = "S'ha convidat a " + usermail
+        redirect_to '/group/view/' + @group.code + "/administrate" # TODO: Testear
+      else
+        flash[:red] = "Ja has convidat a aquest usuari!"
+        redirect_to '/group/view/' + @group.code + "/administrate" # TODO: Testear
+      end
     else
       flash[:red] = "No s'ha trobat a l'usuari"
-      puts "D"
-      redirect_to '/group/view/' + @group.code + "/administrate" # TODO: Testear
+      redirect_to '/group/view/' + @group.code + "/administrate"
       return
     end
   end
@@ -101,12 +100,18 @@ class GroupController < ApplicationController
     @invitation = Invitation.get_by_id(params[:id])
 
     if @invitation.recipent_id == @user.id
-      @group = get_group(@invitation.group_id)
-      unless @group.users.exists?(@user)
+      @group = Group.get_from_cache_id(@invitation.group_id)
+      unless @group.users.exists?(@user.id)
         # Ok for me
         create_membership(@user.id, @group.id, 0)
+        @invitation.destroy
+        redirect_to "/group/view/" + @group.code + "/overview"
       end
     end
+
+    flash[:red] = "Error"
+    puts "HOAOLSSLL"
+    redirect_to root_url
   end
 
   private

@@ -36,9 +36,10 @@ class User < ApplicationRecord
   end
 
   def resize_image
-    resized_image = MiniMagick::Image.read(avatar)
-    resized_image = resized_image.resize("300x300")
+    resized_image = MiniMagick::Image.open(avatar)
     resized_image = resized_image.format('jpg')
+    resized_image = resized_image.resize("300x300")
+
     v_filename = avatar.filename
     v_content_type = avatar.content_type
     avatar.purge

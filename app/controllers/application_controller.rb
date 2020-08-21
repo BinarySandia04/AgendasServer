@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
   end
 
   def get_group(groupcode)
-    Group.get_from_cache(groupcode)
+    return Group.get_from_cache(groupcode)
+    # Group.find_by_code(code)
   end
 
   def isApi

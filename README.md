@@ -5,10 +5,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Agenda Server</h3>
+  <h3 align="center">Agendas Server</h3>
 
   <p align="center">
-    The official Agenda Server source code
+    The official Agendas Server source code
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·

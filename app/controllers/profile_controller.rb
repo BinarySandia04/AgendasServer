@@ -39,7 +39,7 @@ class ProfileController < ApplicationController
         if isApi
           renderJson("OK")
         else
-          redirect_to '/profile/' + @user.username
+          redirect_to '/profile/' + @user.id.to_s
         end
       else
         renderResponse("ERROR_AUTHENTICATION", "Password confirmation failed", "edit_view", "red")

@@ -11,7 +11,7 @@
         <% end %>
       </td>
       <td>
-        <%= @listuser.username %>
+        <%= link_to @listuser.username, '/profile/' + @listuser.id.to_s %>
       </td>
       <td><%= Membership.get_role_string(member.role) %></td>
     </tr>

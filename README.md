@@ -63,6 +63,10 @@ Now you must install **libvips** using your package manager:
 ```sh
 sudo apt-get install libvips
 ```
+And also you need to install **yarn**:
+```sh
+sudo apt-get install yarn
+```
 
 ### Installation
 
@@ -70,9 +74,13 @@ Ok so if you want to get the source code clone this repo:
 ```sh
 git clone https://github.com/BinarySandia04/GendaServer.git
 ```
-And if you want to run the server you must install the **gem dependencies**:
+If you want to run the server you must install the **gem dependencies**:
 ```sh
 bundle install
+```
+And you must install the **yarn packages**:
+```sh
+yarn install --check-files
 ```
 
 Enjoy. Run the server with the run script:

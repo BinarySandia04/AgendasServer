@@ -1,6 +1,9 @@
 <h2>Members:</h2>
+<%= form_tag '/group/edit/members', multipart: true do |form| %>
 <table class="table">
-  <% Membership.where(group_id: @group.id).each do |member| %>
+    <% @count = 0 %>
+    <% Membership.where(group_id: @group.id).each do |member| %>
+    <% @count = @count + 1 %>
     <tr>
       <% @listuser = User.find_by_id(member.user_id) %>
       <td style="width: 25px">
@@ -14,16 +17,20 @@
         <%= @listuser.username %>
       </td>
       <td>
-        <%= Membership.get_role_string(member.role) %>
+        <%= select_tag member.number, options_for_select(Membership.roles.invert, member.role)%>
       </td>
     </tr>
-  <% end %>
+    <% end %>
 </table>
+    <%= hidden_field_tag 'count', @count %>
+    <%= submit_tag 'Actualitzar', class: "green-button"%>
+  <% end %>
+
 <br>
 <br>
 <h2>Convida a gent al grup!</h2>
 
-<%= form_tag group_invite_path, class: "form-container", multipart: true do |form| %>
+<%= form_tag '/groupinvite', class: "form-container", multipart: true do |form| %>
   <div class="form-parameters">
     <div class="field" style="width: 75%">
       <%= label_tag 'groupcode', "Introdueix el correu electrònic o el nom d'usuari de la persona que vols convidar al teu grup:", class: "textlabel" %>

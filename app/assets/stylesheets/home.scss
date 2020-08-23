@@ -201,6 +201,11 @@
   p {
     padding: 15px 0;
     font-size: 18px;
+
+    &.no-important {
+      color: #303030;
+      font-size: 14px;
+    }
   }
 
   @include form-style(auto, auto);

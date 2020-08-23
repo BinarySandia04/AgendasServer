@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
-
-  <title>Hello, world!</title>
 </head>
 <body>
 <!-- navbar -->
@@ -26,8 +24,12 @@
         <p><%= notification.content %></p>
 
         <div class="buttons">
-          <%= link_to "Accept", notification.action, class: "blue-button"%>
+          <%= link_to "Acceptar", notification.action, class: "blue-button"%>
+
+          <%= link_to "Borrar", '/notifications/delete/' + notification.id.to_s, class: "red-button"%>
         </div>
+
+        <p class="no-important"><%= notification.created_at.to_s(:db) %></p>
       </div>
     <% end %>
   <% end %>

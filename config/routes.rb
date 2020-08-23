@@ -11,11 +11,13 @@
 
   get 'group/view/:groupcode/administrate', to: 'group#administrate'
 
-  post 'groupinvite/', to: 'group#invite_post', as: 'group_invite'
-  get 'acceptinvite/:id', to: 'group#accept_invite'
+  post 'group/edit/members', to: 'group#edit_members'
 
-  get 'group/search', to: 'group#join', as: 'group_join'
-  post 'group/search', to: 'group#join_post'
+  get 'task/create/:groupcode', to: 'task#create'
+  post 'task/create/', to: 'task#create_post'
+
+  post 'groupinvite/', to: 'group#invite_post'
+  get 'acceptinvite/:id', to: 'group#accept_invite'
 
   get 'admin', to: 'dashboard#admin_dashboard'
 
@@ -26,6 +28,7 @@
   post 'login', to: 'sessions#create'
 
   get 'notifications', to: 'home#notifications'
+  get 'notifications/delete/:id', to: 'home#delete_notification'
 
   get 'register', to: 'sessions#register_view'
   post 'register', to: 'sessions#register'

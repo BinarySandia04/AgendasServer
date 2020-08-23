@@ -6,15 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
-
-  <title>Hello, world!</title>
 </head>
 <body>
 <!-- navbar -->
 <%= render template: 'templates/navbar' %>
 <div class = "page centered">
   <h1>Edit profile</h1>
-  <%= form_tag editprofile_path, class: "form-container", multipart: true do |form| %>
+  <%= form_tag '/editprofile', class: "form-container", multipart: true do |form| %>
     <div class="form-parameters">
       <%if alert %>
         <div class="alert red">

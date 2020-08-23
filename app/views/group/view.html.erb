@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
-
-  <title>Hello, world!</title>
 </head>
 <body>
 <%= render template: 'templates/navbar' %>
@@ -17,10 +15,13 @@
   <p><%= @group.desc %></p>
 
   <p>Codi del grup: <%= @group.code %></p>
+  <% role = @user.get_role(@group) %>
   <%= render template: 'templates/alerts' %>
 
-  <% if @user.get_role(@group) == 1 %>
+  <% if role == 1 %>
     <%= render template: 'templates/group-actions' %>
+  <% elsif role == 0 %>
+    <%= link_to "Crea una tasca", '/task/create/' + @group.code.to_s, class: "green-button" %>
   <% end %>
 
   <h2>Tasques:</h2>
@@ -32,9 +33,10 @@
     <% end %>
   <% end %>
 
-  <% if @user.get_role(@group) != 2 %>
+
+  <% if role != 2 %>
     <%= render template: 'templates/group-members' %>
-  <% end %>
+  <% end%>
 
 </div>
 </body>

@@ -6,14 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
-
-  <title>Hello, world!</title>
 </head>
 <body class = "centered-login">
 <%= render template: 'templates/navbar' %>
 
 <div class = "centered-login-container">
-  <%= form_tag register_path, class: "form-container" do |form| %>
+  <%= form_tag '/register', class: "form-container" do |form| %>
     <h1>Register</h1>
     <div class="form-parameters" style="width: 550px">
       <%= render template: 'templates/alerts' %>

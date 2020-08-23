@@ -6,15 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
-
-  <title>Hello, world!</title>
 </head>
 
 <body class = "centered-login">
 <%= render template: 'templates/navbar' %>
 
 <div class = "centered-login-container">
-  <%= form_tag login_path, class: "form-container" do |form| %>
+  <%= form_tag '/login', class: "form-container" do |form| %>
     <h1>Login</h1>
     <div class="form-parameters">
 

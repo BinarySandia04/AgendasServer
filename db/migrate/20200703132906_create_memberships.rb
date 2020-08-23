@@ -4,6 +4,7 @@ class CreateMemberships < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :group_id
       t.integer :role
+      t.integer :number # Usado para conseguir rapidamente un identificador del usuario dentro del grupo
 
       t.timestamps
     end

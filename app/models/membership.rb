@@ -4,12 +4,19 @@ class Membership < ApplicationRecord
 
   class << self
     def get_role_string(role_id)
-      roles = {
+      roles[role_id.to_s]
+    end
+
+    def roles
+      {
           "0" => "Membre",
           "1" => "Administrador",
           "2" => "Observador"
       }
-      return roles[role_id.to_s]
+    end
+
+    def roles_list
+      %w[Membre Administrador Observador]
     end
   end
 end

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<!-- navbar -->
+<%= render template: 'templates/navbar' %>
+<div class = "page centered">
+  <h1>
+    Crea una tasca
+  </h1>
+  <%= form_tag group_create_path, class: "form-container", multipart: true do |form| %>
+    <div class="form-parameters">
+      <div class="field centered" style="width: 75%">
+        <%= label_tag 'name', "Nom del grup:", class: "textlabel" %>
+        <br>
+        <%= text_field_tag :name, '', class: "textboxlarge" %>
+      </div>
+
+      <div class="field centered" style="width: 80%">
+        <%= label_tag 'desc', "Descripció:", class: "textlabel" %>
+        <br>
+        <%= text_area_tag :desc, '', class: "bigtextbox" %>
+      </div>
+
+      <div class="action">
+        <%= submit_tag 'Crear grup', class: "submit-button big"%>
+      </div>
+    </div>
+  <% end %>
+</div>
+</body>

@@ -47,11 +47,6 @@ class GroupController < ApplicationController
     end
   end
 
-  def join
-    @user = current_user
-    redirect_to root_url unless @user
-  end
-
   def invite_post
     @user = current_user
     @group = get_group(params[:group_code])
@@ -82,17 +77,11 @@ class GroupController < ApplicationController
     end
   end
 
-  def join_post
-    @user = current_user
-    @group = get_group(params[:groupcode])
-    redirect_to root_url unless @user
-
-    if @group
-      redirect_to "/group/view/" + @group.code + "/overview"
-    else
-      flash.now[:red] = "No s'ha trobat ningun grup. Asegurat de que el codi que has introduït és correcte"
-      render "/group/join"
-    end
+  def edit_members
+    group = Group.find(params[:group])
+    # TODO: Despues de la migracion hacer esto
+    puts params
+    redirect_to '/group/view/' + group.code + "/administrate"
   end
 
   def accept_invite
@@ -107,11 +96,11 @@ class GroupController < ApplicationController
         @invitation.destroy
         redirect_to "/group/view/" + @group.code + "/overview"
       end
+    else
+      flash[:red] = "Error"
+      puts "HOAOLSSLL"
+      redirect_to root_url
     end
-
-    flash[:red] = "Error"
-    puts "HOAOLSSLL"
-    redirect_to root_url
   end
 
   private

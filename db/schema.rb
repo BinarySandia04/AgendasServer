@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_21_172116) do
     t.integer "user_id"
     t.integer "group_id"
     t.integer "role"
+    t.integer "number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

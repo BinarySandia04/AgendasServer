@@ -20,3 +20,10 @@ window.dropdownNavBarInactive = function(){
         x.className = "dropdown-content hidden";
     }, 200);
 };
+
+/**
+ * @class CalendarPicker.
+ * @description Provides a simple way to get a minimalistic calender in your DOM.
+ * @author Mathias Picker - 29 July 2020.
+ */
+

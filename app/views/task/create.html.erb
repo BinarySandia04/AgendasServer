@@ -20,13 +20,31 @@
     <div class="form-parameters">
       <div class="field centered" style="width: 75%">
         <p class="textlabel">Nom de la tasca:</p>
-        <%= text_field_tag :name, '', class: "textboxlarge" %>
+        <%= text_field_tag :title, '', class: "textboxlarge" %>
       </div>
 
       <div class="field centered" style="width: 90%">
         <p class="textlabel">Descripció:</p>
         <%= text_area_tag :desc, '', class: "bigtextbox", style: "height: 100%" %>
       </div>
+
+      <div class="field centered" style="width: 90%">
+        <p>Data:</p>
+        <div id="calendar" style="height: 500px"></div>
+        <%= date_field :birthdate, '', value: '2000-01-01', class: 'textbox', id: 'calendar-attached'%>
+      </div>
+
+      <div class="field centered" style="width: 90%">
+        <p>Començament:</p>
+        <%= number_field_tag :start_h, '', min: 0, max: 23, value: 9, style: "width: 40px" %>h:
+        <%= number_field_tag :start_m, '', min: 0, max: 59, value: 0, style: "width: 40px" %>m
+        <p>Es un event?</p>
+        <p>Durada:</p>
+        <%= number_field_tag :duration_h, '', min: 0, max: 99999, value: 0, style: "width: 40px" %>h:
+        <%= number_field_tag :duration_m, '', min: 0, max: 59, value: 0, style: "width: 40px" %>m
+      </div>
+
+
 
       <div class="field centered" style="width: 90%">
         <p class="textlabel">Categoria:</p>

@@ -19,6 +19,11 @@ class ProfileController < ApplicationController
         redirect_to root_url
       end
     else
+      if User.where(displayname: params[:displayname]).size > 1
+        renderResponse("ERROR_SAME_USERNAME", "Ja existeix un usuari amb aquest nom d'usuari!", "edit_view", "red")
+        return
+      end
+
       if @user.authenticate(params[:password])
 
         # Update fields
@@ -40,9 +45,11 @@ class ProfileController < ApplicationController
           renderJson("OK")
         else
           redirect_to '/profile/' + @user.id.to_s
+          return
         end
       else
-        renderResponse("ERROR_AUTHENTICATION", "Password confirmation failed", "edit_view", "red")
+        renderResponse("ERROR_AUTHENTICATION", "La contrasenya que has introduït es incorrecta", "edit_view", "red")
+        return
       end
     end
   end

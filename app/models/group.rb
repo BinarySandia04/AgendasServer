@@ -39,5 +39,24 @@ class Group < ApplicationRecord
     def get_from_cache_id(id)
       Rails.cache.fetch('groups') {Group.find(id)}
     end
+
+    def has_right_permissions(group, user, roles)
+      if group.nil?
+        return false
+      end
+
+      unless group.users.exists?(user.id)
+        return false
+      end
+
+      userRole = user.get_role(group)
+      roles.each do |role|
+        if userRole == role
+          return true
+        end
+      end
+
+      return false
+    end
   end
 end

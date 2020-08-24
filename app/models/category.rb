@@ -4,6 +4,8 @@ class Category < ApplicationRecord
   before_create :init
 
   def init
-    self.accentcolor = Color.randomBright().toInt()
+    self.accentcolor = Utils::Color.randomBright().toInt()
   end
+
+
 end

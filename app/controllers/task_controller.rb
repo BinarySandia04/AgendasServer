@@ -18,5 +18,6 @@ class TaskController < ApplicationController
 
   def create_post
     @user = current_user
+    @group = get_group(params[:groupcode])
   end
 end

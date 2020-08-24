@@ -17,7 +17,11 @@
         <%= @listuser.username %>
       </td>
       <td>
-        <%= select_tag member.number, options_for_select(Membership.roles.invert, member.role)%>
+        <% if member.user_id == @group.creator_id %>
+          <%= Membership.roles[member.role.to_s] %>
+        <% else %>
+          <%= select_tag member.number, options_for_select(Membership.roles.invert, member.role)%>
+        <% end %>
       </td>
     </tr>
     <% end %>

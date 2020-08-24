@@ -6,7 +6,7 @@ class GroupController < ApplicationController
   def create_post
     @user = current_user
     if @user
-      @group = createGroup(params[:name], params[:desc])
+      @group = createGroup(params[:name], params[:desc], @user.id)
 
       @membership = create_membership(@user.id, @group.id, 1)
 
@@ -80,7 +80,8 @@ class GroupController < ApplicationController
   def edit_members
     group = Group.find(params[:group])
     # TODO: Despues de la migracion hacer esto
-    puts params
+
+    flash[:green] = "S'han actualtzat les propietats dels membres correctament!"
     redirect_to '/group/view/' + group.code + "/administrate"
   end
 

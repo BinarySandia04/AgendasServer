@@ -335,3 +335,27 @@ img {
     padding: 0px;
   }
 }
+
+input[type="color"] {
+  width: 64px;
+  height: 32px;
+  padding: 0px;
+  border-radius: 3px;
+  border-width: 3px;
+  border-color: $color-white2;
+  border-style: solid;
+}
+
+.colorblock-layout {
+  display: table-cell;
+  padding-bottom: 20px;
+}
+
+.category {
+  float: left;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.15);
+}

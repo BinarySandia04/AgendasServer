@@ -55,11 +55,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def createGroup(name, desc)
+  def createGroup(name, desc, creator_id)
     @group = Group.new(group_params)
 
     @group.name = name
     @group.desc = desc
+    @group.creator_id = creator_id
 
     code = SecureRandom.hex(4)
 

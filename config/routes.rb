@@ -13,8 +13,13 @@
 
   post 'group/edit/members', to: 'group#edit_members'
 
-  get 'task/create/:groupcode', to: 'task#create'
+  # Tascas
+  get 'group/create/:groupcode/task', to: 'task#create'
   post 'task/create/', to: 'task#create_post'
+
+  # Category
+  get 'group/create/:groupcode/category', to: 'category#create'
+  post 'category/create', to: 'category#create_post'
 
   post 'groupinvite/', to: 'group#invite_post'
   get 'acceptinvite/:id', to: 'group#accept_invite'

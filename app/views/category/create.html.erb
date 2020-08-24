@@ -12,14 +12,14 @@
 <%= render template: 'templates/navbar' %>
 <div class = "page centered">
   <h1>
-    Crea una tasca
+    Crea una categoria
   </h1>
   <%= render template: 'templates/alerts' %>
-  <%= form_tag '/task/create/', class: "form-container", multipart: true do |form| %>
+  <%= form_tag '/category/create/', class: "form-container", multipart: true do |form| %>
     <%= hidden_field_tag :groupcode, params[:groupcode] %>
     <div class="form-parameters">
       <div class="field centered" style="width: 75%">
-        <p class="textlabel">Nom de la tasca:</p>
+        <p class="textlabel">Nom de la categoria:</p>
         <%= text_field_tag :name, '', class: "textboxlarge" %>
       </div>
 
@@ -29,16 +29,13 @@
       </div>
 
       <div class="field centered" style="width: 90%">
-        <p class="textlabel">Categoria:</p>
-        <% categories = [] %>
-        <% @group.categories.each do |category| %>
-          <% categories << category.name %>
-        <% end %>
-        <%= select_tag :category, options_for_select(categories << "<Buit>", "<Buit>")%>
+        <p class="textlabel">Color:</p>
+        <%= color_field_tag :color, '#' + Utils::Color.randomBright.toHex.to_s %>
+        <br>
       </div>
 
       <div class="action">
-        <%= submit_tag 'Crear tasca', class: "submit-button big"%>
+        <%= submit_tag 'Crear categoria', class: "submit-button big"%>
       </div>
     </div>
   <% end %>

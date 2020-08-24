@@ -21,8 +21,23 @@
   <% if role == 1 %>
     <%= render template: 'templates/group-actions' %>
   <% elsif role == 0 %>
-    <%= link_to "Crea una tasca", '/task/create/' + @group.code.to_s, class: "green-button" %>
+    <div class="horizontal-layout">
+      <%= render template: '/templates/buttons/create-task' %>
+      <%= render template: '/templates/buttons/create-category' %>
+    </div>
   <% end %>
+
+  <h2>Categories:</h2>
+  <div class="colorblock-layout">
+    <% @group.categories.each do |category| %>
+      <% color =  Utils::Color.fromInt(category.accentcolor)%>
+      <% if color.isBright %>
+        <div class="category" style="color: #000; background-color: <%= '#' + color.toHex %>"><%= category.name %></div>
+      <% else %>
+        <div class="category" style="color: #fff;background-color: <%= '#' + color.toHex %>"><%= category.name %></div>
+      <% end %>
+    <% end %>
+  </div>
 
   <h2>Tasques:</h2>
   <% if @group.tasks.count == 0 %>
@@ -32,7 +47,6 @@
       <p><%= task.title %></p>
     <% end %>
   <% end %>
-
 
   <% if role != 2 %>
     <%= render template: 'templates/group-members' %>

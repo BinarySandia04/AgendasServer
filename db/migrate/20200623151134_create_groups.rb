@@ -5,6 +5,8 @@ class CreateGroups < ActiveRecord::Migration[6.0]
       t.text :desc
       t.string :code
 
+      t.integer :creator_id
+
       t.timestamps
     end
   end

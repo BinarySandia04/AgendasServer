@@ -11,6 +11,7 @@
 <!-- navbar -->
 <%= render template: 'templates/navbar' %>
 <div class = "page centered">
+  <div class="navbar-separator"></div>
   <h1>Convida gent a <%= @group.name %></h1>
   <%= form_tag group_invite_path, class: "form-container", multipart: true do |form| %>
     <div class="form-parameters">

@@ -1,18 +1,20 @@
 @import 'variables';
 
 .navbar {
+
   ul {
     position: fixed;
 
-    top: 10px;
+    // top: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
 
-    width: 100% - $firstmargin * 2;
+    width: 96%;
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: $color_black;
-    border-radius: $border_radius;
+    // border-radius: $border_radius;
   }
 
   .nav-centered-right {
@@ -97,8 +99,6 @@
           width: 44px;
           vertical-align: center;
         }
-
-
 
         display: block;
         color: $color_white;

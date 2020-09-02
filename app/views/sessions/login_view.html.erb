@@ -13,26 +13,26 @@
 
 <div class = "centered-login-container">
   <%= form_tag '/login', class: "form-container" do |form| %>
-    <h1>Login</h1>
+    <h1>Entra</h1>
     <div class="form-parameters">
 
       <%= render template: 'templates/alerts' %>
 
       <div class="field">
-        <%= label_tag 'usermail', 'Nombre de usuario o correo electronico:', class: "textlabel" %>
+        <%= label_tag 'usermail', "Nom d'usuari o correu electrònic:", class: "textlabel" %>
         <br>
         <%= text_field_tag :usermail, '', class: "textbox" %>
       </div>
       <div class="field">
-        <%= label_tag 'password', 'Contraseña:', class: "textlabel" %>
+        <%= label_tag 'password', 'Contrasenya:', class: "textlabel" %>
         <br>
         <%= password_field_tag :password, '', class: "textbox"%>
       </div>
       <div class="action">
-        <%= submit_tag 'Login', class: "submit-button"%>
+        <%= submit_tag 'Iniciar sessió', class: "submit-button"%>
         <p>
-          Don't have an account?
-          <%= link_to 'Register', register_path %>
+          No tens un compte?
+          <%= link_to "Registra't", register_path %>
         </p>
       </div>
     </div>

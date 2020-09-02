@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= render template: 'templates/imports' %>
+
+  <%= javascript_pack_tag 'button-toggles' %>
 </head>
 <body>
 <!-- navbar -->
 <%= render template: 'templates/navbar' %>
 <div class = "page centered">
+  <div class="navbar-separator"></div>
   <h1>
     Crea una tasca
   </h1>
@@ -39,9 +42,12 @@
         <%= number_field_tag :start_h, '', min: 0, max: 23, value: 9, style: "width: 40px" %>h:
         <%= number_field_tag :start_m, '', min: 0, max: 59, value: 0, style: "width: 40px" %>m
         <p>Es un event?</p>
-        <p>Durada:</p>
-        <%= number_field_tag :duration_h, '', min: 0, max: 99999, value: 0, style: "width: 40px" %>h:
-        <%= number_field_tag :duration_m, '', min: 0, max: 59, value: 0, style: "width: 40px" %>m
+        <span class="toggle-button off" id="toggle-button" onclick="toggleDuration()">No</span>
+        <div id="hide-from-toggle" style="display: none;">
+          <p>Durada:</p>
+          <%= number_field_tag :duration_h, '', min: 0, max: 99999, value: 0, style: "width: 40px;", class: "reset-toggle" %>h:
+          <%= number_field_tag :duration_m, '', min: 0, max: 59, value: 0, style: "width: 40px;", class: "reset-toggle" %>m
+        </div>
       </div>
 
 

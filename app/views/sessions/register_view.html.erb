@@ -12,51 +12,51 @@
 
 <div class = "centered-login-container">
   <%= form_tag '/register', class: "form-container" do |form| %>
-    <h1>Register</h1>
+    <h1>Crea un compte</h1>
     <div class="form-parameters" style="width: 550px">
       <%= render template: 'templates/alerts' %>
       <div class="field">
-        <%= label_tag 'username', 'Nombre de usuario', class: "textlabel" %>
+        <%= label_tag 'username', "Nom d'usuari", class: "textlabel" %>
         <br>
         <%= text_field_tag :username, '', class: "textbox" %>
       </div>
       <div class="field">
-        <%= label_tag 'name', 'Nombre', class: "textlabel" %>
+        <%= label_tag 'name', 'Nom', class: "textlabel" %>
         <br>
         <%= text_field_tag :name, '', class: 'textbox' %>
       </div>
       <div class="field">
-        <%= label_tag 'surname', 'Apellidos', class: "textlabel" %>
+        <%= label_tag 'surname', 'Cognom', class: "textlabel" %>
         <br>
         <%= text_field_tag :surname, '', class: 'textbox' %>
       </div>
       <div class="field">
-        <%= label_tag 'birthdate', 'Fecha de nacimiento', class: "textlabel" %>
+        <%= label_tag 'birthdate', 'Data de naixement', class: "textlabel" %>
         <br>
         <%= date_field :birthdate, '', value: '2000-01-01', class: 'textbox' %>
       </div>
       <div class="field">
-        <%= label_tag 'email', 'Correo electronico', class: "textlabel" %>
+        <%= label_tag 'email', 'Correu electrònic', class: "textlabel" %>
         <br>
         <%= text_field_tag :email, '', class: "textbox" %>
       </div>
       <div class="horizontal-layout">
       <div class="field">
-        <%= label_tag 'password', 'Contraseña:', class: "textlabel" %>
+        <%= label_tag 'password', 'Contrasenya:', class: "textlabel" %>
         <br>
         <%= password_field_tag :password, '', class: "textbox"%>
       </div>
       <div class="field">
-        <%= label_tag 'confirmation', 'Confirma la contraseña:', class: "textlabel" %>
+        <%= label_tag 'confirmation', 'Repeteix la contrasenya:', class: "textlabel" %>
         <br>
         <%= password_field_tag :confirmation, '', class: "textbox"%>
       </div>
       </div>
       <div class="action">
-        <%= submit_tag 'Register', class: "submit-button"%>
+        <%= submit_tag 'Crear un compte', class: "submit-button"%>
         <p>
-          Already have an account?
-          <%= link_to 'Login', login_path %>
+          Ja tens un compte?
+          <%= link_to 'Entra', login_path %>
         </p>
       </div>
     </div>

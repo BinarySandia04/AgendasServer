@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_122704) do
+ActiveRecord::Schema.define(version: 2020_09_09_091458) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,13 +33,21 @@ ActiveRecord::Schema.define(version: 2020_08_24_122704) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "assigments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+    t.boolean "is_done"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.integer "group_id"
+    t.text "desc"
     t.integer "accentcolor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "group_id"
-    t.text "desc"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -83,9 +91,12 @@ ActiveRecord::Schema.define(version: 2020_08_24_122704) do
     t.datetime "start"
     t.integer "duration"
     t.text "description"
+    t.integer "group_id"
+    t.integer "category_id"
+    t.integer "user_id"
+    t.text "desc"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "group_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,11 +111,11 @@ ActiveRecord::Schema.define(version: 2020_08_24_122704) do
     t.date "birthdate"
     t.text "description"
     t.string "status"
+    t.boolean "email_confirmed", default: false
+    t.string "confirm_token"
     t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "email_confirmed", default: false
-    t.string "confirm_token"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

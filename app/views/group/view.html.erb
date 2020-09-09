@@ -44,8 +44,8 @@
   <% if @group.tasks.count == 0 %>
     <p>No hi ha ninguna tasca!</p>
   <% else %>
-    <% @group.tasks.each do |task| %>
-      <p><%= task.title %></p>
+    <% Assigment.where(user: @user, task_id: Task.where(group: @group).pluck(:id)).each do |assigment| %>
+      <p><%= assigment.task.title %></p>
     <% end %>
   <% end %>
 

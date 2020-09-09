@@ -1,4 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :group
-  has_many :categories, through: :group
+  belongs_to :category
+  belongs_to :user
+
+  has_many :assigments
 end

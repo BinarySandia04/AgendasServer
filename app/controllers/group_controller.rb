@@ -108,6 +108,12 @@ class GroupController < ApplicationController
   def create_membership(user_id, group_id, role)
     membership = Membership.new(user_id: user_id, group_id: group_id, role: role)
     if membership.save
+      # Refer tasques bro
+      group = get_group(group_id)
+      user = User.get_from_cache(user_id)
+
+      Assigment.add_exisiting(user, group)
+
       return membership
     else
       if isApi

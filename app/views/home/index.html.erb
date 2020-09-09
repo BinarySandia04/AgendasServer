@@ -53,9 +53,18 @@
                 <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
               </div>
             </div>
-
           <% end %>
+
           <%= render template: 'templates/quick-start-buttons'%>
+          <h2>Les teves tasques:</h2>
+          <% @user.assigments.each do |assigment| %>
+            <div class="task-preview">
+              <h2><%= assigment.task.title %></h2>
+              <p>Creada per: <%= assigment.task.user.username %></p>
+            </div>
+          <% end %>
+
+
         <% end %>
       </div>
     <% end %>

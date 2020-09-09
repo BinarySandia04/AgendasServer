@@ -14,6 +14,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :status
 
+      t.boolean :email_confirmed, default: false
+      t.string :confirm_token
+
       t.string :role
 
       t.timestamps

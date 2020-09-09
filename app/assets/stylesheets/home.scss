@@ -14,6 +14,8 @@ body{
 }
 
 .centered {
+  max-width: 1000px;
+  margin: auto !important; // NO HAURIA DE FER AIXO
   text-align: center;
 }
 
@@ -569,6 +571,8 @@ h4 {
   width: 80px;
   font-weight: bold;
   border-radius: 7px;
+
+  user-select: none;
 
   &.off {
     background-color: $color_white3;

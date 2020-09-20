@@ -17,6 +17,8 @@
   get 'group/create/:groupcode/task', to: 'task#create'
   post 'task/create/', to: 'task#create_post'
 
+  get 'task/view/:taskcode', to: 'task#view'
+
   # Category
   get 'group/create/:groupcode/category', to: 'category#create'
   post 'category/create', to: 'category#create_post'

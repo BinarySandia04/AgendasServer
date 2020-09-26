@@ -16,6 +16,21 @@ class TaskController < ApplicationController
     end
   end
 
+  def view
+    @user = current_user
+    @task = Task.find(params[:taskcode])
+
+    if @task.nil? or @user.nil?
+      redirect_to root_url
+    else
+      unless @user.assigments.exists?(task: @task)
+        redirect_to root_url
+      else
+        @assigment = Assigment.where(user: @user, task: @task).first
+      end
+    end
+  end
+
   def create_post
     @user = current_user
     @group = get_group(params[:groupcode])
@@ -72,5 +87,32 @@ class TaskController < ApplicationController
     end
 
     # TODO: Coses
+  end
+
+  def completed
+    @user = current_user
+    @task = Task.find(params[:taskcode])
+
+    @user = current_user
+    @task = Task.find(params[:taskcode])
+
+    if @task.nil? or @user.nil?
+      redirect_to root_url
+    else
+      unless @user.assigments.exists?(task: @task)
+        redirect_to root_url
+      else
+        @assigment = Assigment.where(task: @task, user: @user).first
+        unless @assigment.is_done
+          @assigment.is_done = true
+          @assigment.save()
+          flash.now[:green] = "Has marcat la tasca com a completeda"
+          render 'task/view'
+        else
+          flash.now[:red] = "Error"
+          render 'task/view'
+        end
+      end
+    end
   end
 end

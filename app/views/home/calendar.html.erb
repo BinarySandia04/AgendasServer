@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<!-- navbar -->
+<%= render template: 'templates/big-nav' %>
+
+<!-- front intro page -->
+
+<div class = "page">
+  <div class="bignav-separator"></div>
+  <% unless @user %>
+    <h1>
+      Agenda
+    </h1>
+    <p>
+      Wow this is a cool paragraph xDDDD
+    </p>
+  <% else %>
+    <div class = "page">
+      <%= render template: 'templates/alerts' %>
+
+      <h1>
+        La teva agenda <!-- Capitalist momento -->
+      </h1>
+
+      <%if @user.groups.count == 0 %>
+        <h2>Benvingut a Agenda!</h2>
+        <p>Per començar a sincronitzar tasques, has d'entrar en un grup. Per entrar en un grup tens dugues opcions:</p>
+
+        <li>Esperar a que algu et convidi al seu grup</li>
+        <li>Crear el teu propi grup</li>
+
+        <p>Quan algú et convidi al seu grup t'arribarà una notificació. Per veure les notificacions has de clicar el número de les notificacions al costat de la campaneta</p>
+        <p>Si pitjes en el teu nom d'usuari, pots modificar el teu avatar i també els paràmetres del teu compte</p>
+        <p>Si vols crear un grup pots fer-ho pitjant aquest botó:</p>
+        <%= render template: 'templates/quick-start-buttons'%>
+      <% else %>
+        <h2>Els teus grups:</h2>
+
+        <% @user.groups.each do |group| %>
+
+          <div class="notification">
+            <h2><%= group.name %></h2>
+            <br>
+            <div class="buttons">
+              <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
+            </div>
+          </div>
+        <% end %>
+
+        <%= render template: 'templates/quick-start-buttons'%>
+        <h2>Les teves tasques:</h2>
+        <% @user.assigments.each do |assigment| %>
+          <% color =  Utils::Color.fromInt(assigment.task.category.accentcolor)%>
+          <div class="task-preview" style="background-color: <%= '#' + color.toHex %>" onclick="window.location='/task/view/<%= assigment.task.id %>';">
+            <div id="left">
+              <div class="task-title">
+                <!-- TODO: redirect-->
+                <% if color.isBright %>
+                  <p class="task-title-text", style="color: black;"><%= assigment.task.title %></p>
+                <% else %>
+                  <p class="task-title-text", style="color: white;"><%= assigment.task.title %></p>
+                <% end %>
+              </div>
+            </div><div id="right">
+            <div class="task-rightinfo">
+              <% if color.isBright %>
+                <p style="color: black">Creada per: <%= assigment.task.user.username %></p>
+              <% else %>
+                <p style="color: white">Creada per: <%= assigment.task.user.username %></p>
+              <% end %>
+            </div>
+          </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<%= render template: 'templates/footer' %>
+</body>
+</html>
+
+

@@ -1,9 +1,8 @@
 @import 'variables';
 
-.navbar {
-
+@mixin navbar() {
   ul {
-    position: fixed;
+    position: static;
 
     // top: 10px;
     padding-left: 2%;
@@ -223,4 +222,31 @@
       }
     }
   }
+}
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+}
+
+.second-navbar {
+  @include navbar();
+  top: 20px;
+  color: red;
+
+  ul {
+    background-color: $color_white2;
+  }
+
+  li {
+    a {
+      &.element {
+        color: black;
+      }
+    }
+  }
+}
+
+.navbar {
+  @include navbar();
 }

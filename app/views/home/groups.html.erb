@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<!-- navbar -->
+<%= render template: 'templates/big-nav' %>
+
+<!-- front intro page -->
+
+<div class = "page">
+  <div class="bignav-separator"></div>
+  <h2>Els teus grups:</h2>
+
+  <% @user.groups.each do |group| %>
+
+    <div class="notification">
+      <h2><%= group.name %></h2>
+      <br>
+      <div class="buttons">
+        <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render template: 'templates/quick-start-buttons'%>
+</div>
+<%= render template: 'templates/footer' %>
+</body>
+</html>
+
+

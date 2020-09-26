@@ -9,18 +9,30 @@
 </head>
 <body>
   <!-- navbar -->
-  <%= render template: 'templates/navbar' %>
+  <% if @user %>
+    <%= render template: 'templates/big-nav' %>
+  <% else %>
+    <%= render template: 'templates/navbar' %>
+  <% end %>
 
   <!-- front intro page -->
 
   <div class = "page">
-    <div class="navbar-separator"></div>
+
+    <% if @user %>
+      <div class="bignav-separator"></div>
+    <% else %>
+      <div class="navbar-separator"></div>
+    <% end %>
+
+
     <% unless @user %>
     <h1>
       Agenda
     </h1>
-    <p>
-      Wow this is a cool paragraph xDDDD
+    <p>Benvingut a Agenda!</p><p>Agenda és una altre manera de organitzar-se, utilitzant el poder de la sincronització!
+  </p><p>Per començar a utilitzar-la, registra't amb el botó de adalt a la dreta!
+  </p><p>A que esperes?
     </p>
     <% else %>
       <div class = "page">
@@ -42,44 +54,7 @@
           <p>Si vols crear un grup pots fer-ho pitjant aquest botó:</p>
           <%= render template: 'templates/quick-start-buttons'%>
         <% else %>
-          <h2>Els teus grups:</h2>
-
-          <% @user.groups.each do |group| %>
-
-            <div class="notification">
-              <h2><%= group.name %></h2>
-              <br>
-              <div class="buttons">
-                <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
-              </div>
-            </div>
-          <% end %>
-
-          <%= render template: 'templates/quick-start-buttons'%>
-          <h2>Les teves tasques:</h2>
-          <% @user.assigments.each do |assigment| %>
-            <% color =  Utils::Color.fromInt(assigment.task.category.accentcolor)%>
-            <div class="task-preview" style="background-color: <%= '#' + color.toHex %>" onclick="window.location='/task/view/<%= assigment.task.id %>';">
-              <div id="left">
-                <div class="task-title">
-                  <!-- TODO: redirect-->
-                  <% if color.isBright %>
-                    <p class="task-title-text", style="color: black;"><%= assigment.task.title %></p>
-                  <% else %>
-                    <p class="task-title-text", style="color: white;"><%= assigment.task.title %></p>
-                <% end %>
-                </div>
-              </div><div id="right">
-              <div class="task-rightinfo">
-                <% if color.isBright %>
-                  <p style="color: black">Creada per: <%= assigment.task.user.username %></p>
-                <% else %>
-                  <p style="color: white">Creada per: <%= assigment.task.user.username %></p>
-              <% end %>
-              </div>
-              </div>
-            </div>
-          <% end %>
+          <h2>Tens <%= Assigment.where(user: @user, is_done: nil).count %> tasques per completar</h2>
         <% end %>
       </div>
     <% end %>

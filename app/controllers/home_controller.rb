@@ -38,4 +38,16 @@ class HomeController < ApplicationController
       redirect_to root_url
     end
   end
+
+  def groups
+    @user = current_user
+  end
+
+  def tasks
+    @user = current_user
+  end
+
+  def calendar
+    @user = current_user
+  end
 end

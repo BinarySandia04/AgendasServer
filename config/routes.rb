@@ -18,6 +18,7 @@
   post 'task/create/', to: 'task#create_post'
 
   get 'task/view/:taskcode', to: 'task#view'
+  get 'task/view/:taskcode/completed', to: 'task#completed'
 
   # Category
   get 'group/create/:groupcode/category', to: 'category#create'
@@ -30,6 +31,10 @@
 
   get 'news', to: 'home#news'
   get 'contact', to: 'home#contact'
+
+  get 'groups', to: 'home#groups'
+  get 'tasks', to: 'home#tasks'
+  get 'calendar', to: 'home#calendar'
 
   get 'login', to: 'sessions#login_view'
   post 'login', to: 'sessions#create'

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<%= render template: 'templates/navbar' %>
+<div class = "page">
+  <div class="navbar-separator"></div>
+  <h1><%= @task.group.name %></h1>
+  <h2><%= @task.title %></h2>
+
+  <% if @task.user.avatar.attached? %>
+    <%= image_tag(url_for(@task.user.avatar), class: "user-image")%>
+  <% else %>
+    <%= image_tag("profile.png", class: "user-image")%>
+  <% end %>
+
+  <p style="display: block">Creada per <%= @task.user.username %></p>
+
+  <% if @assigment.is_done %>
+    <a class="blue-button disabled" disabled="">Marcar tasca com a completada</a>
+  <% else %>
+    <%= link_to "Marcar tasca com a completada", '/task/view/' + @task.id.to_s + "/completed", class: "blue-button" %>
+  <% end %>
+
+  <p><%= @task.desc %></p>
+  <% color =  Utils::Color.fromInt(@task.category .accentcolor)%>
+
+  <% if color.isBright %>
+    <div class="category" style="color: #000; background-color: <%= '#' + color.toHex %>;"><%= @task.category.name %></div>
+  <% else %>
+    <div class="category" style="color: #fff;background-color: <%= '#' + color.toHex %>;"><%= @task.category .name %></div>
+  <% end %>
+
+  <div style="height: 75px;"></div>
+</div>
+
+<%= render template: 'templates/footer' %>
+</body>
+</html>

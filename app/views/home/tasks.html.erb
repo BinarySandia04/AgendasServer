@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<!-- navbar -->
+<%= render template: 'templates/big-nav' %>
+
+<!-- front intro page -->
+
+<div class = "page">
+  <div class="bignav-separator"></div>
+  <h2>Les teves tasques:</h2>
+  <% @user.assigments.each do |assigment| %>
+    <% color =  Utils::Color.fromInt(assigment.task.category.accentcolor)%>
+    <div class="task-preview" style="background-color: <%= '#' + color.toHex %>" onclick="window.location='/task/view/<%= assigment.task.id %>';">
+      <div id="left">
+        <div class="task-title">
+          <!-- TODO: redirect-->
+          <% if color.isBright %>
+            <p class="task-title-text", style="color: black;"><%= assigment.task.title %></p>
+          <% else %>
+            <p class="task-title-text", style="color: white;"><%= assigment.task.title %></p>
+          <% end %>
+        </div>
+      </div><div id="right">
+      <div class="task-rightinfo">
+        <% if color.isBright %>
+          <p style="color: black">Creada per: <%= assigment.task.user.username %></p>
+        <% else %>
+          <p style="color: white">Creada per: <%= assigment.task.user.username %></p>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  <% end %>
+</div>
+<%= render template: 'templates/footer' %>
+</body>
+</html>
+
+

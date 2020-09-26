@@ -181,11 +181,6 @@ body{
     border-color: $color_green_alert_secondary;
   }
 }
-
-.navmargin {
-  // margin-left: $firstmargin;
-  // margin-right: $firstmargin;
-}
 .nicemargin {
   margin-left: $secondmargin;
   margin-right: $secondmargin;
@@ -193,6 +188,10 @@ body{
 
 .navbar-separator {
   min-height: $bodypaddingtop;
+}
+
+.bignav-separator {
+  min-height: $bodypadding;
 }
 
 .page {
@@ -305,6 +304,12 @@ img {
 
   &:hover {
     background-position: 100%;
+  }
+
+  &.disabled {
+    background-image: $white_gradient;
+    color: #444444;
+    cursor: not-allowed;
   }
 }
 
@@ -587,6 +592,13 @@ h4 {
   &:hover {
     background-color: #ccc;
   }
+}
+
+.user-image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .task-preview {

@@ -21,5 +21,6 @@ class Notification < ApplicationRecord
   protected
   def set_unread
     self.unread = true
+    self.confirmable = false
   end
 end

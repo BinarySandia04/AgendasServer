@@ -24,16 +24,23 @@
         <h2><%= notification.title %></h2>
         <p><%= notification.content %></p>
 
-        <div class="buttons">
-          <%= link_to "Acceptar", notification.action, class: "blue-button"%>
+        <% if notification.confirmable %>
+          <div class="buttons">
+            <%= link_to notification.action_name, '/notifications/accept/' + notification.id.to_s, class: "blue-button"%>
 
-          <%= link_to "Borrar", '/notifications/delete/' + notification.id.to_s, class: "red-button"%>
-        </div>
+            <%= link_to notification.deny_action_name, '/notifications/delete/' + notification.id.to_s, class: "red-button"%>
+          </div>
+        <% else %>
+          <div class="buttons">
+            <%= link_to "Borrar", '/notifications/delete/' + notification.id.to_s, class: "red-button"%>
+          </div>
+        <% end %>
 
         <p class="no-important"><%= notification.created_at.to_s(:db) %></p>
       </div>
     <% end %>
   <% end %>
+</div>
 
   <%= render template: 'templates/footer' %>
 </div>

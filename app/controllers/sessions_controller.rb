@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     user = User.where(confirm_token: params[:confirm_token]).first
     if user
       user.activate_email
-      flash[:green] = "Success confirming email!"
+      flash[:green] = "Compte verificat correctament!"
       redirect_to login_url
     else
       redirect_to root_url
@@ -69,7 +69,7 @@ class SessionsController < ApplicationController
           renderResponse("ERROR_EMAIL_CONFIRMATION", "Please activate your account following the instructions of the confirmation mail", "login_view", "green")
         end
       else
-        renderResponse("ERROR_WRONG_PASSWORD", "Wrong password", "login_view", "red")
+        renderResponse("ERROR_WRONG_PASSWORD", "Contrasenya incorrecta", "login_view", "red")
       end
     end
   end

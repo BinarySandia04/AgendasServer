@@ -16,29 +16,34 @@
 <div class = "page">
   <div class="bignav-separator"></div>
   <h2>Les teves tasques:</h2>
-  <% @user.assigments.each do |assigment| %>
-    <% color =  Utils::Color.fromInt(assigment.task.category.accentcolor)%>
-    <div class="task-preview" style="background-color: <%= '#' + color.toHex %>" onclick="window.location='/task/view/<%= assigment.task.id %>';">
-      <div id="left">
-        <div class="task-title">
-          <!-- TODO: redirect-->
-          <% if color.isBright %>
-            <p class="task-title-text", style="color: black;"><%= assigment.task.title %></p>
-          <% else %>
-            <p class="task-title-text", style="color: white;"><%= assigment.task.title %></p>
-          <% end %>
-        </div>
-      </div><div id="right">
-      <div class="task-rightinfo">
-        <% if color.isBright %>
-          <p style="color: black">Creada per: <%= assigment.task.user.username %></p>
-        <% else %>
-          <p style="color: white">Creada per: <%= assigment.task.user.username %></p>
-        <% end %>
-      </div>
-    </div>
-    </div>
+
+  <% n = false %>
+
+  <% @user.assigments.where(is_done: nil).each do |assigment| %>
+    <% @p_assigment = assigment %>
+    <% @p_completed = false %>
+    <%= render template: 'templates/task-preview' %>
+    <% n = true %>
   <% end %>
+
+  <% unless n %>
+    Tot net! No tens cap tasca a fer!
+  <% end %>
+  <div style="height: 30px"></div> <!-- separator -->
+  <h2>Tasques completades:</h2>
+  <% n = false %>
+
+  <% @user.assigments.where(is_done: true).each do |assigment| %>
+    <% @p_assigment = assigment %>
+    <% @p_completed = true %>
+    <% n = true %>
+    <%= render template: 'templates/task-preview' %>
+  <% end %>
+
+  <% unless n %>
+    Encara no has completat cap tasca.
+  <% end %>
+  <div style="height: 30px"></div> <!-- separator -->
 </div>
 <%= render template: 'templates/footer' %>
 </body>

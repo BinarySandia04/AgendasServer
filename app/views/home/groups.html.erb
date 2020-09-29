@@ -23,9 +23,15 @@
       <h2><%= group.name %></h2>
       <br>
       <div class="buttons">
-        <%= link_to "Mirar", '/group/view/' + group.code + "/overview", class: "blue-button"%>
+        <%= link_to "Veure", '/group/view/' + group.code + "/overview", class: "blue-button"%>
       </div>
     </div>
+  <% end %>
+
+  <% unless @user.groups.present? %>
+    <p>No formes part de cap grup.</p>
+    <p>Vols entrar en un grup? Demana a un administrador d'un grup ja existent que et convidi. Llavors et saltarà una notificació i podràs entrar-hi.</p>
+    <p>Els teus grups i els grups en els quals formes part apareixeràn aquí.</p>
   <% end %>
 
   <%= render template: 'templates/quick-start-buttons'%>

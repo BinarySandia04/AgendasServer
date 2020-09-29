@@ -78,6 +78,7 @@ class TaskController < ApplicationController
     if @task.save
       # Crear assigments
       Assigment.create_auto(@task)
+      Assigment.notify_users(@task, @user, @user.username + " ha creat la tasca " + title, desc)
 
       flash[:green] = "S'ha creat la tasca correctament!"
       redirect_to '/group/view/' + params[:groupcode] + '/overview'

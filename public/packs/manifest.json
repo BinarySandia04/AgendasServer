@@ -1,15 +1,15 @@
 {
-  "application.js": "/packs/js/application-776307a18182ee82bded.js",
-  "application.js.map": "/packs/js/application-776307a18182ee82bded.js.map",
+  "application.js": "/packs/js/application-c00fc7b4b5843f02122b.js",
+  "application.js.map": "/packs/js/application-c00fc7b4b5843f02122b.js.map",
   "button-toggles.js": "/packs/js/button-toggles-8003123bac556ad521fd.js",
   "button-toggles.js.map": "/packs/js/button-toggles-8003123bac556ad521fd.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-776307a18182ee82bded.js"
+        "/packs/js/application-c00fc7b4b5843f02122b.js"
       ],
       "js.map": [
-        "/packs/js/application-776307a18182ee82bded.js.map"
+        "/packs/js/application-c00fc7b4b5843f02122b.js.map"
       ]
     },
     "button-toggles": {

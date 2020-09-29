@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= render template: 'templates/imports' %>
+</head>
+<body>
+<%= render template: 'templates/navbar' %>
+<div class = "page">
+  <div class="navbar-separator"></div>
+  <h2>Borrar?</h2>
+
+  <h1>Estàs a punt de borrar</h1><h1> <%= Group.find_by_code(@group_id).name %></h1>
+  <h2>N'estàs completament segur?</h2>
+  <p>Totes les tasques i les categories del grup es borraran. Estàs segur de completament de que vols continuar?</p>
+
+  <%= form_tag '/group/delete/', multipart: true do |form| %>
+    <div class="horizontal-layout">
+      <%= submit_tag 'Si', class: "red-button" %>
+      <%= link_to "No", '/group/view/' + @group_id, class: "green-button" %>
+      <%= hidden_field_tag 'IKnowWhatAmIDoing', '1'%>
+      <%= hidden_field_tag "groupcode", @group_id %>
+    </div>
+  <% end %>
+
+  <div style="height: 30px"></div> <!-- separator -->
+
+</div>
+
+<div style="height: 30px"></div> <!-- separator -->
+<%= render template: 'templates/footer' %>
+</body>
+</html>

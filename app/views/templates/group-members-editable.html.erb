@@ -1,9 +1,8 @@
 <h2>Members:</h2>
-<%= form_tag '/group/edit/members', multipart: true do |form| %>
 <table class="table">
     <% @count = 0 %>
     <% Membership.where(group_id: @group.id).each do |member| %>
-    <% @count = @count + 1 %>
+    <%= form_tag '/group/edit/' + @group.id.to_s + "/members", multipart: true do |form| %>
     <tr>
       <% @listuser = User.find_by_id(member.user_id) %>
       <td style="width: 25px">
@@ -16,19 +15,22 @@
       <td>
         <%= @listuser.username %>
       </td>
-      <td>
-        <% if member.user_id == @group.creator_id %>
-          <%= Membership.roles[member.role.to_s] %>
-        <% else %>
-          <%= select_tag member.number, options_for_select(Membership.roles.invert, member.role)%>
-        <% end %>
-      </td>
-    </tr>
+      <% if member.user_id == @group.creator_id %>
+        <td>
+        <%= Membership.roles[member.role.to_s] %>
+        </td>
+      <% else %>
+        <td>
+          <%= hidden_field_tag "member_id", member.id %>
+          <%= select_tag "role", options_for_select(Membership.roles.invert, member.role)%>
+        </td>
+        <td>
+          <%= submit_tag 'Actualitzar', class: "green-button"%>
+        </td>
+      <% end %>
+    </tr><% end %>
     <% end %>
 </table>
-    <%= hidden_field_tag 'count', @count %>
-    <%= submit_tag 'Actualitzar', class: "green-button"%>
-  <% end %>
 
 <br>
 <br>

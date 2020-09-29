@@ -5,6 +5,15 @@
 @import 'reset';
 @import 'variables';
 
+#clock {
+  // font-family: 'Orbiton', sans-serif;
+  color: #66ff99;
+  font-size: 56px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 html {
   height: 100%;
 }
@@ -191,12 +200,12 @@ body{
 }
 
 .bignav-separator {
-  min-height: $bodypadding;
+  min-height: 125px;
 }
 
 .page {
 
-  min-height: 80vh;
+  min-height: 90vh;
   margin-left: $bodypadding;
   margin-right: $bodypadding;
   // margin: $bodypaddingtop $bodypadding 10px $bodypadding;
@@ -554,13 +563,13 @@ h4 {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   background-color: $color_black;
   color: $color-white;
   text-align: center;
 
   .nicemargin {
-    padding-top: 20px;
+    padding-top: 2vh;
 
     p {
       color: $color-white2;

@@ -11,7 +11,7 @@
 
   get 'group/view/:groupcode/administrate', to: 'group#administrate'
 
-  post 'group/edit/members', to: 'group#edit_members'
+  post 'group/edit/:groupcode/members', to: 'group#edit_members'
 
   # Tascas
   get 'group/create/:groupcode/task', to: 'task#create'
@@ -25,7 +25,17 @@
   post 'category/create', to: 'category#create_post'
 
   post 'groupinvite/', to: 'group#invite_post'
+
   get 'acceptinvite/:id', to: 'group#accept_invite'
+  get 'denyinvite/:id', to: 'group#deny_invite'
+
+  # Sortir del grup
+  get 'group/exit/:groupcode', to: 'group#exit_group_confirm'
+  post 'group/exit', to: 'group#exit_group'
+
+  get 'group/delete/:groupcode', to: 'group#delete_group_confirm'
+  post 'group/delete', to: 'group#delete_group'
+  ###
 
   get 'admin', to: 'dashboard#admin_dashboard'
 
@@ -41,6 +51,7 @@
 
   get 'notifications', to: 'home#notifications'
   get 'notifications/delete/:id', to: 'home#delete_notification'
+  get 'notifications/accept/:id', to: 'home#accept_notification'
 
   get 'register', to: 'sessions#register_view'
   post 'register', to: 'sessions#register'

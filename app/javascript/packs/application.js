@@ -10,42 +10,12 @@ function updateNotifications(){
         }
     );
 }
-
-
 function fill_zeros(number, length) {
     var my_string = '' + number;
     while (my_string.length < length) {
         my_string = '0' + my_string;
     }
     return my_string;
-}
-
-window.onload = function defineCalendar(){
-    const myCalender = new CalendarPicker('#calendar', {
-        // If max < min or min > max then the only available day will be today.
-        min: new Date(),
-        max: new Date(new Date().getFullYear() + 4, 10) // NOTE: new Date(nextYear, 10) is "Sun Nov 01 nextYear"
-    });
-
-    const updatedValue = document.querySelector("#calendar-attached");
-
-    // Set the current date on load
-
-    var today = new Date()
-    var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)
-    var day = fill_zeros(tomorrow.getDate(), 2);
-    var month = fill_zeros(tomorrow.getMonth() + 1, 2);
-    var year = fill_zeros(tomorrow.getFullYear(), 4);
-    updatedValue.setAttribute("value", year + "-" + month + "-" + day);
-
-    // Add callback
-    myCalender.onValueChange((currentValue) => {
-        var day = fill_zeros(currentValue.getDate(), 2);
-        var month = fill_zeros(currentValue.getMonth() + 1, 2);
-        var year = fill_zeros(currentValue.getFullYear(), 4);
-        updatedValue.setAttribute("value", year + "-" + month + "-" + day);
-        console.log(`The current value of the calendar is: ${currentValue}`);
-    });
 }
 
 class CalendarPicker {
@@ -327,6 +297,51 @@ class CalendarPicker {
         if (this.callback) return this.callback(this.value);
         this.callback = callback;
     }
+}
+
+window.onload = function setupClock(){
+    var clock = document.getElementById("clock");
+    var data = new Date();
+    var hora = fill_zeros(data.getHours(), 2);
+    var minut = fill_zeros(data.getMinutes(), 2);
+    var segons = fill_zeros(data.getSeconds(), 2);
+
+    if(clock != null){
+        clock.innerHTML = hora + ":" + minut + ":" + segons;
+        setInterval(function() {
+            var data = new Date();
+            var hora = fill_zeros(data.getHours(), 2);
+            var minut = fill_zeros(data.getMinutes(), 2);
+            var segons = fill_zeros(data.getSeconds(), 2);
+            clock.innerHTML = hora + ":" + minut + ":" + segons;
+        }, 1000);
+    }
+
+    const myCalender = new CalendarPicker('#calendar', {
+        // If max < min or min > max then the only available day will be today.
+        min: new Date(),
+        max: new Date(new Date().getFullYear() + 4, 10) // NOTE: new Date(nextYear, 10) is "Sun Nov 01 nextYear"
+    });
+
+    const updatedValue = document.querySelector("#calendar-attached");
+
+    // Set the current date on load
+
+    var today = new Date()
+    var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)
+    var day = fill_zeros(tomorrow.getDate(), 2);
+    var month = fill_zeros(tomorrow.getMonth() + 1, 2);
+    var year = fill_zeros(tomorrow.getFullYear(), 4);
+    updatedValue.setAttribute("value", year + "-" + month + "-" + day);
+
+    // Add callback
+    myCalender.onValueChange((currentValue) => {
+        var day = fill_zeros(currentValue.getDate(), 2);
+        var month = fill_zeros(currentValue.getMonth() + 1, 2);
+        var year = fill_zeros(currentValue.getFullYear(), 4);
+        updatedValue.setAttribute("value", year + "-" + month + "-" + day);
+        console.log(`The current value of the calendar is: ${currentValue}`);
+    });
 }
 
 

@@ -6,7 +6,13 @@ class CreateNotifications < ActiveRecord::Migration[6.0]
       t.text :title
       t.text :content
 
-      t.text :action
+      t.string :action
+      t.string :deny_action
+
+      t.string :action_name
+      t.string :deny_action_name
+
+      t.boolean :confirmable
 
       t.boolean :unread
       t.timestamps

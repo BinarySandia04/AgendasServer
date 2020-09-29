@@ -35,7 +35,6 @@
   </p><p>A que esperes?
     </p>
     <% else %>
-      <div class = "page">
         <%= render template: 'templates/alerts' %>
 
         <h1>
@@ -54,9 +53,9 @@
           <p>Si vols crear un grup pots fer-ho pitjant aquest botó:</p>
           <%= render template: 'templates/quick-start-buttons'%>
         <% else %>
-          <h2>Tens <%= Assigment.where(user: @user, is_done: nil).count %> tasques per completar</h2>
+          <h2>- Actualment tens <%= Assigment.where(user: @user, is_done: nil).count %> tasques per completar</h2>
+          <div id="clock"></div>
         <% end %>
-      </div>
     <% end %>
   </div>
   <%= render template: 'templates/footer' %>

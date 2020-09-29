@@ -1,0 +1,36 @@
+<% color =  Utils::Color.fromInt(@p_assigment.task.category.accentcolor)%>
+<% if @p_completed %>
+  <div class="task-preview" style="background-color: #999" onclick="window.location='/task/view/<%= @p_assigment.task.id %>';">
+    <div id="left">
+      <div class="task-title">
+        <!-- TODO: redirect-->
+        <p class="task-title-text", style="color: black;"><%= @p_assigment.task.title %></p>
+      </div>
+    </div><div id="right">
+    <div class="task-rightinfo">
+      <p style="color: black">Creada per: <%= @p_assigment.task.user.username %></p>
+    </div>
+  </div>
+  </div>
+<% else %>
+  <div class="task-preview" style="background-color: <%= '#' + color.toHex %>" onclick="window.location='/task/view/<%= @p_assigment.task.id %>';">
+    <div id="left">
+      <div class="task-title">
+        <!-- TODO: redirect-->
+        <% if color.isBright %>
+          <p class="task-title-text", style="color: black;"><%= @p_assigment.task.title %></p>
+        <% else %>
+          <p class="task-title-text", style="color: white;"><%= @p_assigment.task.title %></p>
+        <% end %>
+      </div>
+    </div><div id="right">
+    <div class="task-rightinfo">
+      <% if color.isBright %>
+        <p style="color: black">Creada per: <%= @p_assigment.task.user.username %></p>
+      <% else %>
+        <p style="color: white">Creada per: <%= @p_assigment.task.user.username %></p>
+      <% end %>
+    </div>
+  </div>
+  </div>
+<% end %>

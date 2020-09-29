@@ -80,7 +80,11 @@ ActiveRecord::Schema.define(version: 2020_09_09_091458) do
     t.integer "user_id"
     t.text "title"
     t.text "content"
-    t.text "action"
+    t.string "action"
+    t.string "deny_action"
+    t.string "action_name"
+    t.string "deny_action_name"
+    t.boolean "confirmable"
     t.boolean "unread"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -26,11 +26,21 @@
       <%= render template: '/templates/buttons/create-task' %>
       <%= render template: '/templates/buttons/create-category' %>
     </div>
+    <div class="horizontal-layout">
+      <%= link_to "Surt del grup!", '/group/exit/' + @group.code.to_s, class: "red-button" %>
+    </div>
   <% end %>
+
+  <% if role != 2 %>
+    <%= render template: 'templates/group-members' %>
+    <div style="height: 30px"></div> <!-- separator -->
+  <% end%>
 
   <h2>Categories:</h2>
   <div class="colorblock-layout">
+    <% n = false %>
     <% @group.categories.each do |category| %>
+      <% n= true %>
       <% color =  Utils::Color.fromInt(category.accentcolor)%>
       <% if color.isBright %>
         <div class="category" style="color: #000; background-color: <%= '#' + color.toHex %>"><%= category.name %></div>
@@ -38,23 +48,27 @@
         <div class="category" style="color: #fff;background-color: <%= '#' + color.toHex %>"><%= category.name %></div>
       <% end %>
     <% end %>
+    <% unless n %>
+      <p>No existeix cap categoria</p>
+    <% end %>
+
   </div>
+
 
   <h2>Tasques:</h2>
   <% if @group.tasks.count == 0 %>
     <p>No hi ha ninguna tasca!</p>
   <% else %>
     <% Assigment.where(user: @user, task_id: Task.where(group: @group).pluck(:id)).each do |assigment| %>
-      <p><%= assigment.task.title %></p>
+      <% @p_assigment = assigment %>
+      <%= render template: 'templates/task-preview' %>
     <% end %>
   <% end %>
-
-  <% if role != 2 %>
-    <%= render template: 'templates/group-members' %>
-  <% end%>
+  <div style="height: 30px"></div> <!-- separator -->
 
 </div>
 
+<div style="height: 30px"></div> <!-- separator -->
 <%= render template: 'templates/footer' %>
 </body>
 </html>

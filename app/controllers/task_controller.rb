@@ -44,17 +44,20 @@ class TaskController < ApplicationController
 
     # Verificacion
     if title == ""
-      flash.now[:red] = "Has de introduïr un títol"
+      flash.now[:red] = "Has d'introduïr un títol"
       render 'task/create'
       return
     end
 
     category = params[:category] # String del nombre
 
-    category_object = nil
-    unless category == "<Buit>"
-      category_object = Category.where(group_id: @group.id, name: category).first
+    unless Category.where(group_id: @group.id, name: category).present?
+      flash.now[:red] = "Has d'introduir una categoria vàlida"
+      render 'task/create'
+      return
     end
+
+    category_object = Category.where(group_id: @group.id, name: category).first
 
     @task = Task.new()
 

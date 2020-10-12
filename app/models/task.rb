@@ -4,4 +4,8 @@ class Task < ApplicationRecord
   belongs_to :user
 
   has_many :assigments
+
+  has_one_attached :file
+
+
 end

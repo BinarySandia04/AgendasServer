@@ -54,7 +54,7 @@ class SessionsController < ApplicationController
     end
 
     if myUser.nil?
-      renderResponse("ERROR_USERMAIL_DOESNT_EXISTS", "This user doesn't exist", "login_view", "red")
+      renderResponse("ERROR_USERMAIL_DOESNT_EXISTS", "Aquest usuari no existeix!", "login_view", "red")
       return
     else
       if myUser.authenticate(password)
@@ -66,7 +66,7 @@ class SessionsController < ApplicationController
             redirect_to root_url
           end
         else
-          renderResponse("ERROR_EMAIL_CONFIRMATION", "Please activate your account following the instructions of the confirmation mail", "login_view", "green")
+          renderResponse("ERROR_EMAIL_CONFIRMATION", "Siusplau activa el teu compte amb les instruccions que hi han al teu mail", "login_view", "green")
         end
       else
         renderResponse("ERROR_WRONG_PASSWORD", "Contrasenya incorrecta", "login_view", "red")

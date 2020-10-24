@@ -1,0 +1,876 @@
+I, [2020-10-24T21:12:52.691025 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064] Started GET "/" for 192.168.100.159 at 2020-10-24 21:12:52 +0100
+I, [2020-10-24T21:12:52.768990 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064] Processing by HomeController#index as HTML
+I, [2020-10-24T21:12:52.784996 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendering home/index.html.erb
+I, [2020-10-24T21:12:52.790768 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:12:53.796898 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendered templates/imports.html.erb (Duration: 1005.8ms | Allocations: 40687)
+I, [2020-10-24T21:12:53.797987 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:12:53.801070 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendered templates/navbar.html.erb (Duration: 2.9ms | Allocations: 751)
+I, [2020-10-24T21:12:53.802220 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:12:53.803018 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendered templates/footer.html.erb (Duration: 0.6ms | Allocations: 93)
+I, [2020-10-24T21:12:53.803194 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064]   Rendered home/index.html.erb (Duration: 1017.8ms | Allocations: 42739)
+I, [2020-10-24T21:12:53.803733 #6487]  INFO -- : [f34a8b3d-28b4-458a-8522-9c470296b064] Completed 200 OK in 1034ms (Views: 1028.5ms | Allocations: 44515)
+I, [2020-10-24T21:12:53.901174 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 192.168.100.159 at 2020-10-24 21:12:53 +0100
+F, [2020-10-24T21:12:53.904571 #6487] FATAL -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[210740ca-05f8-4629-9ae4-2a79d1369cc7]   
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[210740ca-05f8-4629-9ae4-2a79d1369cc7] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:12:53.906477 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:12:53.908055 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:12:53.907899 #6487]  INFO -- : [fd9561f4-97b0-4c73-8b34-8f7efd07bc47] Started GET "/assets/home-84df8d19d9fe0759ef75910d216d6ec347ff006be41eec08208a842cef11f1cd.css" for 192.168.100.159 at 2020-10-24 21:12:53 +0100
+I, [2020-10-24T21:12:53.915842 #6487]  INFO -- : [f59c9e33-fb97-4d74-97db-068d831977b6] Started GET "/assets/navbar-a97a1bec18adb61406be7a6e885cf7960b2c281295933cd9bf807500134eb38c.css" for 192.168.100.159 at 2020-10-24 21:12:53 +0100
+I, [2020-10-24T21:12:53.916400 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendering errors/show.html.erb
+I, [2020-10-24T21:12:53.925344 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:12:53.929295 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendered templates/imports.html.erb (Duration: 3.3ms | Allocations: 1203)
+I, [2020-10-24T21:12:53.930576 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:12:53.931475 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 146)
+I, [2020-10-24T21:12:53.932532 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:12:53.933714 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendered templates/alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+I, [2020-10-24T21:12:53.934810 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:12:53.935083 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:12:53.935227 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7]   Rendered errors/show.html.erb (Duration: 15.2ms | Allocations: 3388)
+I, [2020-10-24T21:12:53.935695 #6487]  INFO -- : [210740ca-05f8-4629-9ae4-2a79d1369cc7] Completed 200 OK in 27ms (Views: 25.2ms | Allocations: 5991)
+I, [2020-10-24T21:12:54.598017 #6487]  INFO -- : [7de2bb5b-5d39-49f8-b9d6-7718ddc91cb9] Started GET "/assets/favicon-77b10fca201de6a4d9a23f5346219744203247df5270854aafd0e6f8f9440e3e.png" for 192.168.100.159 at 2020-10-24 21:12:54 +0100
+I, [2020-10-24T21:13:23.400232 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d] Started GET "/" for 185.175.60.77 at 2020-10-24 21:13:23 +0100
+I, [2020-10-24T21:13:23.404073 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d] Processing by HomeController#index as HTML
+I, [2020-10-24T21:13:23.407883 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendering home/index.html.erb
+I, [2020-10-24T21:13:23.408659 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:13:23.416935 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendered templates/imports.html.erb (Duration: 7.9ms | Allocations: 1212)
+I, [2020-10-24T21:13:23.417853 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:13:23.419576 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendered templates/navbar.html.erb (Duration: 1.4ms | Allocations: 139)
+I, [2020-10-24T21:13:23.420143 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:13:23.420582 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:13:23.420985 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d]   Rendered home/index.html.erb (Duration: 12.7ms | Allocations: 1625)
+I, [2020-10-24T21:13:23.421910 #6487]  INFO -- : [89748283-b4c8-46d8-bfd8-aeed76d0399d] Completed 200 OK in 17ms (Views: 15.3ms | Allocations: 1958)
+I, [2020-10-24T21:13:23.497895 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:13:23 +0100
+F, [2020-10-24T21:13:23.503973 #6487] FATAL -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   
+[66fa518a-1f21-4665-b187-a9075bb06e58] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[66fa518a-1f21-4665-b187-a9075bb06e58]   
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[66fa518a-1f21-4665-b187-a9075bb06e58] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[66fa518a-1f21-4665-b187-a9075bb06e58] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[66fa518a-1f21-4665-b187-a9075bb06e58] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[66fa518a-1f21-4665-b187-a9075bb06e58] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[66fa518a-1f21-4665-b187-a9075bb06e58] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[66fa518a-1f21-4665-b187-a9075bb06e58] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[66fa518a-1f21-4665-b187-a9075bb06e58] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[66fa518a-1f21-4665-b187-a9075bb06e58] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:13:23.506889 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:13:23.510438 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:13:23.514145 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendering errors/show.html.erb
+I, [2020-10-24T21:13:23.514876 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:13:23.510216 #6487]  INFO -- : [73aa6359-973c-4ae4-ab3f-47b2e41120c3] Started GET "/assets/home-84df8d19d9fe0759ef75910d216d6ec347ff006be41eec08208a842cef11f1cd.css" for 185.175.60.77 at 2020-10-24 21:13:23 +0100
+I, [2020-10-24T21:13:23.508754 #6487]  INFO -- : [0e5c02d2-4cfc-4d39-8a67-f26d0395246f] Started GET "/assets/navbar-a97a1bec18adb61406be7a6e885cf7960b2c281295933cd9bf807500134eb38c.css" for 185.175.60.77 at 2020-10-24 21:13:23 +0100
+I, [2020-10-24T21:13:23.521909 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendered templates/imports.html.erb (Duration: 6.7ms | Allocations: 1204)
+I, [2020-10-24T21:13:23.527070 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:13:23.537436 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendered templates/navbar.html.erb (Duration: 1.4ms | Allocations: 139)
+I, [2020-10-24T21:13:23.538272 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:13:23.538826 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:13:23.540011 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:13:23.540640 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:13:23.540939 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58]   Rendered errors/show.html.erb (Duration: 26.4ms | Allocations: 3772)
+I, [2020-10-24T21:13:23.541731 #6487]  INFO -- : [66fa518a-1f21-4665-b187-a9075bb06e58] Completed 200 OK in 31ms (Views: 29.0ms | Allocations: 4131)
+I, [2020-10-24T21:13:23.722600 #6487]  INFO -- : [a733f382-3c56-4217-a110-6ff0be17580f] Started GET "/assets/favicon-77b10fca201de6a4d9a23f5346219744203247df5270854aafd0e6f8f9440e3e.png" for 185.175.60.77 at 2020-10-24 21:13:23 +0100
+I, [2020-10-24T21:16:10.086019 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580] Started GET "/login" for 185.175.60.77 at 2020-10-24 21:16:10 +0100
+I, [2020-10-24T21:16:10.090433 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580] Processing by SessionsController#login_view as HTML
+I, [2020-10-24T21:16:10.099820 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:16:10.104366 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:10.112662 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendered templates/imports.html.erb (Duration: 7.8ms | Allocations: 1212)
+I, [2020-10-24T21:16:10.114348 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:10.115990 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendered templates/navbar.html.erb (Duration: 1.2ms | Allocations: 98)
+I, [2020-10-24T21:16:10.117987 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:10.118685 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendered templates/alerts.html.erb (Duration: 0.3ms | Allocations: 19)
+I, [2020-10-24T21:16:10.122344 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580]   Rendered sessions/login_view.html.erb (Duration: 22.0ms | Allocations: 2409)
+I, [2020-10-24T21:16:10.123352 #6487]  INFO -- : [8b2dc336-a8c3-433f-9ffd-57329dba8580] Completed 200 OK in 32ms (Views: 28.9ms | Allocations: 3317)
+I, [2020-10-24T21:16:10.193903 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:16:10 +0100
+F, [2020-10-24T21:16:10.198657 #6487] FATAL -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   
+[e5bfe449-51dc-4227-b501-9cad47cba024] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[e5bfe449-51dc-4227-b501-9cad47cba024]   
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[e5bfe449-51dc-4227-b501-9cad47cba024] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[e5bfe449-51dc-4227-b501-9cad47cba024] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[e5bfe449-51dc-4227-b501-9cad47cba024] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[e5bfe449-51dc-4227-b501-9cad47cba024] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[e5bfe449-51dc-4227-b501-9cad47cba024] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[e5bfe449-51dc-4227-b501-9cad47cba024] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[e5bfe449-51dc-4227-b501-9cad47cba024] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[e5bfe449-51dc-4227-b501-9cad47cba024] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:10.200673 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:10.200886 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:10.203696 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:10.204289 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:10.209493 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendered templates/imports.html.erb (Duration: 5.0ms | Allocations: 1203)
+I, [2020-10-24T21:16:10.210131 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:10.211237 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendered templates/navbar.html.erb (Duration: 0.9ms | Allocations: 139)
+I, [2020-10-24T21:16:10.211613 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:10.211980 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:16:10.212308 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:10.212744 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:10.212950 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024]   Rendered errors/show.html.erb (Duration: 9.0ms | Allocations: 1729)
+I, [2020-10-24T21:16:10.213501 #6487]  INFO -- : [e5bfe449-51dc-4227-b501-9cad47cba024] Completed 200 OK in 12ms (Views: 10.9ms | Allocations: 2088)
+I, [2020-10-24T21:16:17.467473 #6487]  INFO -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a] Started POST "/login" for 185.175.60.77 at 2020-10-24 21:16:17 +0100
+I, [2020-10-24T21:16:17.472365 #6487]  INFO -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:16:17.472747 #6487]  INFO -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a]   Parameters: {"authenticity_token"=>"xFDX2aNNxZ7HZq0eSd4Q2+jVHEyE/Q1qY4rAicFjnWJajgJGKQLwN24Ejs+rYkE17lnZEWZSO85D2eNQdmSVCA==", "usermail"=>"Sandia98", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+D, [2020-10-24T21:16:17.492772 #6487] DEBUG -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a]   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+I, [2020-10-24T21:16:17.495827 #6487]  INFO -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a] Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.6ms | Allocations: 1859)
+F, [2020-10-24T21:16:17.500233 #6487] FATAL -- : [4f0726f7-a7ee-4b33-93fd-c0d3279ad61a]   
+[4f0726f7-a7ee-4b33-93fd-c0d3279ad61a] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[4f0726f7-a7ee-4b33-93fd-c0d3279ad61a]   
+[4f0726f7-a7ee-4b33-93fd-c0d3279ad61a] app/controllers/sessions_controller.rb:53:in `create'
+I, [2020-10-24T21:16:26.734770 #6487]  INFO -- : [23f74258-5df0-47b1-b65f-abe8cc3d40a4] Started POST "/login" for 185.175.60.77 at 2020-10-24 21:16:26 +0100
+I, [2020-10-24T21:16:26.739383 #6487]  INFO -- : [23f74258-5df0-47b1-b65f-abe8cc3d40a4] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:16:26.739808 #6487]  INFO -- : [23f74258-5df0-47b1-b65f-abe8cc3d40a4]   Parameters: {"authenticity_token"=>"xFDX2aNNxZ7HZq0eSd4Q2+jVHEyE/Q1qY4rAicFjnWJajgJGKQLwN24Ejs+rYkE17lnZEWZSO85D2eNQdmSVCA==", "usermail"=>"Sandia", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+I, [2020-10-24T21:16:26.744722 #6487]  INFO -- : [23f74258-5df0-47b1-b65f-abe8cc3d40a4] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 284)
+F, [2020-10-24T21:16:26.748425 #6487] FATAL -- : [23f74258-5df0-47b1-b65f-abe8cc3d40a4]   
+[23f74258-5df0-47b1-b65f-abe8cc3d40a4] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[23f74258-5df0-47b1-b65f-abe8cc3d40a4]   
+[23f74258-5df0-47b1-b65f-abe8cc3d40a4] app/controllers/sessions_controller.rb:53:in `create'
+I, [2020-10-24T21:16:30.347112 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf] Started GET "/" for 185.175.60.77 at 2020-10-24 21:16:30 +0100
+I, [2020-10-24T21:16:30.351431 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf] Processing by HomeController#index as HTML
+I, [2020-10-24T21:16:30.355382 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendering home/index.html.erb
+I, [2020-10-24T21:16:30.356185 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:30.364203 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendered templates/imports.html.erb (Duration: 7.6ms | Allocations: 1212)
+I, [2020-10-24T21:16:30.364958 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:30.366758 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendered templates/navbar.html.erb (Duration: 1.4ms | Allocations: 139)
+I, [2020-10-24T21:16:30.367359 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:30.367817 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:30.368141 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf]   Rendered home/index.html.erb (Duration: 12.3ms | Allocations: 1625)
+I, [2020-10-24T21:16:30.369061 #6487]  INFO -- : [db075f59-c007-44ee-9656-e8a084371dcf] Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 1962)
+I, [2020-10-24T21:16:30.419554 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:16:30 +0100
+F, [2020-10-24T21:16:30.426539 #6487] FATAL -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   
+[cfa80013-c93f-47fd-97e5-4270f609f684] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[cfa80013-c93f-47fd-97e5-4270f609f684]   
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[cfa80013-c93f-47fd-97e5-4270f609f684] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[cfa80013-c93f-47fd-97e5-4270f609f684] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[cfa80013-c93f-47fd-97e5-4270f609f684] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[cfa80013-c93f-47fd-97e5-4270f609f684] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[cfa80013-c93f-47fd-97e5-4270f609f684] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[cfa80013-c93f-47fd-97e5-4270f609f684] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[cfa80013-c93f-47fd-97e5-4270f609f684] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[cfa80013-c93f-47fd-97e5-4270f609f684] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:30.429716 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:30.430046 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:30.434361 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:30.435224 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:30.442743 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendered templates/imports.html.erb (Duration: 7.1ms | Allocations: 1203)
+I, [2020-10-24T21:16:30.443506 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:30.445199 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendered templates/navbar.html.erb (Duration: 1.3ms | Allocations: 134)
+I, [2020-10-24T21:16:30.446053 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:30.446599 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:16:30.447154 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:30.447593 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:30.447768 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684]   Rendered errors/show.html.erb (Duration: 13.1ms | Allocations: 1724)
+I, [2020-10-24T21:16:30.448225 #6487]  INFO -- : [cfa80013-c93f-47fd-97e5-4270f609f684] Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 2083)
+I, [2020-10-24T21:16:30.983479 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1] Started GET "/news" for 185.175.60.77 at 2020-10-24 21:16:30 +0100
+I, [2020-10-24T21:16:30.985562 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1] Processing by HomeController#news as HTML
+I, [2020-10-24T21:16:30.988215 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendering home/news.html.erb
+I, [2020-10-24T21:16:30.989577 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:30.993049 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendered templates/imports.html.erb (Duration: 3.2ms | Allocations: 1212)
+I, [2020-10-24T21:16:30.993560 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:30.994452 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 139)
+I, [2020-10-24T21:16:30.994729 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:30.994925 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:30.995062 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1]   Rendered home/news.html.erb (Duration: 6.6ms | Allocations: 1786)
+I, [2020-10-24T21:16:30.995497 #6487]  INFO -- : [c82478cc-2d96-4744-a0a9-1a446c8ee4a1] Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 2256)
+I, [2020-10-24T21:16:31.046771 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:16:31 +0100
+F, [2020-10-24T21:16:31.049997 #6487] FATAL -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46]   
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[9acbc7f1-987c-40a1-a28c-f0419dae5c46] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:31.051499 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:31.051663 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:31.053654 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:31.054106 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:31.057527 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendered templates/imports.html.erb (Duration: 3.2ms | Allocations: 1203)
+I, [2020-10-24T21:16:31.058047 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:31.058840 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendered templates/navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+I, [2020-10-24T21:16:31.059214 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:31.059462 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:16:31.059747 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:31.059939 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:31.060071 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46]   Rendered errors/show.html.erb (Duration: 6.2ms | Allocations: 1729)
+I, [2020-10-24T21:16:31.060515 #6487]  INFO -- : [9acbc7f1-987c-40a1-a28c-f0419dae5c46] Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2089)
+I, [2020-10-24T21:16:31.467306 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00] Started GET "/contact" for 185.175.60.77 at 2020-10-24 21:16:31 +0100
+I, [2020-10-24T21:16:31.469219 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00] Processing by HomeController#contact as HTML
+I, [2020-10-24T21:16:31.471731 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendering home/contact.html.erb
+I, [2020-10-24T21:16:31.473319 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:31.476695 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendered templates/imports.html.erb (Duration: 3.1ms | Allocations: 1212)
+I, [2020-10-24T21:16:31.477180 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:31.478143 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 139)
+I, [2020-10-24T21:16:31.478433 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:31.478635 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:31.478772 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00]   Rendered home/contact.html.erb (Duration: 6.8ms | Allocations: 1870)
+I, [2020-10-24T21:16:31.479216 #6487]  INFO -- : [70a82144-51d6-4ea8-91d8-dbbdaaa80c00] Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 2339)
+I, [2020-10-24T21:16:31.517588 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:16:31 +0100
+F, [2020-10-24T21:16:31.520694 #6487] FATAL -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   
+[95895080-b5ca-49d9-896b-40ee31c1b203] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[95895080-b5ca-49d9-896b-40ee31c1b203]   
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[95895080-b5ca-49d9-896b-40ee31c1b203] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[95895080-b5ca-49d9-896b-40ee31c1b203] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[95895080-b5ca-49d9-896b-40ee31c1b203] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[95895080-b5ca-49d9-896b-40ee31c1b203] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[95895080-b5ca-49d9-896b-40ee31c1b203] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[95895080-b5ca-49d9-896b-40ee31c1b203] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[95895080-b5ca-49d9-896b-40ee31c1b203] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[95895080-b5ca-49d9-896b-40ee31c1b203] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:31.522261 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:31.522424 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:31.524332 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:31.524739 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:31.528119 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendered templates/imports.html.erb (Duration: 3.2ms | Allocations: 1203)
+I, [2020-10-24T21:16:31.528492 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:31.529312 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 139)
+I, [2020-10-24T21:16:31.529595 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:31.529936 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:16:31.530184 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:31.530369 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:31.530551 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203]   Rendered errors/show.html.erb (Duration: 6.0ms | Allocations: 1729)
+I, [2020-10-24T21:16:31.530994 #6487]  INFO -- : [95895080-b5ca-49d9-896b-40ee31c1b203] Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2093)
+I, [2020-10-24T21:16:32.671057 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f] Started GET "/login" for 185.175.60.77 at 2020-10-24 21:16:32 +0100
+I, [2020-10-24T21:16:32.673071 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f] Processing by SessionsController#login_view as HTML
+I, [2020-10-24T21:16:32.674944 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:16:32.675324 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:32.678744 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendered templates/imports.html.erb (Duration: 3.2ms | Allocations: 1212)
+I, [2020-10-24T21:16:32.679216 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:32.679939 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendered templates/navbar.html.erb (Duration: 0.5ms | Allocations: 97)
+I, [2020-10-24T21:16:32.680289 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:32.680549 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 19)
+I, [2020-10-24T21:16:32.682027 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f]   Rendered sessions/login_view.html.erb (Duration: 6.8ms | Allocations: 1890)
+I, [2020-10-24T21:16:32.682538 #6487]  INFO -- : [e7307d66-cdc5-4259-bff0-fa9e97af773f] Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 2219)
+I, [2020-10-24T21:16:32.720890 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:16:32 +0100
+F, [2020-10-24T21:16:32.724004 #6487] FATAL -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609]   
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[6e6f184e-e30d-47ca-97cc-2efc34ddb609] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:32.725552 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:32.725764 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:32.727631 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:32.728091 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:32.731659 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendered templates/imports.html.erb (Duration: 3.3ms | Allocations: 1203)
+I, [2020-10-24T21:16:32.732081 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:32.732911 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 134)
+I, [2020-10-24T21:16:32.733198 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:32.733423 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:16:32.733721 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:32.734015 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:32.734156 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609]   Rendered errors/show.html.erb (Duration: 6.3ms | Allocations: 1724)
+I, [2020-10-24T21:16:32.734604 #6487]  INFO -- : [6e6f184e-e30d-47ca-97cc-2efc34ddb609] Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2083)
+I, [2020-10-24T21:16:38.878457 #6487]  INFO -- : [4e501cad-3930-499a-b948-4fc9960f7057] Started POST "/login" for 185.175.60.77 at 2020-10-24 21:16:38 +0100
+I, [2020-10-24T21:16:38.882910 #6487]  INFO -- : [4e501cad-3930-499a-b948-4fc9960f7057] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:16:38.883321 #6487]  INFO -- : [4e501cad-3930-499a-b948-4fc9960f7057]   Parameters: {"authenticity_token"=>"dyTvL+gAXiTtkhqs0hwbGzSaqax9NlbNikRbEEtuVezp+jqwYk9rjUTwOX0woEr1MhZs8Z+ZYGmqF3jJ/Gldhg==", "usermail"=>"Syndria", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+I, [2020-10-24T21:16:38.887953 #6487]  INFO -- : [4e501cad-3930-499a-b948-4fc9960f7057] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 271)
+F, [2020-10-24T21:16:38.892318 #6487] FATAL -- : [4e501cad-3930-499a-b948-4fc9960f7057]   
+[4e501cad-3930-499a-b948-4fc9960f7057] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[4e501cad-3930-499a-b948-4fc9960f7057]   
+[4e501cad-3930-499a-b948-4fc9960f7057] app/controllers/sessions_controller.rb:53:in `create'
+I, [2020-10-24T21:16:52.028199 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439] Started GET "/" for 192.168.100.159 at 2020-10-24 21:16:52 +0100
+I, [2020-10-24T21:16:52.032347 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439] Processing by HomeController#index as HTML
+I, [2020-10-24T21:16:52.036281 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendering home/index.html.erb
+I, [2020-10-24T21:16:52.037071 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:52.045171 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendered templates/imports.html.erb (Duration: 7.4ms | Allocations: 1212)
+I, [2020-10-24T21:16:52.046601 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:52.048493 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendered templates/navbar.html.erb (Duration: 1.4ms | Allocations: 140)
+I, [2020-10-24T21:16:52.049208 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:52.049751 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:52.050092 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439]   Rendered home/index.html.erb (Duration: 13.4ms | Allocations: 1625)
+I, [2020-10-24T21:16:52.051093 #6487]  INFO -- : [6a00cd69-dc2b-4a68-8b25-f2b8d4a14439] Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 1956)
+I, [2020-10-24T21:16:52.121378 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 192.168.100.159 at 2020-10-24 21:16:52 +0100
+F, [2020-10-24T21:16:52.127354 #6487] FATAL -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[98d5a9aa-4948-41c0-858e-955f8f141ea7]   
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[98d5a9aa-4948-41c0-858e-955f8f141ea7] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:52.129355 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:52.129567 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:52.132328 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:52.132931 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:52.137927 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendered templates/imports.html.erb (Duration: 4.7ms | Allocations: 1203)
+I, [2020-10-24T21:16:52.138450 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:52.139596 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendered templates/navbar.html.erb (Duration: 0.9ms | Allocations: 140)
+I, [2020-10-24T21:16:52.139984 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:52.140351 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:16:52.140689 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:52.140954 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:52.141151 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7]   Rendered errors/show.html.erb (Duration: 8.5ms | Allocations: 1730)
+I, [2020-10-24T21:16:52.141933 #6487]  INFO -- : [98d5a9aa-4948-41c0-858e-955f8f141ea7] Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 2089)
+I, [2020-10-24T21:16:53.789123 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f] Started GET "/login" for 192.168.100.159 at 2020-10-24 21:16:53 +0100
+I, [2020-10-24T21:16:53.796973 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f] Processing by SessionsController#login_view as HTML
+I, [2020-10-24T21:16:53.800872 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:16:53.801702 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:53.809836 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendered templates/imports.html.erb (Duration: 7.5ms | Allocations: 1212)
+I, [2020-10-24T21:16:53.810708 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:53.812201 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendered templates/navbar.html.erb (Duration: 1.1ms | Allocations: 98)
+I, [2020-10-24T21:16:53.812889 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:53.813598 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 19)
+I, [2020-10-24T21:16:53.816494 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f]   Rendered sessions/login_view.html.erb (Duration: 15.2ms | Allocations: 1891)
+I, [2020-10-24T21:16:53.817537 #6487]  INFO -- : [8c7bb123-bc50-46cd-8675-86a2ceef653f] Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 2218)
+I, [2020-10-24T21:16:53.869170 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 192.168.100.159 at 2020-10-24 21:16:53 +0100
+F, [2020-10-24T21:16:53.873935 #6487] FATAL -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   
+[de521a89-d391-4e4f-990f-3ca5141f4da8] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[de521a89-d391-4e4f-990f-3ca5141f4da8]   
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[de521a89-d391-4e4f-990f-3ca5141f4da8] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:16:53.875918 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:16:53.876163 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:16:53.878978 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendering errors/show.html.erb
+I, [2020-10-24T21:16:53.879512 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:16:53.884719 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendered templates/imports.html.erb (Duration: 5.0ms | Allocations: 1203)
+I, [2020-10-24T21:16:53.885249 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:16:53.886486 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendered templates/navbar.html.erb (Duration: 1.0ms | Allocations: 140)
+I, [2020-10-24T21:16:53.886921 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:16:53.887298 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:16:53.887737 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:16:53.888018 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:16:53.888211 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8]   Rendered errors/show.html.erb (Duration: 9.0ms | Allocations: 1730)
+I, [2020-10-24T21:16:53.888811 #6487]  INFO -- : [de521a89-d391-4e4f-990f-3ca5141f4da8] Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 2089)
+I, [2020-10-24T21:16:58.648811 #6487]  INFO -- : [40455099-1bbb-4380-96e0-cae06255739d] Started POST "/login" for 192.168.100.159 at 2020-10-24 21:16:58 +0100
+I, [2020-10-24T21:16:58.653279 #6487]  INFO -- : [40455099-1bbb-4380-96e0-cae06255739d] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:16:58.653860 #6487]  INFO -- : [40455099-1bbb-4380-96e0-cae06255739d]   Parameters: {"authenticity_token"=>"PlsxjtzM7ET82BC80jv8YBm5u8O82OKylQXYrhp6LzXkHH2bQIcP5T02paHzTBbf8uqRcQ2v9AuDcNU09FYafg==", "usermail"=>"Sandia98", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+I, [2020-10-24T21:16:58.658333 #6487]  INFO -- : [40455099-1bbb-4380-96e0-cae06255739d] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 271)
+F, [2020-10-24T21:16:58.662718 #6487] FATAL -- : [40455099-1bbb-4380-96e0-cae06255739d]   
+[40455099-1bbb-4380-96e0-cae06255739d] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[40455099-1bbb-4380-96e0-cae06255739d]   
+[40455099-1bbb-4380-96e0-cae06255739d] app/controllers/sessions_controller.rb:53:in `create'
+I, [2020-10-24T21:31:42.452086 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3] Started GET "/" for 185.175.60.77 at 2020-10-24 21:31:42 +0100
+I, [2020-10-24T21:31:42.528214 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3] Processing by HomeController#index as HTML
+I, [2020-10-24T21:31:42.544467 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendering home/index.html.erb
+I, [2020-10-24T21:31:42.548373 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:31:43.368839 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendered templates/imports.html.erb (Duration: 820.2ms | Allocations: 21533)
+I, [2020-10-24T21:31:43.370025 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:31:43.373720 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendered templates/navbar.html.erb (Duration: 3.4ms | Allocations: 745)
+I, [2020-10-24T21:31:43.374832 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:31:43.375641 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendered templates/footer.html.erb (Duration: 0.6ms | Allocations: 93)
+I, [2020-10-24T21:31:43.375938 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3]   Rendered home/index.html.erb (Duration: 830.9ms | Allocations: 23620)
+I, [2020-10-24T21:31:43.376501 #9152]  INFO -- : [b1fdb369-ad4e-4b16-964a-d3c116e279f3] Completed 200 OK in 848ms (Views: 842.1ms | Allocations: 25428)
+I, [2020-10-24T21:31:43.488320 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:31:43 +0100
+F, [2020-10-24T21:31:43.491558 #9152] FATAL -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   
+[b880fd66-072b-491e-8ebc-31cd56b2df19] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[b880fd66-072b-491e-8ebc-31cd56b2df19]   
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[b880fd66-072b-491e-8ebc-31cd56b2df19] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:31:43.493273 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:31:43.493439 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:31:43.497935 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendering errors/show.html.erb
+I, [2020-10-24T21:31:43.499984 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:31:43.503285 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendered templates/imports.html.erb (Duration: 3.1ms | Allocations: 1203)
+I, [2020-10-24T21:31:43.504311 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:31:43.505181 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 140)
+I, [2020-10-24T21:31:43.506285 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:31:43.507339 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendered templates/alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+I, [2020-10-24T21:31:43.508384 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:31:43.508628 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:31:43.508770 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19]   Rendered errors/show.html.erb (Duration: 10.6ms | Allocations: 2664)
+I, [2020-10-24T21:31:43.509212 #9152]  INFO -- : [b880fd66-072b-491e-8ebc-31cd56b2df19] Completed 200 OK in 16ms (Views: 13.6ms | Allocations: 3648)
+I, [2020-10-24T21:31:46.756387 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc] Started GET "/login" for 185.175.60.77 at 2020-10-24 21:31:46 +0100
+I, [2020-10-24T21:31:46.758740 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc] Processing by SessionsController#login_view as HTML
+I, [2020-10-24T21:31:46.762895 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:31:46.765007 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:31:46.768505 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendered templates/imports.html.erb (Duration: 3.3ms | Allocations: 1212)
+I, [2020-10-24T21:31:46.768924 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:31:46.769656 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendered templates/navbar.html.erb (Duration: 0.5ms | Allocations: 98)
+I, [2020-10-24T21:31:46.770658 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:31:46.771027 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 19)
+I, [2020-10-24T21:31:46.772504 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc]   Rendered sessions/login_view.html.erb (Duration: 9.4ms | Allocations: 2404)
+I, [2020-10-24T21:31:46.773063 #9152]  INFO -- : [7a4e248b-d6b7-47de-9b01-4b8f2da780fc] Completed 200 OK in 14ms (Views: 12.4ms | Allocations: 3312)
+I, [2020-10-24T21:31:46.813003 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:31:46 +0100
+F, [2020-10-24T21:31:46.816259 #9152] FATAL -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:31:46.817831 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:31:46.818004 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:31:46.819923 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendering errors/show.html.erb
+I, [2020-10-24T21:31:46.820372 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:31:46.823671 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendered templates/imports.html.erb (Duration: 3.1ms | Allocations: 1203)
+I, [2020-10-24T21:31:46.824056 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:31:46.824852 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendered templates/navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+I, [2020-10-24T21:31:46.825147 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:31:46.825389 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:31:46.825667 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:31:46.825861 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:31:46.826056 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c]   Rendered errors/show.html.erb (Duration: 5.9ms | Allocations: 1729)
+I, [2020-10-24T21:31:46.826470 #9152]  INFO -- : [0c37bb2e-2d5d-4777-ae87-2daff7e24c4c] Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 2088)
+I, [2020-10-24T21:31:50.294268 #9152]  INFO -- : [c2387c57-d73f-4d94-a5b1-9f266780711e] Started POST "/login" for 185.175.60.77 at 2020-10-24 21:31:50 +0100
+I, [2020-10-24T21:31:50.299038 #9152]  INFO -- : [c2387c57-d73f-4d94-a5b1-9f266780711e] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:31:50.299424 #9152]  INFO -- : [c2387c57-d73f-4d94-a5b1-9f266780711e]   Parameters: {"authenticity_token"=>"QG8OPbihhNOHTE7PfaURK/wNkfiCRwLCziw1DRVvT1resduiMu6xei4ubR6fGUDF+oFUpWDoNGbufxbUomhHMA==", "usermail"=>"Sandia", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+D, [2020-10-24T21:31:50.318778 #9152] DEBUG -- : [c2387c57-d73f-4d94-a5b1-9f266780711e]   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+I, [2020-10-24T21:31:50.322302 #9152]  INFO -- : [c2387c57-d73f-4d94-a5b1-9f266780711e] Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.5ms | Allocations: 1860)
+F, [2020-10-24T21:31:50.326764 #9152] FATAL -- : [c2387c57-d73f-4d94-a5b1-9f266780711e]   
+[c2387c57-d73f-4d94-a5b1-9f266780711e] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[c2387c57-d73f-4d94-a5b1-9f266780711e]   
+[c2387c57-d73f-4d94-a5b1-9f266780711e] app/controllers/sessions_controller.rb:53:in `create'
+D, [2020-10-24T21:34:25.149415 #9256] DEBUG -- :   [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-10-24T21:34:25.239891 #9256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-10-24T21:34:25.241233 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+D, [2020-10-24T21:34:25.257052 #9256] DEBUG -- :   [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+D, [2020-10-24T21:34:25.270708 #9256] DEBUG -- :   [1m[35m (12.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+D, [2020-10-24T21:34:25.292074 #9256] DEBUG -- :   [1m[35m (19.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+D, [2020-10-24T21:34:25.293428 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+D, [2020-10-24T21:34:25.306672 #9256] DEBUG -- :   [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+D, [2020-10-24T21:34:25.322302 #9256] DEBUG -- :   [1m[35m (14.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+D, [2020-10-24T21:34:25.323482 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assigments"[0m
+D, [2020-10-24T21:34:25.336225 #9256] DEBUG -- :   [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "assigments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "task_id" integer, "is_done" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.337373 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+D, [2020-10-24T21:34:25.350582 #9256] DEBUG -- :   [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "group_id" integer, "desc" text, "accentcolor" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.351846 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups"[0m
+D, [2020-10-24T21:34:25.364943 #9256] DEBUG -- :   [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "desc" text, "code" varchar, "creator_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.366227 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "invitations"[0m
+D, [2020-10-24T21:34:25.386903 #9256] DEBUG -- :   [1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE "invitations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer, "sender_id" integer, "recipent_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.388168 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "memberships"[0m
+D, [2020-10-24T21:34:25.398503 #9256] DEBUG -- :   [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "memberships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "role" integer, "number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.399817 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "notifications"[0m
+D, [2020-10-24T21:34:25.413024 #9256] DEBUG -- :   [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "title" text, "content" text, "action" varchar, "deny_action" varchar, "action_name" varchar, "deny_action_name" varchar, "confirmable" boolean, "unread" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.414396 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+D, [2020-10-24T21:34:25.427643 #9256] DEBUG -- :   [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "start" datetime, "duration" integer, "description" text, "group_id" integer, "category_id" integer, "user_id" integer, "desc" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.429064 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+D, [2020-10-24T21:34:25.442108 #9256] DEBUG -- :   [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password_digest" varchar, "password" varchar, "displayname" varchar, "name" varchar, "surname" varchar, "sex" varchar, "birthdate" date, "description" text, "status" varchar, "email_confirmed" boolean DEFAULT 0, "confirm_token" varchar, "role" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.443218 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-10-24T21:34:25.443619 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-10-24T21:34:25.443968 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+D, [2020-10-24T21:34:25.444328 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+D, [2020-10-24T21:34:25.444636 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-10-24T21:34:25.450802 #9256] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+D, [2020-10-24T21:34:25.454893 #9256] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_attachments_uniqueness" ON "aactive_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+D, [2020-10-24T21:34:25.457060 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "tindex_aactive_storage_attachments_on_blob_id" ON "aactive_storage_attachments" ("blob_id")[0m
+D, [2020-10-24T21:34:25.458892 #9256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aactive_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "active_storage_attachments"[0m
+D, [2020-10-24T21:34:25.459922 #9256] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+D, [2020-10-24T21:34:25.463384 #9256] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+D, [2020-10-24T21:34:25.467477 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+D, [2020-10-24T21:34:25.470781 #9256] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+D, [2020-10-24T21:34:25.472473 #9256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "aactive_storage_attachments"[0m
+D, [2020-10-24T21:34:25.473149 #9256] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aactive_storage_attachments"[0m
+D, [2020-10-24T21:34:25.473519 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+D, [2020-10-24T21:34:25.473895 #9256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-10-24T21:34:25.494142 #9256] DEBUG -- :   [1m[35m (19.9ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-10-24T21:34:25.510383 #9256] DEBUG -- :   [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+D, [2020-10-24T21:34:25.524626 #9256] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-10-24T21:34:25.537849 #9256] DEBUG -- :   [1m[35m (11.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200909091458)[0m
+D, [2020-10-24T21:34:25.548358 #9256] DEBUG -- :   [1m[35m (9.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200511074706),
+(20200623150208),
+(20200623151134),
+(20200701131651),
+(20200702122704),
+(20200703132906),
+(20200703134019),
+(20200817155725);
+
+[0m
+D, [2020-10-24T21:34:25.566697 #9256] DEBUG -- :   [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+D, [2020-10-24T21:34:25.573191 #9256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-10-24T21:34:25.587703 #9256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-10-24T21:34:25.589101 #9256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "production"], ["created_at", "2020-10-24 20:34:25.586176"], ["updated_at", "2020-10-24 20:34:25.586176"]]
+D, [2020-10-24T21:34:25.601192 #9256] DEBUG -- :   [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-10-24T21:34:25.603349 #9256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-10-24T21:34:25.606230 #9256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+D, [2020-10-24T21:34:25.608320 #9256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-10-24T21:34:25.609542 #9256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e0be2653e48bf0812b63bfc02aae8398d28c4120"], ["created_at", "2020-10-24 20:34:25.607083"], ["updated_at", "2020-10-24 20:34:25.607083"]]
+D, [2020-10-24T21:34:25.629964 #9256] DEBUG -- :   [1m[35m (19.9ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-10-24T21:34:36.428561 #9260] DEBUG -- :   [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-10-24T21:34:36.533210 #9260] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-10-24T21:34:36.539826 #9260] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+I, [2020-10-24T21:35:19.511826 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74] Started GET "/" for 185.175.60.77 at 2020-10-24 21:35:19 +0100
+I, [2020-10-24T21:35:19.549000 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74] Processing by HomeController#index as HTML
+I, [2020-10-24T21:35:19.564871 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendering home/index.html.erb
+I, [2020-10-24T21:35:19.571978 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:20.421372 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendered templates/imports.html.erb (Duration: 849.0ms | Allocations: 21910)
+I, [2020-10-24T21:35:20.422473 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:20.425677 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendered templates/navbar.html.erb (Duration: 2.9ms | Allocations: 743)
+I, [2020-10-24T21:35:20.426700 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:20.427562 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendered templates/footer.html.erb (Duration: 0.7ms | Allocations: 93)
+I, [2020-10-24T21:35:20.427750 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74]   Rendered home/index.html.erb (Duration: 862.5ms | Allocations: 23954)
+I, [2020-10-24T21:35:20.428308 #9406]  INFO -- : [1a4e9bee-7936-4b35-994f-ffea08ddae74] Completed 200 OK in 879ms (Views: 873.1ms | Allocations: 25731)
+I, [2020-10-24T21:35:20.541153 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:35:20 +0100
+F, [2020-10-24T21:35:20.544566 #9406] FATAL -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[ba96354d-9834-4c5c-aba4-1ed67bad0fe4] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:35:20.546302 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:35:20.546489 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:35:20.550975 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendering errors/show.html.erb
+I, [2020-10-24T21:35:20.553551 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:20.557369 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendered templates/imports.html.erb (Duration: 3.5ms | Allocations: 1203)
+I, [2020-10-24T21:35:20.558486 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:20.559362 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendered templates/navbar.html.erb (Duration: 0.7ms | Allocations: 140)
+I, [2020-10-24T21:35:20.560482 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:20.561518 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendered templates/alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+I, [2020-10-24T21:35:20.562602 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:20.562851 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:35:20.562990 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4]   Rendered errors/show.html.erb (Duration: 11.8ms | Allocations: 2664)
+I, [2020-10-24T21:35:20.563446 #9406]  INFO -- : [ba96354d-9834-4c5c-aba4-1ed67bad0fe4] Completed 200 OK in 17ms (Views: 14.8ms | Allocations: 3647)
+I, [2020-10-24T21:35:28.435815 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57] Started GET "/login" for 185.175.60.77 at 2020-10-24 21:35:28 +0100
+I, [2020-10-24T21:35:28.440567 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57] Processing by SessionsController#login_view as HTML
+I, [2020-10-24T21:35:28.450219 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:35:28.454654 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:28.461203 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendered templates/imports.html.erb (Duration: 6.1ms | Allocations: 1212)
+I, [2020-10-24T21:35:28.461890 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:28.463144 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendered templates/navbar.html.erb (Duration: 1.0ms | Allocations: 98)
+I, [2020-10-24T21:35:28.464904 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:28.465472 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendered templates/alerts.html.erb (Duration: 0.3ms | Allocations: 19)
+I, [2020-10-24T21:35:28.468125 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57]   Rendered sessions/login_view.html.erb (Duration: 17.4ms | Allocations: 2404)
+I, [2020-10-24T21:35:28.468975 #9406]  INFO -- : [d5dcd0a2-6aa7-43e0-9397-e20b2fc51e57] Completed 200 OK in 28ms (Views: 24.4ms | Allocations: 3312)
+I, [2020-10-24T21:35:28.511392 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:35:28 +0100
+F, [2020-10-24T21:35:28.517306 #9406] FATAL -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1]   
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[eda1cef0-fad1-4993-8e66-f8a6e02008d1] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:35:28.519950 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:35:28.520224 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:35:28.524206 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendering errors/show.html.erb
+I, [2020-10-24T21:35:28.524900 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:28.531136 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendered templates/imports.html.erb (Duration: 5.9ms | Allocations: 1204)
+I, [2020-10-24T21:35:28.531756 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:28.533116 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendered templates/navbar.html.erb (Duration: 1.1ms | Allocations: 139)
+I, [2020-10-24T21:35:28.533900 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:28.534391 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:35:28.534853 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:28.535206 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:35:28.535463 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1]   Rendered errors/show.html.erb (Duration: 10.9ms | Allocations: 1730)
+I, [2020-10-24T21:35:28.536167 #9406]  INFO -- : [eda1cef0-fad1-4993-8e66-f8a6e02008d1] Completed 200 OK in 16ms (Views: 13.7ms | Allocations: 2089)
+I, [2020-10-24T21:35:30.716214 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1] Started POST "/login" for 185.175.60.77 at 2020-10-24 21:35:30 +0100
+I, [2020-10-24T21:35:30.721179 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1] Processing by SessionsController#create as HTML
+I, [2020-10-24T21:35:30.721577 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Parameters: {"authenticity_token"=>"QOJm3QWYV0iRJRbSznngyn6KEpbEaJNgq5zJfL2ZkG7ePLNCj9di4ThHNQMsxbEkeAbXyybHpcSLz+qlCp6YBA==", "usermail"=>"dsadsa", "password"=>"[FILTERED]", "commit"=>"Iniciar sessió"}
+D, [2020-10-24T21:35:30.741901 #9406] DEBUG -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-10-24T21:35:30.772427 #9406] DEBUG -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "dsadsa"], ["LIMIT", 1]]
+I, [2020-10-24T21:35:30.776188 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendering sessions/login_view.html.erb
+I, [2020-10-24T21:35:30.777005 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:30.784658 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendered templates/imports.html.erb (Duration: 7.3ms | Allocations: 1203)
+I, [2020-10-24T21:35:30.785455 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:30.786972 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendered templates/navbar.html.erb (Duration: 1.1ms | Allocations: 92)
+I, [2020-10-24T21:35:30.787823 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:30.788361 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendered templates/alerts.html.erb (Duration: 0.2ms | Allocations: 11)
+I, [2020-10-24T21:35:30.791182 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1]   Rendered sessions/login_view.html.erb (Duration: 14.5ms | Allocations: 1865)
+I, [2020-10-24T21:35:30.792282 #9406]  INFO -- : [414f0403-8344-499b-a874-fd0d0d6c5ee1] Completed 200 OK in 70ms (Views: 17.8ms | ActiveRecord: 8.9ms | Allocations: 6579)
+I, [2020-10-24T21:35:30.831908 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:35:30 +0100
+F, [2020-10-24T21:35:30.835131 #9406] FATAL -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   
+[13794269-6ce5-4eed-8641-adc10b9e08f2] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[13794269-6ce5-4eed-8641-adc10b9e08f2]   
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[13794269-6ce5-4eed-8641-adc10b9e08f2] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:35:30.836710 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:35:30.836879 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:35:30.838856 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendering errors/show.html.erb
+I, [2020-10-24T21:35:30.839366 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:30.842620 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendered templates/imports.html.erb (Duration: 3.1ms | Allocations: 1203)
+I, [2020-10-24T21:35:30.843009 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:30.843745 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendered templates/navbar.html.erb (Duration: 0.6ms | Allocations: 134)
+I, [2020-10-24T21:35:30.844015 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:30.844290 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:35:30.844537 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:30.844722 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:35:30.844960 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2]   Rendered errors/show.html.erb (Duration: 5.9ms | Allocations: 1724)
+I, [2020-10-24T21:35:30.845408 #9406]  INFO -- : [13794269-6ce5-4eed-8641-adc10b9e08f2] Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2083)
+I, [2020-10-24T21:35:32.138766 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4] Started GET "/" for 185.175.60.77 at 2020-10-24 21:35:32 +0100
+I, [2020-10-24T21:35:32.140843 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4] Processing by HomeController#index as HTML
+I, [2020-10-24T21:35:32.142762 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendering home/index.html.erb
+I, [2020-10-24T21:35:32.143154 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:32.146573 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendered templates/imports.html.erb (Duration: 3.2ms | Allocations: 1212)
+I, [2020-10-24T21:35:32.146941 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:32.147687 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendered templates/navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+I, [2020-10-24T21:35:32.147955 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:32.148160 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:35:32.148289 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4]   Rendered home/index.html.erb (Duration: 5.3ms | Allocations: 1625)
+I, [2020-10-24T21:35:32.148830 #9406]  INFO -- : [abbf0e1b-ceb0-4e0f-be39-e679688ef0e4] Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1959)
+I, [2020-10-24T21:35:32.201889 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c] Started GET "/packs/js/application-c00fc7b4b5843f02122b.js" for 185.175.60.77 at 2020-10-24 21:35:32 +0100
+F, [2020-10-24T21:35:32.204921 #9406] FATAL -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   
+[9f18bccd-ec7e-4276-ad44-18d884df603c] ActionController::RoutingError (No route matches [GET] "/packs/js/application-c00fc7b4b5843f02122b.js"):
+[9f18bccd-ec7e-4276-ad44-18d884df603c]   
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+[9f18bccd-ec7e-4276-ad44-18d884df603c] puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+I, [2020-10-24T21:35:32.206427 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c] Processing by ErrorsController#show as */*
+I, [2020-10-24T21:35:32.206596 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Parameters: {"code"=>"404"}
+I, [2020-10-24T21:35:32.208475 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendering errors/show.html.erb
+I, [2020-10-24T21:35:32.208867 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendering templates/imports.html.erb
+I, [2020-10-24T21:35:32.211964 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendered templates/imports.html.erb (Duration: 2.9ms | Allocations: 1203)
+I, [2020-10-24T21:35:32.212346 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendering templates/navbar.html.erb
+I, [2020-10-24T21:35:32.213096 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendered templates/navbar.html.erb (Duration: 0.6ms | Allocations: 134)
+I, [2020-10-24T21:35:32.213421 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendering templates/alerts.html.erb
+I, [2020-10-24T21:35:32.213673 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendered templates/alerts.html.erb (Duration: 0.1ms | Allocations: 11)
+I, [2020-10-24T21:35:32.213937 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendering templates/footer.html.erb
+I, [2020-10-24T21:35:32.214125 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendered templates/footer.html.erb (Duration: 0.1ms | Allocations: 6)
+I, [2020-10-24T21:35:32.214255 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c]   Rendered errors/show.html.erb (Duration: 5.6ms | Allocations: 1724)
+I, [2020-10-24T21:35:32.214698 #9406]  INFO -- : [9f18bccd-ec7e-4276-ad44-18d884df603c] Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 2083)

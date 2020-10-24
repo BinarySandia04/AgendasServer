@@ -17,7 +17,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '3.1.12'
 
 gem "rack", ">= 2.2.3"
 gem "websocket-extensions", ">= 0.1.5"

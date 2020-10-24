@@ -41,6 +41,7 @@ class TaskController < ApplicationController
     start_m = params[:start_m]
     duration_h = params[:duration_h]
     duration_m = params[:duration_m]
+    file = params[:file]
 
     # Verificacion
     if title == ""
@@ -77,6 +78,17 @@ class TaskController < ApplicationController
 
     # Y ahora la duracion
     @task.duration = duration_h.to_i * 60 + duration_m.to_i
+
+    if file
+      @task.file.attach(file)
+      fileResult = @task.file_formatting
+
+      if fileResult == 'SIZE_ERROR'
+        flash.now[:red] = "L'arxiu adjuntat no ha de ser més gran que 15MB"
+        render 'task/create'
+        return
+      end
+    end
 
     if @task.save
       # Crear assigments

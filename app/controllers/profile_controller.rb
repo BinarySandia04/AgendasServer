@@ -31,7 +31,14 @@ class ProfileController < ApplicationController
           @user.avatar.attach(params[:avatar])
 
           # Muy feo quiero crear un callback en user.rb
-          @user.avatar_formatting
+          avatarResult = @user.avatar_formatting
+          if avatarResult != 'OK'
+            if avatarResult == 'SIZE_ERROR'
+              renderResponse("SIZE_ERROR", "L'avatar d'usuari no pot ser més gran que 3MB", "edit_view", "red")
+            else
+              renderResponse("FILE_ERROR", "Format d'arxiu no compatible", "edit_view", "red")
+            end
+          end
         end
 
         @user.displayname = params[:displayname] unless params[:displayname] == ""
@@ -65,6 +72,13 @@ class ProfileController < ApplicationController
     if @viewuser
       @is_my_profile = @viewuser.id == @user.id
       @hide_profile_link = @is_my_profile
+      if isApi
+        properties = {"username" => @viewuser.username, "desc" => @viewuser.description}
+        if @viewuser.avatar.attached?
+          properties["pic"] = url_for(@viewuser.avatar)
+        end
+        renderJson(properties)
+      end
     end
   end
 end

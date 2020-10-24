@@ -21,11 +21,15 @@
   <% end %>
 
   <p style="display: block">Creada per <%= @task.user.username %></p>
-
+  <p><%= Assigment.where(task_id: @task.id).where(is_done: true).size %> persones ja han acabat aquesta tasca</p>
   <% if @assigment.is_done %>
     <a class="blue-button disabled" disabled="">Marcar tasca com a completada</a>
   <% else %>
     <%= link_to "Marcar tasca com a completada", '/task/view/' + @task.id.to_s + "/completed", class: "blue-button" %>
+  <% end %>
+
+  <% if @task.file.attached? %>
+    <a class="green-button" href=<%= url_for(@task.file)%> download>Descarregar <%= @task.file.blob.filename %></a>
   <% end %>
 
   <p><%= @task.desc %></p>

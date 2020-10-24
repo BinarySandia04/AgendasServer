@@ -61,6 +61,10 @@
         <%= select_tag :category, options_for_select(categories << "<Buit>", "<Buit>")%>
       </div>
 
+      <div class="field centered" style="width: 90%">
+        <%= file_field_tag :file, class: "file-upload" %>
+      </div>
+
       <div class="action">
         <%= submit_tag 'Crear tasca', class: "submit-button big"%>
       </div>

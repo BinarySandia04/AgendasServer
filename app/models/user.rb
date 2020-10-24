@@ -73,14 +73,15 @@ class User < ApplicationRecord
     return unless avatar.attached?
     if avatar.blob.content_type.start_with? 'image/'
       if avatar.blob.byte_size > 3.megabytes
-        errors.add(:avatar, 'size needs to be less than 10MB')
         avatar.purge
+        return 'SIZE_ERROR'
       else
         resize_image
+        return 'OK'
       end
     else
       avatar.purge
-      errors.add(:avatar, 'needs to be an image')
+      return 'TYPE_ERROR'
     end
   end
 

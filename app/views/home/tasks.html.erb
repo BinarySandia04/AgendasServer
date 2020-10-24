@@ -19,7 +19,7 @@
 
   <% n = false %>
 
-  <% @user.assigments.where(is_done: nil).each do |assigment| %>
+  <% @user.assigments.where(is_done: [nil, false]).each do |assigment| %>
     <% @p_assigment = assigment %>
     <% @p_completed = false %>
     <%= render template: 'templates/task-preview' %>

@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     user = User.where(confirm_token: params[:confirm_token]).first
     if user
       user.activate_email
-      flash[:green] = "Compte verificat correctament!"
+      flash[:green] = "Compte verificat correctament! Ja pots iniciar sessió amb l'aplicació o amb la web!"
       redirect_to login_url
     else
       redirect_to root_url
@@ -61,6 +61,7 @@ class SessionsController < ApplicationController
         if myUser.email_confirmed
           if isApi
             renderJson("OK")
+            session[:user_id] = myUser.id
           else
             session[:user_id] = myUser.id
             redirect_to root_url

@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
 
   def isApi
     params[:api] == "YES"
+    #true
   end
 
   def renderJson(theJson)

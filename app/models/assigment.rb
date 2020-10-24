@@ -6,6 +6,7 @@ class Assigment < ApplicationRecord
     task.group.users.each do |user|
       assigment = Assigment.new()
 
+      assigment.is_done = false
       assigment.user = user
       assigment.task = task
 

@@ -64,5 +64,7 @@
   get 'logout', to: 'sessions#logout'
   root to: 'home#index'
   # Api routes
-
+  %w( 404 422 500 503 ).each do |code|
+    get code, :to => "errors#show", :code => code
+  end
   end

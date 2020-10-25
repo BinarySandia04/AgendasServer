@@ -5,54 +5,50 @@
 <!--    <img src="images/logo.png" alt="Logo" width="80" height="80">-->
 <!--   </a>-->
 
-  <h3 align="center">Agendas Server</h3>
+  <h3 align="center">Agenda Server</h3>
 
   <p align="center">
-    The official Agendas Server source code
+    Codi del meu TDR sobre la construcció d'una aplicació web
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Informa d'un error</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Demana una proposta</a>
   </p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Índex
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Sobre el projecte](#about-the-project)
+  * [Fet amb](#built-with)
+* [Instal·lació del projecte](#getting-started)
+  * [Requisits previs](#prerequisites)
+  * [Instal·lació](#installation)
+* [Llicència](#license)
+* [Contacte](#contact)
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre el projecte
 
 This is the Agenda server side code. I'm posting it because I'm forced to do it.
 
-### Built With
+### Fet amb
 
 * [Ruby]
 * [Rails](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Instal·lació del projecte
 
 Ok so if you want to get the source code clone this repo:
 ```sh
 git clone https://github.com/BinarySandia04/GendaServer.git
 ```
 
-### Prerequisites
+### Requisits previs
 
 First, you need to install ruby 2.5.5. Do it with rvm or other ruby package manager you like. Then install the bundler gem if you don't have it:
 ```sh
@@ -68,7 +64,7 @@ And also you need to install **yarn**:
 sudo apt-get install yarn
 ```
 
-### Installation
+### Instal·lació
 
 Ok so if you want to get the source code clone this repo:
 ```sh
@@ -94,12 +90,12 @@ If you want to **DROP** the entire database use the reset script:
 ```
 
 <!-- LICENSE -->
-## License
+## Llicència
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
-## Contact
+## Contacte
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 

@@ -21,9 +21,9 @@
 
 * [Sobre el projecte](#sobre-el-projecte)
   * [Fet amb](#fet-amb)
-* [Instal·lació del projecte](#instal·lació-del-projecte)
+* [Instal·lació del projecte](#installació-del-projecte)
   * [Requisits previs](#requisits-previs)
-  * [Instal·lació](#instal·lació)
+  * [Instal·lació](#installació)
 * [Llicència](#llicència)
 * [Contacte](#contacte)
 

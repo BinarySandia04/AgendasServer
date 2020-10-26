@@ -19,72 +19,69 @@
 <!-- TABLE OF CONTENTS -->
 ## Índex
 
-* [Sobre el projecte](#about-the-project)
-  * [Fet amb](#built-with)
-* [Instal·lació del projecte](#getting-started)
-  * [Requisits previs](#prerequisites)
-  * [Instal·lació](#installation)
-* [Llicència](#license)
-* [Contacte](#contact)
+* [Sobre el projecte](#sobre-el-projecte)
+  * [Fet amb](#fet-amb)
+* [Instal·lació del projecte](#instal·lació-del-projecte)
+  * [Requisits previs](#requisits-previs)
+  * [Instal·lació](#instal·lació)
+* [Llicència](#llicència)
+* [Contacte](#contacte)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre el projecte
 
-This is the Agenda server side code. I'm posting it because I'm forced to do it.
+Aquest és el codi del projecte de Ruby on Rails de Agenda. És públic per motius educatius.
 
 ### Fet amb
 
-* [Ruby]
-* [Rails](https://getbootstrap.com)
+* [Ruby](https://www.ruby-lang.org/es/)
+* [Rails](https://rubyonrails.org/)
 * [JQuery](https://jquery.com)
 
 <!-- GETTING STARTED -->
 ## Instal·lació del projecte
 
-Ok so if you want to get the source code clone this repo:
+Per instal·lar el projecte al teu ordinador, només has de clonar el repositori i seguir els [requisits previs](#requisits-previs)
 ```sh
 git clone https://github.com/BinarySandia04/GendaServer.git
 ```
 
 ### Requisits previs
 
-First, you need to install ruby 2.5.5. Do it with rvm or other ruby package manager you like. Then install the bundler gem if you don't have it:
+Primer necessites instal·lar Ruby 2.5.5. Ho pots fer amb rvm o qualsevol altre distribuïdor de Ruby. Després, instal·la la Gem de Bundler si no la tens:
 ```sh
 gem install bundler
 ```
 
-Now you must install **libvips** using your package manager:
+Necessites instal·lar **libvips** utilitzant el teu gestor de paquets:
 ```sh
 sudo apt-get install libvips
 ```
-And also you need to install **yarn**:
+I també **yarn**:
 ```sh
 sudo apt-get install yarn
 ```
 
 ### Instal·lació
 
-Ok so if you want to get the source code clone this repo:
-```sh
-git clone https://github.com/BinarySandia04/GendaServer.git
-```
-If you want to run the server you must install the **gem dependencies**:
+Per executar el servidor has d'instal·lar les Gems de la Gemfile:
 ```sh
 bundle install
 ```
-And you must install the **yarn packages**:
+I també has d'instal·lar els **paquets de Yarn**:
 ```sh
 yarn install --check-files
 ```
 
-Enjoy. Run the server with the run script:
+I ja està! Finalment executa el servidor amb el script **run.sh**:
 ```sh
 ./run.sh
 ```
+El servidor s'obrirà al port 8080 en l'entorn de producció.
 
-If you want to **DROP** the entire database use the reset script:
+Si vols borrar les bases de dades utilitza **reset.sh**:
 ```sh
 ./reset.sh
 ```
@@ -97,6 +94,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contacte
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Aran Roig - aranseraroig@gmail.com

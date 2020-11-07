@@ -13,9 +13,9 @@
   <div class="navbar-separator"></div>
   <h2>Borrar?</h2>
 
-  <h1>Estàs a punt de borrar</h1><h1> <%= Group.find_by_code(@group_id).name %></h1>
+  <h1>Estàs a punt d'esborrar</h1><h1> <%= Group.find_by_code(@group_id).name %></h1>
   <h2>N'estàs completament segur?</h2>
-  <p>Totes les tasques i les categories del grup es borraran. Estàs segur de completament de que vols continuar?</p>
+  <p>Totes les tasques i les categories del grup s'esborraran. Estàs completament segur de que vols continuar?</p>
 
   <%= form_tag '/group/delete/', multipart: true do |form| %>
     <div class="horizontal-layout">

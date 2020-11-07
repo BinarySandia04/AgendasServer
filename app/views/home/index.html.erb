@@ -30,8 +30,8 @@
     <h1>
       Agenda
     </h1>
-    <p>Benvingut a Agenda!</p><p>Agenda és una altre manera de organitzar-se, utilitzant el poder de la sincronització!
-  </p><p>Per començar a utilitzar-la, registra't amb el botó de adalt a la dreta!
+    <p>Benvingut a Agenda!</p><p>Agenda és una altra manera d'organitzar-se, utilitzant el poder de la sincronització!
+  </p><p>Per començar a utilitzar-la, registra't amb el botó de dalt a la dreta!
   </p><p>A que esperes?
     </p>
     <% else %>
@@ -43,14 +43,14 @@
 
         <%if @user.groups.count == 0 %>
           <h2>Benvingut a Agenda!</h2>
-          <p>Per començar a sincronitzar tasques, has d'entrar en un grup. Per entrar en un grup tens dugues opcions:</p>
+          <p>Per començar a sincronitzar tasques, has d'entrar a un grup. Per fer-ho tens dugues opcions:</p>
 
-          <li>Esperar a que algu et convidi al seu grup</li>
+          <li>Esperar a que algú et convidi al seu grup</li>
           <li>Crear el teu propi grup</li>
 
           <p>Quan algú et convidi al seu grup t'arribarà una notificació. Per veure les notificacions has de clicar el número de les notificacions al costat de la campaneta</p>
-          <p>Si pitjes en el teu nom d'usuari, pots modificar el teu avatar i també els paràmetres del teu compte</p>
-          <p>Si vols crear un grup pots fer-ho pitjant aquest botó:</p>
+          <p>Si pitges en el teu nom d'usuari, pots modificar el teu avatar i també els paràmetres del teu compte</p>
+          <p>Si vols crear un grup, pots fer-ho pitjant aquest botó:</p>
           <%= render template: 'templates/quick-start-buttons'%>
         <% else %>
           <h2>- Actualment tens <%= Assigment.where(user: @user, is_done: nil).count %> tasques per completar</h2>

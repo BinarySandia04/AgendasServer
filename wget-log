@@ -1,0 +1,11 @@
+--2020-10-25 09:01:38--  http://api.dynu.com/nic/update?myip=185.175.60.115&myipv6=no&username=Sandia98&password=ytuquesabes2
+Resolving api.dynu.com (api.dynu.com)... 162.216.241.196, 162.216.241.241, 207.38.69.200, ...
+Connecting to api.dynu.com (api.dynu.com)|162.216.241.196|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5 [text/html]
+Saving to: ‘update?myip=185.175.60.115&myipv6=no&username=Sandia98&password=ytuquesabes2’
+
+               update?myip=18   0%[                                                  ]       0  --.-KB/s               update?myip=185.175.60.115&my 100%[=================================================>]       5  --.-KB/s    in 0s      
+
+2020-10-25 09:01:39 (180 KB/s) - ‘update?myip=185.175.60.115&myipv6=no&username=Sandia98&password=ytuquesabes2’ saved [5/5]
+
